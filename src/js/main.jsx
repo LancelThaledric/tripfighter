@@ -11,6 +11,3 @@ ReactDOM.render(
   <h1>Hello, world!</h1>,
   document.getElementById('root')
 );
-
-import cats from './cats.jsx';
-console.log(cats);
