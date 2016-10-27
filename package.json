@@ -29,7 +29,8 @@
     "webpack": "^1.13.2"
   },
   "scripts": {
-    "compile": "webpack -p"
+    "build": "webpack -p",
+    "builddev": "webpack"
   },
   "repository": {
     "type": "git",

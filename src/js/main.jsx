@@ -7,7 +7,9 @@ import index from 'file?name=[name].[ext]!../index.html';
 
 import style from '../style/style.scss';
 
+import TfHome from './components/home.jsx';
+
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  <TfHome/>,
   document.getElementById('root')
 );
