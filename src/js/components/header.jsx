@@ -6,14 +6,13 @@ class TfHeader extends React.Component {
 
     render(){
 
-        let links = [];
-        this.props.links.forEach(function(elem) {
-            links.push(<li><a href="#">{elem}</a></li>);
-        });
-
         return <header className="tf-site-header"><nav>
-            <a href="#">{this.props.title}</a>
-            <ul className="tf-site-menu">{links}</ul>
+            <a id="main-menu-toggle">E Menu</a>
+            <a id="home-link" className="site-title">TRIP FIGHTER</a>
+            <form className="search-box">
+                <input type="search" name="search" className="search-box-input"/>
+            </form>
+            <a id="login-box">Connexion</a>
         </nav></header>;
     }
 

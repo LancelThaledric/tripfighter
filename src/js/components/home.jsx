@@ -8,9 +8,7 @@ class TfHome extends React.Component {
 
     render(){
 
-        let links = ['Character select', 'Stage select'];
-
-        return <TfHeader title="Accueil Trip Fighter" links={links}/>;
+        return <TfHeader/>;
     }
 
 }
