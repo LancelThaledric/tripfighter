@@ -1,0 +1,18 @@
+section.tf-site-intro{
+
+    padding: 2rem;
+
+    text-align: center;
+
+    max-width: $max-width-section;
+    margin: 0 auto;
+
+    h2{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.2em;
+        
+        strong{font-weight: 900; font-variant: small-caps; font-size: 1.2em;}
+    }
+}

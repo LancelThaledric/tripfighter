@@ -1,3 +1,10 @@
+$header-height: 4rem;
+
+$items-font-size: 1.5rem;
+$site-title-font-size: 2rem;
+$items-padding: 1.2rem;
+
+
 header.tf-site-header{
     display: flex;
     flex-flow: row nowrap;
@@ -11,6 +18,11 @@ header.tf-site-header{
         align-items: stretch;
         justify-content: space-between;
 
+        font-size: $items-font-size;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 900;
+        line-height: 1.2em;
+
         width: 100%;
 
         &>*{
@@ -18,8 +30,8 @@ header.tf-site-header{
             flex-flow: row nowrap;
             align-items: center;
             justify-content: center;
-            padding: 0 1rem;
-            height: 3rem;
+            padding: 0 $items-padding;
+            height: $header-height;
             flex: 1;
         }
         &>:first-child{
@@ -28,6 +40,10 @@ header.tf-site-header{
         }
         &>:last-child{
             justify-content: flex-end;
+        }
+
+        .tf-site-title{
+            font-size: $site-title-font-size;
         }
     }
 
