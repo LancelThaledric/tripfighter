@@ -1,4 +1,4 @@
-$icon-size: 2rem;
+$icon-size: 2.4rem;
 $thickness: 0.4rem;
 
 div.tf-separator{
@@ -17,7 +17,7 @@ div.tf-separator{
 
         position: absolute;
         left: calc(50% - #{$icon-size / 2});
-        top: -$icon-size / 2 - $thickness / 2;
+        top: -$icon-size / 2 + $thickness / 2;
 
         background: $bgcolor;
     }

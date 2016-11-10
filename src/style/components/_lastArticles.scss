@@ -1,0 +1,61 @@
+$article-margin: 2rem;
+$article-height: 20rem;
+
+section.tf-last-articles{
+    max-width: $max-width-section;
+
+    margin: 0 auto;
+
+    div.tf-article-grid{
+        display: flex;
+        flex-flow: row wrap;
+
+        padding: $article-margin / 2;
+
+        div.tf-article-wrapper{
+            min-width: $article-height;
+            height: $article-height;
+            flex: $article-height;
+
+            display: flex;
+            align-items: stretch;
+
+            &:first-child{
+                flex: $article-height*2;
+            }
+
+            div.tf-article-box{
+                flex: 1;
+                margin: 1rem;
+                background: $modernmediumcolor;
+
+                display: flex;
+                align-items: stretch;
+
+                div.tf-article-inner{
+                    margin: 1rem; padding: 1rem;
+                    flex: 1;
+
+                    &:hover{
+                        background: $modernlightcolor;
+                    }
+
+                    h3{
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
+    }
+
+    div.tf-last-articles-more{
+        margin-bottom: 1rem;
+        a.tf-abutton{
+            margin-top: 0;
+
+            strong{font-weight: 900; font-variant: small-caps; font-size: 1.2em;}
+        }
+    }
+
+}

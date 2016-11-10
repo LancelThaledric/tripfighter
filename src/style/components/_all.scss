@@ -1,0 +1,19 @@
+a.tf-abutton,
+button,
+input[type=submit]{
+    display: inline-block;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: $bgcolor;
+    background: $modernmediumcolor;
+    text-decoration: none;
+
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.tf-center-button-bar{
+    text-align: center;
+}
