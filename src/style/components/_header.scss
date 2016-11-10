@@ -4,13 +4,28 @@ $items-font-size: 1.5rem;
 $site-title-font-size: 2rem;
 $items-padding: 1.2rem;
 
+div#tf-app{
+    margin-top: $header-height;
+}
 
 header.tf-site-header{
     display: flex;
     flex-flow: row nowrap;
 
-    background: $modernmediumcolor;
     color: $bgcolor;
+
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+
+    &::after{
+        content: ''; display: block;
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+        background: $modernmediumcolor;
+    }
 
     nav{
         display: flex;
