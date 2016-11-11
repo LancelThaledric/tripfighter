@@ -20,7 +20,7 @@ class TfCharacterSelect extends React.Component {
                 <div className="tf-character-left">
                     <a href="#" className="tf-character-select-link">
                         <div className="tf-character-inner">
-                            <h3 className="tf-character-select-title">Moderne</h3>
+                            <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Moderne</h3>
                             <img className="tf-fighter" src={resource_leftFighter}/>
                         </div>
                     </a>
@@ -28,7 +28,7 @@ class TfCharacterSelect extends React.Component {
                 <div className="tf-character-right">
                     <a href="#"  className="tf-character-select-link">
                         <div className="tf-character-inner">
-                            <h3 className="tf-character-select-title">Traditionnel</h3>
+                            <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Traditionnel</h3>
                             <img className="tf-fighter" src={resource_rightFighter}/>
                         </div>
                     </a>
