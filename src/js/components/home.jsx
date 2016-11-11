@@ -6,6 +6,7 @@ import TfHeader from './header.jsx';
 import TfIntro from './intro.jsx';
 import TfSeparator from './separator.jsx';
 import TfLastArticles from './lastArticles.jsx';
+import TfCharacterSelect from './characterSelect.jsx';
 
 class TfHome extends React.Component {
 
@@ -17,6 +18,7 @@ class TfHome extends React.Component {
             <TfSeparator/>
             <TfLastArticles/>
             <TfSeparator/>
+            <TfCharacterSelect/>
         </div>;
     }
 

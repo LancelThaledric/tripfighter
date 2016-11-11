@@ -21,7 +21,6 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                exclude: /node_modules/,
                 loader: ExtractTextPlugin.extract('style', 'css!sass')
             },
             {
@@ -29,17 +28,23 @@ module.exports = {
                 loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
             },
             {
-                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+                test: /\.(ttf|eot|svg|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'file-loader',
+                query:{
+                    name: 'fonts/[name].[ext]'
+                }
             },
             {
-                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'file-loader'
+                test: /\.(png|jpg|jpeg|gif|svg)$/,
+                loader: 'file-loader',
+                query:{
+                    name: 'resource/[name].[ext]'
+                }
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin('style/main.css', {
+        new ExtractTextPlugin('main.css', {
             allChunks: true
         })
     ]
