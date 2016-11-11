@@ -95,6 +95,7 @@ section.tf-character-select{
                 overflow: hidden;
 
                 transform: skewX(-15deg);
+
             }
             a.tf-character-select-link:hover{
                 div.tf-character-inner::after{
@@ -103,14 +104,16 @@ section.tf-character-select{
             }
 
             
+
+            
         }
 
         div.tf-character-left{
             margin-left: -0.2588190451 * $character-select-height;
             a.tf-character-select-link div.tf-character-inner{
-                background-image: url('../resource/character-modern-background-toned.jpg');
+                background-image: url('../resource/character-modern-background-toned-darken.jpg');
                 &::after{
-                    background-image: url('../resource/character-modern-background.jpg');
+                    background-image: url('../resource/character-modern-background-darken.jpg');
                 }
                 padding-left: 0.2588190451 * $character-select-height * 2 + 4rem;
             }
@@ -136,9 +139,9 @@ section.tf-character-select{
         div.tf-character-right{
             margin-right: -0.2588190451 * $character-select-height;
             a.tf-character-select-link div.tf-character-inner{
-                background-image: url('../resource/character-trad-background-toned.jpg');
+                background-image: url('../resource/character-trad-background-toned-darken.jpg');
                 &::after{
-                    background-image: url('../resource/character-trad-background.jpg');
+                    background-image: url('../resource/character-trad-background-darken.jpg');
                 }
                 padding-right: 0.2588190451 * $character-select-height * 2 + 4rem;
                 text-align: right;
@@ -183,7 +186,7 @@ section.tf-character-select{
         position: relative;
         &::after{
             content: ''; display: block;
-            z-index: -1;
+            z-index: -2;
             width: 100%; height: 100%;
             position: absolute; top: 0; left: 0;
             background-size: inherit;
@@ -202,6 +205,8 @@ section.tf-character-select{
 
         transition: margin ease 0.4s,
                     opacity ease 0.4s;
+        
+        position: relative;
 
         span.tf-character-title-small{
             display: block;
