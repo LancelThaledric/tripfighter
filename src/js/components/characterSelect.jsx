@@ -2,6 +2,9 @@ import 'babel-polyfill';
 
 import React from 'react';
 
+import resource_leftFighter from '../../resource/fighter-left.png';
+import resource_rightFighter from '../../resource/fighter-right.png';
+
 class TfCharacterSelect extends React.Component {
 
     render(){
@@ -18,6 +21,7 @@ class TfCharacterSelect extends React.Component {
                     <a href="#" className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title">Moderne</h3>
+                            <img className="tf-fighter" src={resource_leftFighter}/>
                         </div>
                     </a>
                 </div>
@@ -25,6 +29,7 @@ class TfCharacterSelect extends React.Component {
                     <a href="#"  className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title">Traditionnel</h3>
+                            <img className="tf-fighter" src={resource_rightFighter}/>
                         </div>
                     </a>
                 </div>

@@ -57,6 +57,12 @@ section.tf-character-select{
             div.tf-character-inner{
                 opacity: 0.5;
             }
+            div.tf-character-left img.tf-fighter{
+                margin-left: -2rem;
+            }
+            div.tf-character-right img.tf-fighter{
+                margin-right: -2rem;
+            }
         }
 
         div.tf-character-left, div.tf-character-right{
@@ -108,6 +114,9 @@ section.tf-character-select{
                 div.tf-character-inner{
                     opacity: 1;
                 }
+                img.tf-fighter{
+                    margin-left: 6rem;
+                }
             }
         }
 
@@ -129,6 +138,9 @@ section.tf-character-select{
                 }
                 div.tf-character-inner{
                     opacity: 1;
+                }
+                img.tf-fighter{
+                    margin-right: 6rem;
                 }
             }
         }
@@ -169,6 +181,19 @@ section.tf-character-select{
 
         transition: margin ease 0.4s,
                     opacity ease 0.4s;
+    }
+
+    img.tf-fighter{
+        position: absolute;
+        z-index: 0;
+        height: 384px; width: auto;
+        transition: margin ease 0.4s;
+    }
+    div.tf-character-left img.tf-fighter{
+        bottom: 0; left: 0.2588190451 * $character-select-height * 2;
+    }
+    div.tf-character-right img.tf-fighter{
+        bottom: 0; right: 0.2588190451 * $character-select-height * 2;
     }
 
 }
