@@ -22,6 +22,9 @@ class TfCharacterSelect extends React.Component {
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Moderne</h3>
                             <img className="tf-fighter" src={resource_leftFighter}/>
+                            <p className="tf-fighter-description">
+                                Partez à la découverte des somptueux paysages urbains japonais !
+                            </p>
                         </div>
                     </a>
                 </div>
@@ -30,6 +33,9 @@ class TfCharacterSelect extends React.Component {
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Traditionnel</h3>
                             <img className="tf-fighter" src={resource_rightFighter}/>
+                            <p className="tf-fighter-description">
+                                Explorez les campagnes luxuriantes du pays du Soleil levant !
+                            </p>
                         </div>
                     </a>
                 </div>

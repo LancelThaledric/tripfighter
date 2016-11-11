@@ -50,8 +50,15 @@ section.tf-character-select{
             div.tf-character-right h3.tf-character-select-title{
                 margin-right: -4rem;
             }
-            h3.tf-character-select-title{
+            h3.tf-character-select-title,
+            p.tf-fighter-description{
                 opacity: 0.5;
+            }
+            div.tf-character-left p.tf-fighter-description{
+                margin-left: 12rem;
+            }
+            div.tf-character-right p.tf-fighter-description{
+                margin-right: 12rem;
             }
 
             div.tf-character-inner{
@@ -111,6 +118,10 @@ section.tf-character-select{
                     margin-left: 4rem;
                     opacity: 1;
                 }
+                p.tf-fighter-description{
+                    margin-left: 20rem;
+                    opacity: 1;
+                }
                 div.tf-character-inner{
                     opacity: 1;
                 }
@@ -136,6 +147,10 @@ section.tf-character-select{
                     margin-right: 4rem;
                     opacity: 1;
                 }
+                p.tf-fighter-description{
+                    margin-right: 20rem;
+                    opacity: 1;
+                }
                 div.tf-character-inner{
                     opacity: 1;
                 }
@@ -158,6 +173,10 @@ section.tf-character-select{
 
         margin: 0 -0.2588190451 * $character-select-height;
         padding: 0 0.2588190451 * $character-select-height;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
 
         position: relative;
         &::after{
@@ -200,6 +219,24 @@ section.tf-character-select{
     }
     div.tf-character-right img.tf-fighter{
         bottom: 0; right: 0.2588190451 * $character-select-height * 2;
+    }
+
+    p.tf-fighter-description{
+        @extend .tf-raleway;
+        color: $bgcolor;
+        font-size: 1.2em;
+        max-width: 24rem;
+
+        transition: margin ease 0.4s,
+                    opacity ease 0.4s;
+    }
+    div.tf-character-left p.tf-fighter-description{
+        margin-left: 16rem;
+        align-self: flex-start;
+    }
+    div.tf-character-right p.tf-fighter-description{
+        margin-right: 16rem;
+        align-self: flex-end;
     }
 
 }
