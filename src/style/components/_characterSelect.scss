@@ -93,9 +93,9 @@ section.tf-character-select{
         div.tf-character-left{
             margin-left: -0.2588190451 * $character-select-height;
             a.tf-character-select-link div.tf-character-inner{
-                background-image: url('../../resource/character-modern-background-toned.jpg');
+                background-image: url('../resource/character-modern-background-toned.jpg');
                 &::after{
-                    background-image: url('../../resource/character-modern-background.jpg');
+                    background-image: url('../resource/character-modern-background.jpg');
                 }
                 padding-left: 0.2588190451 * $character-select-height * 2 + 4rem;
             }
@@ -114,9 +114,9 @@ section.tf-character-select{
         div.tf-character-right{
             margin-right: -0.2588190451 * $character-select-height;
             a.tf-character-select-link div.tf-character-inner{
-                background-image: url('../../resource/character-trad-background-toned.jpg');
+                background-image: url('../resource/character-trad-background-toned.jpg');
                 &::after{
-                    background-image: url('../../resource/character-trad-background.jpg');
+                    background-image: url('../resource/character-trad-background.jpg');
                 }
                 padding-right: 0.2588190451 * $character-select-height * 2 + 4rem;
                 text-align: right;

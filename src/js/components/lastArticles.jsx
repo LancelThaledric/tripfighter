@@ -33,7 +33,7 @@ class TfLastArticles extends React.Component {
                 </div>
             </div>
             <div className="tf-center-button-bar tf-last-articles-more">
-                <a href="#" className="tf-abutton">Mettez-moi une dose de <strong>Japon</strong> supplémentaire</a>
+                <a href="#" className="tf-abutton" title="Voir plus d'articles">Mettez-moi une dose de <strong>Japon</strong> supplémentaire</a>
             </div>
         </section>;
     }
