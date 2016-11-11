@@ -4,6 +4,7 @@ import React from 'react';
 
 import resource_leftFighter from '../../resource/fighter-left.png';
 import resource_rightFighter from '../../resource/fighter-right.png';
+import resource_versus from '../../resource/versus.png';
 
 class TfCharacterSelect extends React.Component {
 
@@ -21,10 +22,14 @@ class TfCharacterSelect extends React.Component {
                     <a href="#" className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Moderne</h3>
-                            <img className="tf-fighter" src={resource_leftFighter}/>
+                            <img className="tf-fighter" src={resource_leftFighter} alt=""/>
                             <p className="tf-fighter-description">
                                 Partez à la découverte des somptueux paysages urbains japonais !
                             </p>
+                            <div className="tf-fighter-bar">
+                                <div className="tf-fighter-bar-in"></div>
+                            </div>
+                            <img className="tf-character-select-versus" src={resource_versus} alt=""/>
                         </div>
                     </a>
                 </div>
@@ -32,10 +37,14 @@ class TfCharacterSelect extends React.Component {
                     <a href="#"  className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Traditionnel</h3>
-                            <img className="tf-fighter" src={resource_rightFighter}/>
+                            <img className="tf-fighter" src={resource_rightFighter} alt=""/>
                             <p className="tf-fighter-description">
                                 Explorez les campagnes luxuriantes du pays du Soleil levant !
                             </p>
+                            <div className="tf-fighter-bar">
+                                <div className="tf-fighter-bar-in"></div>
+                            </div>
+                            <img className="tf-character-select-versus" src={resource_versus} alt=""/>
                         </div>
                     </a>
                 </div>

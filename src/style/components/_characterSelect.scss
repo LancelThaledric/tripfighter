@@ -78,6 +78,7 @@ section.tf-character-select{
 
             display: flex;
             align-items: stretch;
+            position: relative;
 
             transition: flex ease 0.4s;
 
@@ -90,6 +91,7 @@ section.tf-character-select{
                 display: flex;
                 align-items: stretch;
                 position: relative;
+                z-index: 1;
                 overflow: hidden;
 
                 transform: skewX(-15deg);
@@ -210,7 +212,7 @@ section.tf-character-select{
 
     img.tf-fighter{
         position: absolute;
-        z-index: 0;
+        z-index: 10;
         height: 384px; width: auto;
         transition: margin ease 0.4s;
     }
@@ -239,4 +241,46 @@ section.tf-character-select{
         align-self: flex-end;
     }
 
+    div.tf-fighter-bar{
+        height: 2rem;
+        border: solid 0.25rem $bgcolor;
+        transform: skewX(-15deg);
+        position: relative;
+        z-index: 1;
+        margin-top: 1rem;
+    }
+    div.tf-character-left div.tf-fighter-bar{
+        margin-right: 4rem;
+        margin-left: -8rem;
+    }
+    div.tf-character-right div.tf-fighter-bar{
+        margin-left: 4rem;
+        margin-right: -8rem;
+        text-align: right;
+    }
+
+    div.tf-fighter-bar-in{
+        display: inline-block;
+        background: $bgcolor;
+        height: 100%;
+    }
+    div.tf-character-left div.tf-fighter-bar-in{
+        width: 87%;
+    }
+    div.tf-character-right div.tf-fighter-bar-in{
+        width: 78%;
+    }
+
+    img.tf-character-select-versus{
+        height: 8rem; width: auto;
+        position: absolute;
+        top: 50%;
+        z-index: 50;
+    }
+    div.tf-character-left img.tf-character-select-versus{
+        right: 6.1rem;
+    }
+    div.tf-character-right img.tf-character-select-versus{
+        left: 4.1rem;
+    }
 }
