@@ -30,12 +30,34 @@ section.tf-character-select{
         }
     }
 
+    p.tf-character-select-intro{
+        @extend .tf-center;
+        @extend .tf-raleway;
+        margin: 0 0 1.5rem 0;
+    }
+
     div.tf-character-select-selector{
         display: flex;
         flex-flow: row nowrap;
 
         width: 100%;
         overflow: hidden;
+
+        &:hover{
+            div.tf-character-left h3.tf-character-select-title{
+                margin-left: -4rem;
+            }
+            div.tf-character-right h3.tf-character-select-title{
+                margin-right: -4rem;
+            }
+            h3.tf-character-select-title{
+                opacity: 0.5;
+            }
+
+            div.tf-character-inner{
+                opacity: 0.5;
+            }
+        }
 
         div.tf-character-left, div.tf-character-right{
             flex: 1;
@@ -46,6 +68,10 @@ section.tf-character-select{
 
             transition: flex ease 0.4s;
 
+            &:hover{
+                flex: 1.2;  // hack : le hover devrait se faire sur le <a> normalement. Mais cela nécessiterait de fixer cette valeur en JSX.
+            }
+
             a.tf-character-select-link{
                 flex: 1;
                 display: flex;
@@ -54,41 +80,14 @@ section.tf-character-select{
                 overflow: hidden;
 
                 transform: skewX(-15deg);
-
-
-                div.tf-character-inner{
-                    flex: 1;
-                    transform: skewX(15deg);
-
-                    background-size: cover;
-                    background-position: center;
-                    transform: skewX(15deg);
-
-                    margin: 0 -0.2588190451 * $character-select-height;
-                    padding: 0 0.2588190451 * $character-select-height;
-
-                    position: relative;
-                    &::after{
-                        content: ''; display: block;
-                        z-index: -1;
-                        width: 100%; height: 100%;
-                        position: absolute; top: 0; left: 0;
-                        background-size: inherit;
-                        background-position: inherit;
-                        opacity: 0;
-                        transition: opacity ease 0.4s;
-                    }
-                }
             }
-
-            &:hover{
-                flex: 1.2;
-
-                a.tf-character-select-link div.tf-character-inner::after{
+            a.tf-character-select-link:hover{
+                div.tf-character-inner::after{
                     opacity: 1;
                 }
-                
             }
+
+            
         }
 
         div.tf-character-left{
@@ -97,6 +96,17 @@ section.tf-character-select{
                 background-image: url('../../resource/character-modern-background-toned.jpg');
                 &::after{
                     background-image: url('../../resource/character-modern-background.jpg');
+                }
+                padding-left: 0.2588190451 * $character-select-height * 2 + 4rem;
+            }
+
+            a.tf-character-select-link:hover{
+                h3.tf-character-select-title{
+                    margin-left: 4rem;
+                    opacity: 1;
+                }
+                div.tf-character-inner{
+                    opacity: 1;
                 }
             }
         }
@@ -108,8 +118,57 @@ section.tf-character-select{
                 &::after{
                     background-image: url('../../resource/character-trad-background.jpg');
                 }
+                padding-right: 0.2588190451 * $character-select-height * 2 + 4rem;
+                text-align: right;
+            }
+
+            a.tf-character-select-link:hover{
+                h3.tf-character-select-title{
+                    margin-right: 4rem;
+                    opacity: 1;
+                }
+                div.tf-character-inner{
+                    opacity: 1;
+                }
             }
         }
+    }
+
+    div.tf-character-inner{
+        flex: 1;
+        transform: skewX(15deg);
+
+        background-size: cover;
+        background-position: center;
+        transform: skewX(15deg);
+
+        transition: opacity ease 0.4s;
+
+        margin: 0 -0.2588190451 * $character-select-height;
+        padding: 0 0.2588190451 * $character-select-height;
+
+        position: relative;
+        &::after{
+            content: ''; display: block;
+            z-index: -1;
+            width: 100%; height: 100%;
+            position: absolute; top: 0; left: 0;
+            background-size: inherit;
+            background-position: inherit;
+            opacity: 0;
+            transition: opacity ease 0.4s;
+        }
+    }
+
+    h3.tf-character-select-title{
+        @extend .tf-raleway;
+        @extend strong;
+        font-size: 4rem;
+        text-transform: uppercase;
+        color: $bgcolor;
+
+        transition: margin ease 0.4s,
+                    opacity ease 0.4s;
     }
 
 }

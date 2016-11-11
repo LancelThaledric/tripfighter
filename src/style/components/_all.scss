@@ -28,6 +28,17 @@ body{
     color: $bgcolor;
 }
 
-.center{
+.tf-center{
     text-align: center;
+}
+
+.tf-raleway{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+strong.tf-raleway, .tf-raleway strong,
+b.tf-raleway, .tf-raleway b{
+    font-weight: 900;
 }
