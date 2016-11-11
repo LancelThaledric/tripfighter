@@ -17,3 +17,17 @@ input[type=submit]{
 .tf-center-button-bar{
     text-align: center;
 }
+
+body{
+    background-color: $bgcolor;
+    color: $fgcolor;
+}
+
+.inverted-section{
+    background-color: $fgcolor;
+    color: $bgcolor;
+}
+
+.center{
+    text-align: center;
+}

@@ -1,83 +1,115 @@
 $character-select-height: 32rem;
 
 section.tf-character-select{
+
+    @extend .inverted-section;
+
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
+    align-items: stretch;
 
-    width: 100%;
-    overflow: hidden;
-
-    div.tf-character-left, div.tf-character-right{
-        flex: 1;
-        height: $character-select-height;
+    h2{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 900;
+        line-height: 1.2em;
+        font-size: 2rem;
+        text-align: center;
+        margin: 2rem 0;
 
         display: flex;
-        align-items: stretch;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        flex: 0;
 
-        transition: flex ease 0.4s;
-
-        a.tf-character-select-link{
+        &::before, &::after{
+            content: '';
             flex: 1;
+            height: 1px;
+            background: $bgcolor;
+        }
+    }
+
+    div.tf-character-select-selector{
+        display: flex;
+        flex-flow: row nowrap;
+
+        width: 100%;
+        overflow: hidden;
+
+        div.tf-character-left, div.tf-character-right{
+            flex: 1;
+            height: $character-select-height;
+
             display: flex;
             align-items: stretch;
-            position: relative;
-            overflow: hidden;
 
-            transform: skewX(-15deg);
+            transition: flex ease 0.4s;
 
-
-            div.tf-character-inner{
+            a.tf-character-select-link{
                 flex: 1;
-                transform: skewX(15deg);
-
-                background-size: cover;
-                background-position: center;
-                transform: skewX(15deg);
-
-                margin: 0 -0.2588190451 * $character-select-height;
-                padding: 0 0.2588190451 * $character-select-height;
-
+                display: flex;
+                align-items: stretch;
                 position: relative;
+                overflow: hidden;
+
+                transform: skewX(-15deg);
+
+
+                div.tf-character-inner{
+                    flex: 1;
+                    transform: skewX(15deg);
+
+                    background-size: cover;
+                    background-position: center;
+                    transform: skewX(15deg);
+
+                    margin: 0 -0.2588190451 * $character-select-height;
+                    padding: 0 0.2588190451 * $character-select-height;
+
+                    position: relative;
+                    &::after{
+                        content: ''; display: block;
+                        z-index: -1;
+                        width: 100%; height: 100%;
+                        position: absolute; top: 0; left: 0;
+                        background-size: inherit;
+                        background-position: inherit;
+                        opacity: 0;
+                        transition: opacity ease 0.4s;
+                    }
+                }
+            }
+
+            &:hover{
+                flex: 1.2;
+
+                a.tf-character-select-link div.tf-character-inner::after{
+                    opacity: 1;
+                }
+                
+            }
+        }
+
+        div.tf-character-left{
+            margin-left: -0.2588190451 * $character-select-height;
+            a.tf-character-select-link div.tf-character-inner{
+                background-image: url('../../resource/character-modern-background-toned.jpg');
                 &::after{
-                    content: ''; display: block;
-                    z-index: -1;
-                    width: 100%; height: 100%;
-                    position: absolute; top: 0; left: 0;
-                    background-size: inherit;
-                    background-position: inherit;
-                    opacity: 0;
-                    transition: opacity ease 0.4s;
+                    background-image: url('../../resource/character-modern-background.jpg');
                 }
             }
         }
 
-        &:hover{
-            flex: 1.2;
-
-            a.tf-character-select-link div.tf-character-inner::after{
-                opacity: 1;
-            }
-            
-        }
-    }
-
-    div.tf-character-left{
-        margin-left: -0.2588190451 * $character-select-height;
-        a.tf-character-select-link div.tf-character-inner{
-            background-image: url('../../resource/character-modern-background-toned.jpg');
-            &::after{
-                background-image: url('../../resource/character-modern-background.jpg');
+        div.tf-character-right{
+            margin-right: -0.2588190451 * $character-select-height;
+            a.tf-character-select-link div.tf-character-inner{
+                background-image: url('../../resource/character-trad-background-toned.jpg');
+                &::after{
+                    background-image: url('../../resource/character-trad-background.jpg');
+                }
             }
         }
     }
 
-    div.tf-character-right{
-        margin-right: -0.2588190451 * $character-select-height;
-        a.tf-character-select-link div.tf-character-inner{
-            background-image: url('../../resource/character-trad-background-toned.jpg');
-            &::after{
-                background-image: url('../../resource/character-trad-background.jpg');
-            }
-        }
-    }
 }

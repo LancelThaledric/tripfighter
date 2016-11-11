@@ -1,4 +1,4 @@
-$icon-size: 2.4rem;
+$icon-size: 2rem;
 $thickness: 0.4rem;
 
 div.tf-separator{
@@ -9,16 +9,21 @@ div.tf-separator{
 
     position: relative;
 
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
 
     div.tf-separator-icon{
         width: $icon-size; height: $icon-size;
         border: solid $thickness $modernmediumcolor;
-        border-radius: $icon-size;
+        background: $modernmediumcolor;
+        transform: rotate(45deg);
+        margin: 0 0.5rem;
 
-        position: absolute;
-        left: calc(50% - #{$icon-size / 2});
-        top: -$icon-size / 2 + $thickness / 2;
-
-        background: $bgcolor;
+        &:nth-child(1), &:nth-child(3){
+            width: $icon-size*0.666; height: $icon-size*0.666;
+        }
     }
 }
