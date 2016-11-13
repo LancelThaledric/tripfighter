@@ -1,0 +1,34 @@
+div.tf-article-mini-wrapper{
+    min-width: $article-height;
+    height: $article-height;
+    flex: $article-height;
+
+    display: flex;
+    align-items: stretch;
+
+    &:first-child{
+        flex: $article-height*2;
+    }
+
+    div.tf-article-mini-box{
+        flex: 1;
+        margin: 1rem;
+        background: $modernmediumcolor;
+
+        display: flex;
+        align-items: stretch;
+
+        div.tf-article-mini-inner{
+            margin: 1rem; padding: 1rem;
+            flex: 1;
+
+            &:hover{
+                background: $modernlightcolor;
+            }
+
+            h3{
+                margin-top: 0;
+            }
+        }
+    }
+}
