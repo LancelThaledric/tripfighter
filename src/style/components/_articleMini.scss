@@ -77,6 +77,8 @@ div.tf-article-mini-wrapper{
         z-index: 10;
         color: $bgcolor;
         overflow: hidden;
+        display: flex;
+        flex-flow: column nowrap;
 
         div.tf-transiter{
             width: 100% * 1.2588190451; height: 100%;
@@ -84,7 +86,7 @@ div.tf-article-mini-wrapper{
             top: 0; left: 100% * 1.2588190451;
             z-index: 0;
             background-size: cover;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0,0,0,0.5);
             transform: skewX(-15deg);
             transition: left ease 0.4s;
 
@@ -94,7 +96,7 @@ div.tf-article-mini-wrapper{
                 position: absolute;
                 top: 0; left: 100%;
                 z-index: 1;
-                background: rgba(0,0,0,0.4);
+                background: rgba(0,0,0,0.5);
                 transition: left ease 0s 0.4s;
             }
         }
@@ -102,17 +104,41 @@ div.tf-article-mini-wrapper{
         div.tf-article-mini-content{
             position: relative;
             z-index: 10;
+            flex: 1;
 
-            *{
+            &>*{
                 opacity: 0;
                 transition: opacity ease 0.4s;
             }
-            *:first-child{
+            &>*:first-child{
                 opacity: 1;
             }
 
             h3{
                 @extend .tf-raleway;
+                margin: 0 0 1rem;
+            }
+
+            hr{
+                border: none; border-top : solid 1px $bgcolor;
+                background: none;
+                width: auto; height: 0;
+                margin: 0;
+            }
+
+            p{
+                margin: 1rem 0;
+            }
+
+            div.tf-tag-list{
+                position: absolute;
+                bottom: 0; left: 0;
+
+                .tf-tag, .tf-tag-little{
+                    margin-bottom: 0;
+
+                    background: $fgcolor;
+                }
             }
         }
     }

@@ -4,11 +4,11 @@ $article-height: 20rem;
 @import 'articleMini';
 
 section.tf-last-articles{
-    max-width: $max-width-section;
-
-    margin: 0 auto;
 
     div.tf-article-grid{
+        max-width: $max-width-section;
+        margin: 0 auto;
+
         display: flex;
         flex-flow: row wrap;
 
@@ -22,6 +22,29 @@ section.tf-last-articles{
             margin-top: 0;
 
             strong{font-variant: small-caps; font-size: 1.2em;}
+        }
+    }
+
+    h2{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 900;
+        line-height: 1.2em;
+        font-size: 2rem;
+        text-align: center;
+        margin: 2rem 0 0;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        flex: 0;
+
+        &::before, &::after{
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: $fgcolor;
+            margin: 0 2rem;
         }
     }
 
