@@ -3,11 +3,12 @@ import 'babel-polyfill';
 import React from 'react';
 
 import TfHeader from './header.jsx';
-import TfIntro from './intro.jsx';
 import TfSeparator from './separator.jsx';
 import TfTextSeparator from './textSeparator.jsx';
 import TfLastArticles from './lastArticles.jsx';
 import TfCharacterSelect from './characterSelect.jsx';
+import TfScrollInvitation from './scrollInvitation.jsx';
+import TfPunchline from './punchline.jsx';
 
 class TfHome extends React.Component {
 
@@ -15,11 +16,11 @@ class TfHome extends React.Component {
 
         return <div id="tf-app">
             <TfHeader/>
-            <TfIntro/>
-            <TfSeparator/>
-            <TfLastArticles/>
+            <TfPunchline/>
             <TfSeparator/>
             <TfCharacterSelect/>
+            <TfLastArticles/>
+            <TfSeparator/>
         </div>;
     }
 

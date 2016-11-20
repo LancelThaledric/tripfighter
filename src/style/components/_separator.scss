@@ -8,6 +8,7 @@ div.tf-separator{
     height: $thickness;
 
     position: relative;
+    z-index: 50;
 
     display: flex;
     flex-flow: row nowrap;
