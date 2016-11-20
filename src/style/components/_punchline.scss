@@ -11,11 +11,7 @@ section.tf-site-punchline{
     margin: 0 auto;
 
     h2{
-        font-family: 'Raleway', sans-serif;
-        font-weight: 500;
-        font-size: 1.2rem;
-        line-height: 1.2em;
-        
-        strong{font-weight: 700; font-variant: small-caps; font-size: 1.2em;}
+        @extend .tf-raleway;
+        strong{ font-variant: small-caps; font-size: 1.2em; }
     }
 }
