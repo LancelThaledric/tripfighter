@@ -1,18 +1,3 @@
-a.tf-abutton,
-button,
-input[type=submit]{
-    @extend .tf-raleway;
-
-    display: inline-block;
-
-    color: $bgcolor;
-    background: $modernmediumcolor;
-    text-decoration: none;
-
-    padding: 1rem;
-    margin: 1rem;
-}
-
 .tf-center-button-bar{
     text-align: center;
 }

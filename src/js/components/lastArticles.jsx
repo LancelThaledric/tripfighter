@@ -5,6 +5,7 @@ import React from 'react';
 import {Icon} from 'react-fa';
 
 import TfArticleMini from './articleMini.jsx';
+import TfAButton from './abutton.jsx';
 
 import resource_hokusai from '../../resource/thumbnail/hokusai.png';
 import resource_mochis from '../../resource/thumbnail/mochis.png';
@@ -80,8 +81,8 @@ class TfLastArticles extends React.Component {
                     </div>
                 </TfArticleMini>
             </div>
-            <div className="tf-center-button-bar tf-last-articles-more">
-                <a href="#" className="tf-abutton" title="Voir plus d'articles">Mettez-moi une dose de <strong>Japon</strong> supplémentaire</a>
+            <div className="tf-center-button-bar">
+                <TfAButton href="#" title="Plus d'articles">Mettez-moi une dose de <strong>Japon</strong> supplémentaire</TfAButton>
             </div>
         </section>;
     }
