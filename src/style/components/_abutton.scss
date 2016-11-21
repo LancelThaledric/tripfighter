@@ -27,20 +27,20 @@ input[type=submit]{
             transition: left ease 0.4s, right ease 0.4s;
         }
         &::before{
-            left: -55% * 1.2588190451;
+            left: calc(-50% - 4rem * 1.2588190451);
         }
         &::after{
-            right: -55% * 1.2588190451;
+            right: calc(-50% - 4rem * 1.2588190451);
         }
         
     }
 
     &:hover div.tf-transiter{
         &::before{
-            left: -49% * 0.2588190451;
+            left: -48% * 0.2588190451;
         }
         &::after{
-            right: -49% * 0.2588190451;
+            right: -48% * 0.2588190451;
         }
     }
 

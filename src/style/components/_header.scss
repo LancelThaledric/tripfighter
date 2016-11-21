@@ -2,7 +2,7 @@ $header-height: 4rem;
 
 $items-font-size: 1.5rem;
 $site-title-font-size: 2.4rem;
-$items-padding: 1.2rem;
+$items-padding: 1rem;
 
 div#tf-app{
     margin-top: $header-height;
@@ -18,6 +18,11 @@ header.tf-site-header{
     top: 0;
     z-index: 100;
     width: 100%;
+
+    a{
+        color: inherit;
+        text-decoration: inherit;
+    }
 
     &::after{
         content: ''; display: block;
@@ -45,21 +50,28 @@ header.tf-site-header{
             flex-flow: row nowrap;
             align-items: center;
             justify-content: center;
-            padding: 0 $items-padding;
             height: $header-height;
             flex: 1;
         }
         &>:first-child{
-            flex: 2;
             justify-content: flex-start;
         }
         &>:last-child{
             justify-content: flex-end;
+            font-size: 2rem;
         }
 
         .tf-site-title{
             font-size: $site-title-font-size;
         }
+    }
+
+    .tf-abutton{
+        padding: 0 $items-padding; margin: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 }
