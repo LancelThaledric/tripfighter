@@ -1,0 +1,54 @@
+div.tf-menu{
+
+    position: absolute;
+    z-index: 100;
+    color: $bgcolor;
+    display: none;
+
+    div.tf-transiter{
+        position: fixed;
+        z-index: 100;
+        background: $modernmediumcolor;
+        width: calc(100% + (0.2588190451*104vh) );; height: 100vh;
+        top: 0; left: calc(-100% - (0.2588190451*204vh) );
+        transition: left ease 0.4s 0.4s;
+        transform: skewX(-15deg);
+
+        &::after{
+            content: ''; position: absolute;
+            left: -100%; top: 0;
+            width: 100%; height: 100%;
+            background: $fgcolor;
+            transition: left ease 0.4s 0.2s;
+        }
+    }
+
+    &.displayed{
+        display: block;
+    }
+
+    div.tf-menu-content{
+        position: relative;
+        z-index: 200;
+        left: -4vw;
+        transition: left ease 0.4s;
+    }
+
+    &.active{
+
+        div.tf-transiter{
+            left: -0.2588190451*52vh;
+            transition: left ease 0.4s;
+            &::after{
+                left: 0;
+                transition: left ease 0.4s 0.2s;
+            }
+        }
+
+        div.tf-menu-content{
+            left: 0;
+            transition: left ease 0.4s 0.2s;
+        }
+
+    }
+}

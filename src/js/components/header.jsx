@@ -8,11 +8,24 @@ import TfAButton from './abutton.jsx';
 
 class TfHeader extends React.Component {
 
+    constructor(props){
+        super(props);
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e){
+        this.props.onMenuToggle();
+        e.preventDefault();
+    }
+
     render(){
+
+        let menuIcon = this.props.menuToggled ? 'times' : 'bars';
 
         return <header className="tf-site-header"><nav>
             <div>
-                <TfAButton href="#" id="tf-main-menu-toggle"><Icon fixedWidth name="bars"/> Menu</TfAButton>
+                <TfAButton href="#tf-menu" id="tf-main-menu-toggle" onClick={this.handleClick}><Icon fixedWidth name={menuIcon}/> Menu</TfAButton>
             </div>
             <div>
                 <a href="#" id="tf-home-link" className="tf-site-title">TRIP FIGHTER</a>

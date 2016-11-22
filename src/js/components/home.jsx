@@ -2,7 +2,7 @@ import 'babel-polyfill';
 
 import React from 'react';
 
-import TfHeader from './header.jsx';
+import TfPage from './page.jsx';
 import TfSeparator from './separator.jsx';
 import TfTextSeparator from './textSeparator.jsx';
 import TfLastArticles from './lastArticles.jsx';
@@ -14,14 +14,13 @@ class TfHome extends React.Component {
 
     render(){
 
-        return <div id="tf-app">
-            <TfHeader/>
+        return <TfPage>
             <TfPunchline/>
             <TfSeparator/>
             <TfCharacterSelect/>
             <TfLastArticles/>
             <TfSeparator/>
-        </div>;
+        </TfPage>;
     }
 
 }
