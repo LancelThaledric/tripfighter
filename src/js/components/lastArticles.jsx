@@ -36,7 +36,7 @@ class TfLastArticles extends React.Component {
                     <h3>Goûtez aux meilleurs mochis de Tokyo</h3><hr/>
                     <p>Huuummm ! La belle bête ! C'est gourmand-croquant !</p>
                     <div className="tf-tag-list">
-                        <div className="tf-tag-little">Cuisine</div>
+                        <div className="tf-tag-little">Gastronomie</div>
                         <div className="tf-tag-little">Moderne</div>
                     </div>
                 </TfArticleMini>
@@ -44,7 +44,7 @@ class TfLastArticles extends React.Component {
                     <h3>Les thermes traditionnels c'est bon pour la santé des cheveux</h3><hr/>
                     <p>Ces bains chauds sont super trop suuuuuuuuper !</p>
                     <div className="tf-tag-list">
-                        <div className="tf-tag-little">Lifestyle</div>
+                        <div className="tf-tag-little">Style de vie</div>
                         <div className="tf-tag-little">Traditionnel</div>
                     </div>
                 </TfArticleMini>
@@ -60,7 +60,7 @@ class TfLastArticles extends React.Component {
                     <h3>La tour de Tokyo, classique indémodable</h3><hr/>
                     <p>Franchement je ne sais plus trop quoi mettre comme vignettes. Je fatigue.</p>
                     <div className="tf-tag-list">
-                        <div className="tf-tag-little">Lieux</div>
+                        <div className="tf-tag-little">Environnement</div>
                         <div className="tf-tag-little">Moderne</div>
                     </div>
                 </TfArticleMini>
@@ -68,7 +68,7 @@ class TfLastArticles extends React.Component {
                     <h3>Une ville de nuit, je ne sais même pas laquelle</h3><hr/>
                     <p>Cependant, je dois avouer que ça reste stylé.</p>
                     <div className="tf-tag-list">
-                        <div className="tf-tag-little">Lieux</div>
+                        <div className="tf-tag-little">Environnement</div>
                         <div className="tf-tag-little">Traditionnel</div>
                     </div>
                 </TfArticleMini>
@@ -78,6 +78,14 @@ class TfLastArticles extends React.Component {
                     <div className="tf-tag-list">
                         <div className="tf-tag-little">Art</div>
                         <div className="tf-tag-little">Moderne</div>
+                    </div>
+                </TfArticleMini>
+                <TfArticleMini>
+                    <h3>Une autre article dummy</h3><hr/>
+                    <p>C'est ça, l'art du dummy !</p>
+                    <div className="tf-tag-list">
+                        <div className="tf-tag-little">Divertissement</div>
+                        <div className="tf-tag-little">Traditionnel</div>
                     </div>
                 </TfArticleMini>
             </div>
