@@ -3,6 +3,7 @@ import 'babel-polyfill';
 import React from 'react';
 
 import {Icon} from 'react-fa';
+import ClassNames from 'classnames';
 
 import TfHeader from './header.jsx'
 import TfMenu from './menu.jsx'
@@ -19,13 +20,20 @@ class TfPage extends React.Component {
             searchDisplayed: false,
 
             logboxToggled: false,
-            logboxDisplayed: false
+            logboxDisplayed: false,
+
+            scrollTop: 0,
+            toScroll: undefined
         };
 
         this.handleMenuToggle = this.handleMenuToggle.bind(this);
         this.handleMenuTransitionEnd = this.handleMenuTransitionEnd.bind(this);
         this.computeShowMenu = this.computeShowMenu.bind(this);
         this.computeHideMenu = this.computeHideMenu.bind(this);
+
+        this.scrollTop = 0;
+        this.toScroll = undefined;
+        this.contentDOM = undefined;
     }
 
     handleMenuToggle(){
@@ -46,15 +54,39 @@ class TfPage extends React.Component {
         // hideLogbox();
         newState.menuDisplayed = true;
         setTimeout(function(){  //Le timeout à 10ms est fait pour séparer le display de la transition, sinon elle ne s'effectue pas.'
+            varthis.toScroll = 0;
             varthis.setState({menuToggled: true});
         }, 10);
+
+        this.scrollTop = window.scrollY;
     }
     computeHideMenu(newState){
         newState.menuToggled = false;
+        this.toScroll = this.scrollTop;
+        this.scrollTop = window.scrollY;
+    }
+
+    isFiged(){
+        return (this.state.menuToggled || this.state.searchToggled || this.state.logboxToggled);
+    }
+
+    componentDidUpdate(){
+        if(this.toScroll !== undefined){
+            window.scrollTo(0, this.toScroll);
+            this.toScroll = undefined;
+        }
+
+        if(this.isFiged()){
+            let contentStyleTop = "calc("+(-this.scrollTop)+"px + "+this.props.headerHeight+")";
+            this.contentDOM.style.top = contentStyleTop;
+        }
+
     }
 
     render(){
 
+        let contentClass = ClassNames('tf-content', {'tf-figed': this.isFiged()});
+        
         return <div id="tf-app">
             <div className="tf-header-background"/>
             <TfHeader onMenuToggle={this.handleMenuToggle} menuToggled={this.state.menuToggled}/>
@@ -62,8 +94,10 @@ class TfPage extends React.Component {
                 active={this.state.menuToggled}
                 displayed={this.state.menuDisplayed}
                 onTransitionEnd={this.handleMenuTransitionEnd}
+                figed={!this.isFiged()}
+                scrollOffset={this.isFiged() ? undefined : "calc("+(-this.scrollTop)+"px + "+this.props.headerHeight+")"}
             />
-            <div id="#tf-content" className="tf-content">
+            <div id="#tf-content" className={contentClass} ref={(contentDOM) => { this.contentDOM = contentDOM; }}>
                 {this.props.children}
             </div>
         </div>;
@@ -72,7 +106,7 @@ class TfPage extends React.Component {
 }
 
 TfPage.defaultProps = {
-    active: false
+    headerHeight: "4rem"
 };
 
 module.exports = TfPage;

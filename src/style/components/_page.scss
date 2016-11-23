@@ -10,3 +10,12 @@ div.tf-header-background{
     z-index: 99;
     background: $modernmediumcolor;
 }
+
+div.tf-content{
+    width: 100%;
+}
+
+div.tf-content.tf-figed{
+    position: fixed;
+    z-index: -1;
+}
