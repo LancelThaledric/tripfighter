@@ -1,3 +1,5 @@
+@import 'characterSelectMini';
+
 div.tf-menu{
 
     position: absolute;
@@ -31,7 +33,8 @@ div.tf-menu{
         position: relative;
         z-index: 200;
         left: -4vw;
-        transition: left ease 0.4s;
+        opacity: 0;
+        transition: left ease 0.4s, opacity ease 0.4s;
     }
 
     &.active{
@@ -47,7 +50,8 @@ div.tf-menu{
 
         div.tf-menu-content{
             left: 0;
-            transition: left ease 0.4s 0.2s;
+            opacity: 1;
+            transition: left ease 0.4s 0.2s, opacity ease 0.4s 0.2s;
         }
 
     }
