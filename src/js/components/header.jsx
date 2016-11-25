@@ -3,6 +3,7 @@ import 'babel-polyfill';
 import React from 'react';
 
 import {Icon} from 'react-fa';
+import {Link} from 'react-router';
 
 import TfAButton from './abutton.jsx';
 
@@ -28,7 +29,7 @@ class TfHeader extends React.Component {
                 <TfAButton href="#tf-menu" id="tf-main-menu-toggle" onClick={this.handleClick}><Icon fixedWidth name={menuIcon}/> Menu</TfAButton>
             </div>
             <div>
-                <a href="#" id="tf-home-link" className="tf-site-title">TRIP FIGHTER</a>
+                <Link to="/tripfighter/build/" id="tf-home-link" className="tf-site-title">TRIP FIGHTER</Link>
             </div>
             <div>
                 <TfAButton href="#" id="tf-search-link" title="Recherchez du Japon"><Icon fixedWidth name="search"/></TfAButton>

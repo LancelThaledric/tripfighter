@@ -7,7 +7,8 @@ module.exports = {
     ],
     output: {
         path: './build',
-        filename: 'app.bundle.js'
+        filename: 'app.bundle.js',
+        publicPath: '/tripfighter/build/'   
     },
     module: {
         loaders: [
@@ -39,6 +40,13 @@ module.exports = {
                 loader: 'file-loader',
                 query:{
                     name: 'resource/[name].[ext]'
+                }
+            },
+            {
+                test: /\.htaccess$/,
+                loader: 'file-loader',
+                query:{
+                    name: '[name].[ext]'
                 }
             }
         ]

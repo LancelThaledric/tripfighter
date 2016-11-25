@@ -2,6 +2,8 @@ import 'babel-polyfill';
 
 import React from 'react';
 
+import {Link} from 'react-router';
+
 import resource_leftFighter from '../../resource/fighter-left.png';
 import resource_rightFighter from '../../resource/fighter-right.png';
 import resource_versus from '../../resource/versus.png';
@@ -19,7 +21,7 @@ class TfCharacterSelect extends React.Component {
             </p>
             <div className="tf-character-select-selector">
                 <div className="tf-character-left">
-                    <a href="#" className="tf-character-select-link">
+                    <Link to="/tripfighter/build/moderne/" className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Moderne</h3>
                             <img className="tf-fighter" src={resource_leftFighter} alt=""/>
@@ -31,10 +33,10 @@ class TfCharacterSelect extends React.Component {
                             </div>
                             <img className="tf-character-select-versus" src={resource_versus} alt=""/>
                         </div>
-                    </a>
+                    </Link>
                 </div>
                 <div className="tf-character-right">
-                    <a href="#"  className="tf-character-select-link">
+                    <Link to="/tripfighter/build/traditionnel/" className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Traditionnel</h3>
                             <img className="tf-fighter" src={resource_rightFighter} alt=""/>
@@ -46,7 +48,7 @@ class TfCharacterSelect extends React.Component {
                             </div>
                             <img className="tf-character-select-versus" src={resource_versus} alt=""/>
                         </div>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>;
