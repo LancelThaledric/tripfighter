@@ -5,6 +5,7 @@ import React from 'react';
 import TfPage from './page.jsx';
 import TfSeparator from './separator.jsx';
 import TfThemeSelect from './themeSelect.jsx';
+import TfPageTitle from './pagetitle.jsx';
 
 class TfModerne extends React.Component {
 
@@ -12,7 +13,7 @@ class TfModerne extends React.Component {
 
         return <TfPage>
             <TfSeparator/>
-            <h1>Moderne</h1>
+            <TfPageTitle>Moderne</TfPageTitle>
             <TfThemeSelect/>
         </TfPage>;
     }

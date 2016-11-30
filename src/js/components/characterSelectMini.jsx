@@ -24,7 +24,7 @@ class TfCharacterSelectMini extends React.Component {
                         </div>
                     </Link>
                 </div>
-                <div className="tf-character-right/">
+                <div className="tf-character-right">
                     <Link to="/tripfighter/build/traditionnel"  className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Traditionnel</h3>

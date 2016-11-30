@@ -1,0 +1,28 @@
+section.tf-pagetitle{
+    @extend .inverted-section;
+
+    display: flex;
+
+    h1{
+        @extend .tf-raleway;
+        @extend .tf-center;
+        font-size: 2rem;
+        text-align: center;
+        margin: 2rem 0;
+        flex: 1;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        flex: 0;
+
+        &::before, &::after{
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: $bgcolor;
+            margin: 0 2rem;
+        }
+    }
+}
