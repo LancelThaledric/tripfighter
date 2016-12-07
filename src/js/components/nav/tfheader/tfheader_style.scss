@@ -1,0 +1,66 @@
+@import '../../../../style/base/all';
+
+$items-font-size: 1.5rem;
+$site-title-font-size: 2.4rem;
+$items-padding: 1rem;
+
+header.tf-site-header{
+    display: flex;
+    flex-flow: row nowrap;
+
+    color: $bgcolor;
+
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    width: 100%;
+
+    a{
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    nav{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        justify-content: space-between;
+
+        font-size: $items-font-size;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 900;
+        line-height: 1.2em;
+
+        width: 100%;
+
+        &>*{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+            height: $header-height;
+            flex: 1;
+        }
+        &>:first-child{
+            justify-content: flex-start;
+        }
+        &>:last-child{
+            justify-content: flex-end;
+            font-size: 2rem;
+        }
+
+        .tf-site-title{
+            font-size: $site-title-font-size;
+        }
+    }
+
+    .tf-abutton{
+        padding: 0 $items-padding; margin: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+    }
+
+}

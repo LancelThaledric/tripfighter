@@ -1,0 +1,22 @@
+@import '../../../../style/base/all';
+
+div#tf-app{
+    margin-top: $header-height;
+}
+
+div.tf-header-background{
+    display: block;
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: $header-height;
+    z-index: 99;
+    background: $modernmediumcolor;
+}
+
+div.tf-content{
+    width: 100%;
+}
+
+div.tf-content.tf-figed{
+    position: fixed;
+    z-index: -1;
+}

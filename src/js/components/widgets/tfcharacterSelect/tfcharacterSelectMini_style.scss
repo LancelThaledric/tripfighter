@@ -1,0 +1,53 @@
+@import './tfcharacterSelect_style_generic.scss';
+
+section.tf-character-select-mini{
+    $character-select-height: 8rem;
+
+    @extend .tf-character-select;
+    background: none;
+
+    h2{
+        font-weight: 500;
+    }
+
+    div.tf-character-left, div.tf-character-right{
+        height: $character-select-height !important;
+    }
+
+    img.tf-fighter{
+        height: 384px/2 !important;
+        bottom: auto !important;
+        top: 0;
+    }
+
+    h3.tf-character-select-title{
+        margin: 2rem;
+    }
+
+    div.tf-character-left{
+        h3.tf-character-select-title{
+            margin-left: 8rem !important;
+        }
+        a.tf-character-select-link:hover{
+            h3.tf-character-select-title{
+                margin-left: 10rem !important;
+            }
+            img.tf-fighter{
+                margin-left: 4rem !important;
+            }
+        }
+    }
+    div.tf-character-right{
+        h3.tf-character-select-title{
+            margin-right: 8rem !important;
+        }
+        a.tf-character-select-link:hover{
+            h3.tf-character-select-title{
+                margin-right: 10rem !important;
+            }
+            img.tf-fighter{
+                    margin-right: 4rem !important;
+                }
+        }
+    }
+}

@@ -1,0 +1,291 @@
+@import '../../../../style/base/all';
+
+$character-select-height: 32rem;
+
+section.tf-character-select{
+
+    @extend .inverted-section;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+
+    h2{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 900;
+        line-height: 1.2em;
+        font-size: 2rem;
+        text-align: center;
+        margin: 2rem 0;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        flex: 0;
+
+        &::before, &::after{
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: $bgcolor;
+            margin: 0 2rem;
+        }
+    }
+
+    p.tf-character-select-intro{
+        @extend .tf-center;
+        @extend .tf-raleway;
+        margin: 0 0 1.5rem 0;
+    }
+
+    div.tf-character-select-selector{
+        display: flex;
+        flex-flow: row nowrap;
+
+        width: 100%;
+        overflow: hidden;
+
+        &:hover{
+            div.tf-character-left h3.tf-character-select-title{
+                margin-left: -4rem;
+            }
+            div.tf-character-right h3.tf-character-select-title{
+                margin-right: -4rem;
+            }
+            h3.tf-character-select-title,
+            p.tf-fighter-description{
+                opacity: 0.5;
+            }
+            div.tf-character-left p.tf-fighter-description{
+                margin-left: 12rem;
+            }
+            div.tf-character-right p.tf-fighter-description{
+                margin-right: 12rem;
+            }
+
+            div.tf-character-inner{
+                opacity: 0.25;
+            }
+            div.tf-character-left img.tf-fighter{
+                margin-left: -2rem;
+            }
+            div.tf-character-right img.tf-fighter{
+                margin-right: -2rem;
+            }
+        }
+
+        div.tf-character-left, div.tf-character-right{
+            flex: 1;
+            height: $character-select-height;
+
+            display: flex;
+            align-items: stretch;
+            position: relative;
+
+            transition: flex ease 0.4s;
+
+            &:hover{
+                flex: 1.2;  // hack : le hover devrait se faire sur le <a> normalement. Mais cela nécessiterait de fixer cette valeur en JSX.
+            }
+
+            a.tf-character-select-link{
+                flex: 1;
+                display: flex;
+                align-items: stretch;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+
+                transform: skewX(-15deg);
+
+            }
+            a.tf-character-select-link:hover{
+                div.tf-character-inner::after{
+                    opacity: 1;
+                }
+            }
+            
+        }
+
+        div.tf-character-left{
+            margin-left: -0.2588190451 * $character-select-height;
+            a.tf-character-select-link div.tf-character-inner{
+                background-image: url('../../../../resource/character-modern-background-toned-darken.jpg');
+                &::after{
+                    background-image: url('../../../../resource/character-modern-background-darken.jpg');
+                }
+                padding-left: 0.2588190451 * $character-select-height * 2 + 4rem;
+            }
+
+            a.tf-character-select-link:hover{
+                h3.tf-character-select-title{
+                    margin-left: 4rem;
+                    opacity: 1;
+                }
+                p.tf-fighter-description{
+                    margin-left: 20rem;
+                    opacity: 1;
+                }
+                div.tf-character-inner{
+                    opacity: 1;
+                }
+                img.tf-fighter{
+                    margin-left: 6rem;
+                }
+            }
+        }
+
+        div.tf-character-right{
+            margin-right: -0.2588190451 * $character-select-height;
+            a.tf-character-select-link div.tf-character-inner{
+                background-image: url('../../../../resource/character-trad-background-toned-darken.jpg');
+                &::after{
+                    background-image: url('../../../../resource/character-trad-background-darken.jpg');
+                }
+                padding-right: 0.2588190451 * $character-select-height * 2 + 4rem;
+                text-align: right;
+            }
+
+            a.tf-character-select-link:hover{
+                h3.tf-character-select-title{
+                    margin-right: 4rem;
+                    opacity: 1;
+                }
+                p.tf-fighter-description{
+                    margin-right: 20rem;
+                    opacity: 1;
+                }
+                div.tf-character-inner{
+                    opacity: 1;
+                }
+                img.tf-fighter{
+                    margin-right: 6rem;
+                }
+            }
+        }
+    }
+
+    div.tf-character-inner{
+        flex: 1;
+        transform: skewX(15deg);
+
+        background-size: cover;
+        background-position: center;
+        transform: skewX(15deg);
+
+        transition: opacity ease 0.4s;
+
+        margin: 0 -0.2588190451 * $character-select-height;
+        padding: 0 0.2588190451 * $character-select-height;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+
+        position: relative;
+        &::after{
+            content: ''; display: block;
+            z-index: -2;
+            width: 100%; height: 100%;
+            position: absolute; top: 0; left: 0;
+            background-size: inherit;
+            background-position: inherit;
+            opacity: 0;
+            transition: opacity ease 0.4s;
+        }
+    }
+
+    h3.tf-character-select-title{
+        @extend .tf-raleway;
+        @extend strong;
+        font-size: 4rem;
+        text-transform: uppercase;
+        color: $bgcolor;
+
+        transition: margin ease 0.4s,
+                    opacity ease 0.4s;
+        
+        position: relative;
+
+        span.tf-character-title-small{
+            display: block;
+            font-size: .5em;
+            line-height: 0.4em;
+        }
+    }
+
+    img.tf-fighter{
+        position: absolute;
+        z-index: 10;
+        height: 384px; width: auto;
+        transition: margin ease 0.4s;
+    }
+    div.tf-character-left img.tf-fighter{
+        bottom: 0; left: 0.2588190451 * $character-select-height * 2;
+    }
+    div.tf-character-right img.tf-fighter{
+        bottom: 0; right: 0.2588190451 * $character-select-height * 2;
+    }
+
+    p.tf-fighter-description{
+        @extend .tf-raleway;
+        color: $bgcolor;
+        font-size: 1.2em;
+        max-width: 24rem;
+
+        transition: margin ease 0.4s,
+                    opacity ease 0.4s;
+    }
+    div.tf-character-left p.tf-fighter-description{
+        margin-left: 16rem;
+        align-self: flex-start;
+    }
+    div.tf-character-right p.tf-fighter-description{
+        margin-right: 16rem;
+        align-self: flex-end;
+    }
+
+    div.tf-fighter-bar{
+        height: 2rem;
+        border: solid 0.25rem $bgcolor;
+        transform: skewX(-15deg);
+        position: relative;
+        z-index: 1;
+        margin-top: 1rem;
+    }
+    div.tf-character-left div.tf-fighter-bar{
+        margin-right: 4rem;
+        margin-left: -8rem;
+    }
+    div.tf-character-right div.tf-fighter-bar{
+        margin-left: 4rem;
+        margin-right: -8rem;
+        text-align: right;
+    }
+
+    div.tf-fighter-bar-in{
+        display: inline-block;
+        background: $bgcolor;
+        height: 100%;
+    }
+    div.tf-character-left div.tf-fighter-bar-in{
+        width: 87%;
+    }
+    div.tf-character-right div.tf-fighter-bar-in{
+        width: 78%;
+    }
+
+    img.tf-character-select-versus{
+        height: 8rem; width: auto;
+        position: absolute;
+        top: 50%;
+        z-index: 50;
+    }
+    div.tf-character-left img.tf-character-select-versus{
+        right: 6.1rem;
+    }
+    div.tf-character-right img.tf-character-select-versus{
+        left: 4.1rem;
+    }
+}

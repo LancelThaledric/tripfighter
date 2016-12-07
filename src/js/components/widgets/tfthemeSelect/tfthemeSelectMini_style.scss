@@ -1,0 +1,17 @@
+@import './tfthemeSelect_style_generic.scss';
+
+section.tf-theme-select-mini{
+    $theme-selector-height: 16rem;
+
+    @extend .tf-theme-select;
+    @extend .inverted-section;
+
+    div.tf-theme-select-selector{
+
+        &>a{
+            height: $theme-selector-height;
+        }
+
+    }
+
+}

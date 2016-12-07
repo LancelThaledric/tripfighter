@@ -1,13 +1,5 @@
 @import 'normalize-5.0.0';
-@import 'variables';
-
-@import 'base/colors';
-@import 'base/typography';
-
-@import 'components/all';
-
-@import 'components/home';
-@import 'components/moderne';
+@import 'base/all';
 
 *, *::before, *::after{box-sizing: border-box;}
 
