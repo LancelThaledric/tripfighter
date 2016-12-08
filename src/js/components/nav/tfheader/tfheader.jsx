@@ -31,7 +31,7 @@ class TfHeader extends React.Component {
                 <TfAButton href="#tf-menu" id="tf-main-menu-toggle" onClick={this.handleClick}><Icon fixedWidth name={menuIcon}/> Menu</TfAButton>
             </div>
             <div>
-                <TfAButton to="/tripfighter/build/" id="tf-home-link" className="tf-site-title">TRIP FIGHTER</TfAButton>
+                <TfAButton href="/tripfighter/build/" id="tf-home-link" className="tf-site-title">TRIP FIGHTER</TfAButton>
             </div>
             <div>
                 <TfAButton href="#" id="tf-search-link" title="Recherchez du Japon"><Icon fixedWidth name="search"/></TfAButton>

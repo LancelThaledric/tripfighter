@@ -1,0 +1,21 @@
+//////////////////////////////////////////////////////
+// Character Select
+//////////////////////////////////////////////////////
+
+section.tf-character-select div.tf-character-select-selector{
+
+    div.tf-character-left a.tf-character-select-link div.tf-character-inner{
+        background-image: url('../resource/univers/modern-colors.jpg');
+        &::after{
+            background-image: url('../resource/univers/modern-dark.jpg');
+        }
+    }
+
+    div.tf-character-right a.tf-character-select-link div.tf-character-inner{
+        background-image: url('../resource/univers/trad-colors.jpg');
+        &::after{
+            background-image: url('../resource/univers/trad-dark.jpg');
+        }
+    }
+
+}
