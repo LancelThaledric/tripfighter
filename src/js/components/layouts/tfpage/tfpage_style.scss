@@ -1,21 +1,24 @@
 @import '../../../../style/base/all';
 
+// Header-falloff
 div#tf-app{
     margin-top: $header-height;
 }
 
+// Header background
 div.tf-header-background{
     display: block;
-    position: fixed; top: 0; left: 0;
+    position: fixed; top: 0; left: 0; z-index: 99;
     width: 100%; height: $header-height;
-    z-index: 99;
-    background: $modernmediumcolor;
+    background: #000;
 }
 
+// Full-width static content
 div.tf-content{
     width: 100%;
 }
 
+// Static-content when menu appears
 div.tf-content.tf-figed{
     position: fixed;
     z-index: -1;

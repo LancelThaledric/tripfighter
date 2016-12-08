@@ -11,8 +11,8 @@ div.tf-menu{
     div.tf-transiter{
         position: fixed;
         z-index: 100;
-        background: $modernmediumcolor;
-        width: calc(100% + (0.2588190451*104vh) );; height: 100vh;
+        background: $modernlightcolor;
+        width: calc(100% + (0.2588190451*104vh) ); height: 100vh;
         top: 0; left: calc(-100% - (0.2588190451*204vh) );
         transition: left ease 0.4s 0.4s;
         transform: skewX(-15deg);

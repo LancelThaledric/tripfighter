@@ -4,7 +4,7 @@ $icon-size: 2rem;
 $thickness: 0.4rem;
 
 div.tf-separator{
-    background: $modernmediumcolor;
+    background: $modernlightcolor;
 
     width: 100%;
     height: $thickness;
@@ -20,8 +20,8 @@ div.tf-separator{
 
     div.tf-separator-icon{
         width: $icon-size; height: $icon-size;
-        border: solid $thickness $modernmediumcolor;
-        background: $modernmediumcolor;
+        border: solid $thickness $modernlightcolor;
+        background: $modernlightcolor;
         transform: rotate(45deg);
         margin: 0 0.5rem;
 
@@ -39,7 +39,7 @@ h2.tf-text-separator{
     font-size: 2rem;
     text-align: center;
     margin: 2rem 0;
-    color: $modernmediumcolor;
+    color: $modernlightcolor;
 
     display: flex;
     flex-flow: row nowrap;
@@ -51,6 +51,6 @@ h2.tf-text-separator{
         content: '';
         flex: 1;
         height: $thickness;
-        background: $modernmediumcolor;
+        background: $modernlightcolor;
     }
 }

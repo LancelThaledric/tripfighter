@@ -10,7 +10,7 @@ input[type=submit]{
     overflow: hidden;
 
     color: $bgcolor;
-    background: $modernmediumcolor;
+    background: $modernlightcolor;
     text-decoration: none;
 
     padding: 1rem 1.2rem;
@@ -24,7 +24,7 @@ input[type=submit]{
             position: absolute; z-index: 0;
             top: 0;
             width: 50% * 1.2588190451; height: 100%;
-            background: $modernlightcolor;
+            background: $bgcolor;
             transform: skewX(-15deg);
             transition: left ease 0.4s, right ease 0.4s;
         }

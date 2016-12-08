@@ -1,6 +1,14 @@
 @import 'normalize-5.0.0';
 @import 'base/all';
 
+@import 'components/layouts';
+@import 'components/nav';
+@import 'components/pages';
+@import 'components/sections';
+@import 'components/widgets';
+
+// Custom reset
+
 *, *::before, *::after{box-sizing: border-box;}
 
 a{
