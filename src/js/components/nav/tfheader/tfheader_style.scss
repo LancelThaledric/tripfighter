@@ -26,7 +26,6 @@ header.tf-site-header{
         width: 100%;
 
         @extend .tf-raleway;
-        @extend strong;
         font-size: $items-font-size;
 
         &>*{
@@ -46,7 +45,9 @@ header.tf-site-header{
         }
 
         .tf-site-title{
+            @extend strong;
             font-size: $site-title-font-size;
+            cursor: pointer;
         }
     }
 
@@ -69,6 +70,11 @@ header.tf-site-header{
                 height: 0.25rem;
                 top: auto; bottom: 0;
             }
+        }
+
+        transition: text-shadow ease 0.4s;
+        &:hover{
+            text-shadow: $bgcolor 0px 0px 1px, $bgcolor 0px 0px 1px, $bgcolor 0px 0px 1px, $bgcolor 0px 0px 1px;
         }
     }
 
