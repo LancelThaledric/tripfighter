@@ -1,6 +1,99 @@
 @import './tfcharacterSelect_style_generic.scss';
 
 section.tf-character-select-mini{
+
+    @extend .tf-character-select;
+
+    $character-select-height: 8rem;
+
+    h2{
+        font-weight: 500;
+    }
+
+    div.tf-character-select-selector{
+        div.tf-character-left, div.tf-character-right{
+            height: $character-select-height;
+        }
+
+        div.tf-character-left{
+            margin-left: sin(-15deg) * $character-select-height;
+
+            a.tf-character-select-link div.tf-character-inner{
+                //padding-left: 0.2588190451 * $character-select-height * 2 + 4rem;
+                padding-left: -1 * sin(-15deg) * $character-select-height * 2 + 4rem;
+            }
+        }
+
+        div.tf-character-right{
+            margin-right: sin(-15deg) * $character-select-height;
+            a.tf-character-select-link div.tf-character-inner{
+                padding-right: -1 * sin(-15deg) * $character-select-height * 2 + 4rem;
+            }
+        }
+
+        div.tf-character-inner{
+            margin: 0 sin(-15deg) * $character-select-height;
+            padding: 0 -1 * sin(-15deg) * $character-select-height;
+        }
+
+        div.tf-character-left img.tf-fighter{
+            left: -1 * sin(-15deg) * $character-select-height * 2;
+        }
+        div.tf-character-right img.tf-fighter{
+            right: -1 * sin(-15deg) * $character-select-height * 2;
+        }
+
+        img.tf-fighter{
+            height: 384px / 2;
+            bottom: auto;
+            top: 0;
+        }
+
+        h3.tf-character-select-title{
+            margin: 2rem;
+        }
+
+        div.tf-character-left{
+            h3.tf-character-select-title{
+                margin-left: 8rem;
+            }
+            a.tf-character-select-link:hover{
+                h3.tf-character-select-title{
+                    margin-left: 10rem;
+                }
+                img.tf-fighter{
+                    margin-left: 4rem;
+                }
+            }
+        }
+        div.tf-character-right{
+            h3.tf-character-select-title{
+                margin-right: 8rem;
+            }
+            a.tf-character-select-link:hover{
+                h3.tf-character-select-title{
+                    margin-right: 10rem;
+                }
+                img.tf-fighter{
+                    margin-right: 4rem;
+                }
+            }
+        }
+
+        &:hover{
+            div.tf-character-left h3.tf-character-select-title{
+                margin-left: 4rem;
+            }
+            div.tf-character-right h3.tf-character-select-title{
+                margin-right: 4rem;
+            }
+        }
+    }
+
+}
+
+/*
+section.tf-character-select-mini{
     $character-select-height: 8rem;
 
     @extend .tf-character-select;
@@ -50,4 +143,4 @@ section.tf-character-select-mini{
                 }
         }
     }
-}
+}*/

@@ -1,1 +1,71 @@
 @import './tfcharacterSelect_style_generic.scss';
+
+section.tf-character-select{
+
+    $character-select-height: 32rem;
+
+    div.tf-character-select-selector{
+        div.tf-character-left, div.tf-character-right{
+            height: $character-select-height;
+        }
+
+        div.tf-character-left{
+            margin-left: sin(-15deg) * $character-select-height;
+
+            a.tf-character-select-link div.tf-character-inner{
+                //padding-left: 0.2588190451 * $character-select-height * 2 + 4rem;
+                padding-left: -1 * sin(-15deg) * $character-select-height * 2 + 4rem;
+            }
+        }
+
+        div.tf-character-right{
+            margin-right: sin(-15deg) * $character-select-height;
+            a.tf-character-select-link div.tf-character-inner{
+                padding-right: -1 * sin(-15deg) * $character-select-height * 2 + 4rem;
+            }
+        }
+
+        div.tf-character-inner{
+            margin: 0 sin(-15deg) * $character-select-height;
+            padding: 0 -1 * sin(-15deg) * $character-select-height;
+        }
+
+        div.tf-character-left img.tf-fighter{
+            bottom: 0; left: -1 * sin(-15deg) * $character-select-height * 2;
+        }
+        div.tf-character-right img.tf-fighter{
+            bottom: 0; right: -1 * sin(-15deg) * $character-select-height * 2;
+        }
+
+        div.tf-character-left{
+            a.tf-character-select-link:hover{
+                h3.tf-character-select-title{
+                    margin-left: 4rem;
+                }
+                img.tf-fighter{
+                    margin-left: 6rem;
+                }
+            }
+        }
+        div.tf-character-right{
+            a.tf-character-select-link:hover{
+                h3.tf-character-select-title{
+                    margin-right: 4rem;
+                }
+                img.tf-fighter{
+                    margin-right: 6rem;
+                }
+            }
+        }
+
+        &:hover{
+            div.tf-character-left h3.tf-character-select-title{
+                margin-left: -4rem;
+            }
+            div.tf-character-right h3.tf-character-select-title{
+                margin-right: -4rem;
+            }
+        }
+    }
+
+}

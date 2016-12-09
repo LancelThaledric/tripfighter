@@ -1,8 +1,9 @@
 //////////////////////////////////////////////////////
-// Character Select
+// Character Select & Character Select Mini
 //////////////////////////////////////////////////////
 
-section.tf-character-select div.tf-character-select-selector{
+section.tf-character-select div.tf-character-select-selector,
+section.tf-character-select-mini div.tf-character-select-selector{
 
     div.tf-character-left a.tf-character-select-link div.tf-character-inner{
         background-image: url('../resource/univers/modern-colors.jpg');
