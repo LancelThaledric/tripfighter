@@ -22,6 +22,114 @@ section.tf-character-select-mini div.tf-character-select-selector{
 }
 
 //////////////////////////////////////////////////////
+// Theme Select & Theme Select Mini
+//////////////////////////////////////////////////////
+
+// Modern version
+.tf-modern{
+    section.tf-theme-select,
+    section.tf-theme-select-mini{
+
+        a.tf-theme-environnement div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/environnement-modern.jpg');
+        }
+        a.tf-theme-art div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/art-modern.jpg');
+        }
+        a.tf-theme-divertissement div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/divertissement-modern.jpg');
+        }
+        a.tf-theme-gastronomie div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/gastronomie-modern.jpg');
+        }
+        a.tf-theme-vetements div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/vetements-modern.jpg');
+        }
+        a.tf-theme-styledevie div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/styledevie-modern.jpg');
+        }
+
+    }
+}
+
+// Traditionnal version
+.tf-trad{
+    section.tf-theme-select,
+    section.tf-theme-select-mini{
+
+        a.tf-theme-environnement div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/environnement-trad.jpg');
+        }
+        a.tf-theme-art div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/art-trad.jpg');
+        }
+        a.tf-theme-divertissement div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/divertissement-trad.jpg');
+        }
+        a.tf-theme-gastronomie div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/gastronomie-trad.jpg');
+        }
+        a.tf-theme-vetements div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/vetements-trad.jpg');
+        }
+        a.tf-theme-styledevie div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/styledevie-trad.jpg');
+        }
+    }
+}
+
+// Colored on hover
+section.tf-theme-select,
+section.tf-theme-select-mini{
+
+    a.tf-theme-environnement div.tf-theme-thumbnail{
+        background-image: url('../resource/themes/environnement.jpg');
+    }
+    a.tf-theme-art div.tf-theme-thumbnail{
+        background-image: url('../resource/themes/art.jpg');
+    }
+    a.tf-theme-divertissement div.tf-theme-thumbnail{
+        background-image: url('../resource/themes/divertissement.jpg');
+    }
+    a.tf-theme-gastronomie div.tf-theme-thumbnail{
+        background-image: url('../resource/themes/gastronomie.jpg');
+    }
+    a.tf-theme-vetements div.tf-theme-thumbnail{
+        background-image: url('../resource/themes/vetements.jpg');
+    }
+    a.tf-theme-styledevie div.tf-theme-thumbnail{
+        background-image: url('../resource/themes/styledevie.jpg');
+    }
+}
+
+// Nav main menu version
+
+div.tf-menu{
+    section.tf-theme-select,
+    section.tf-theme-select-mini{
+
+        a.tf-theme-environnement div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/environnement-modern.jpg');
+        }
+        a.tf-theme-art div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/art-trad.jpg');
+        }
+        a.tf-theme-divertissement div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/divertissement-modern.jpg');
+        }
+        a.tf-theme-gastronomie div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/gastronomie-trad.jpg');
+        }
+        a.tf-theme-vetements div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/vetements-modern.jpg');
+        }
+        a.tf-theme-styledevie div.tf-theme-thumbnail::after{
+            background-image: url('../resource/themes/styledevie-trad.jpg');
+        }
+    }
+}
+
+//////////////////////////////////////////////////////
 // Separator
 //////////////////////////////////////////////////////
 

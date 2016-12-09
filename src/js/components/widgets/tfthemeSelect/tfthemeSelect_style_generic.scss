@@ -76,6 +76,7 @@ section.tf-theme-select{
         }
     }
 
+    /*
     a.tf-theme-environnement div.tf-theme-thumbnail{
         background-image: url('../../../../resource/themes/environnement.jpg');
         &::after{
@@ -111,7 +112,7 @@ section.tf-theme-select{
         &::after{
             background-image: url('../../../../resource/themes/styledevie-trad.jpg');
         }
-    }
+    }*/
 
     h3.tf-theme-title{
         @extend .tf-raleway;
