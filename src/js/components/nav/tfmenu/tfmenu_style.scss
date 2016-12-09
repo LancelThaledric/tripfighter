@@ -11,7 +11,7 @@ div.tf-menu{
     div.tf-transiter{
         position: fixed;
         z-index: 100;
-        background: $modernlightcolor;
+        background: $bgcolor;
         width: calc(100% + (0.2588190451*104vh) ); height: 100vh;
         top: 0; left: calc(-100% - (0.2588190451*204vh) );
         transition: left ease 0.4s 0.4s;
@@ -57,7 +57,7 @@ div.tf-menu{
         div.tf-menu-content{
             left: 0;
             opacity: 1;
-            transition: left ease 0.4s 0.2s, opacity ease 0.4s 0.2s;
+            transition: left ease 0.4s 0.4s, opacity ease 0.4s 0.4s;
         }
 
     }
