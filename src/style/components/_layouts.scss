@@ -3,6 +3,9 @@
 //////////////////////////////////////////////////////
 
 // Header background
-div.tf-header-background{
+.tf-modern div.tf-header-background{
     background: $modernlightcolor; //red
+}
+.tf-trad div.tf-header-background{
+    background: $tradlightcolor; //yellow
 }

@@ -19,3 +19,43 @@ section.tf-character-select div.tf-character-select-selector{
     }
 
 }
+
+//////////////////////////////////////////////////////
+// Separator
+//////////////////////////////////////////////////////
+
+.tf-modern div.tf-separator{
+    background: $modernlightcolor;
+
+    div.tf-separator-icon{
+        border-color: $modernlightcolor;
+        background: $modernlightcolor;
+    }
+}
+
+.tf-trad div.tf-separator{
+    background: $tradlightcolor;
+
+    div.tf-separator-icon{
+        border-color: $tradlightcolor;
+        background: $tradlightcolor;
+    }
+}
+
+//////////////////////////////////////////////////////
+// Text Separator
+//////////////////////////////////////////////////////
+
+.tf-modern h2.tf-text-separator{
+    color: $modernlightcolor;
+    &::before, &::after{
+        background: $modernlightcolor;
+    }
+}
+
+.tf-trad h2.tf-text-separator{
+    color: $modernlightcolor;
+    &::before, &::after{
+        background: $modernlightcolor;
+    }
+}
