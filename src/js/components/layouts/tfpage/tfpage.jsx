@@ -88,8 +88,10 @@ class TfPage extends React.Component {
     render(){
 
         let contentClass = ClassNames('tf-content', {'tf-figed': this.isFiged()});
+
+        let universClass = ClassNames(this.props.univers);
         
-        return <div id="tf-app">
+        return <div id="tf-app" className={universClass}>
             <div className="tf-header-background"/>
             <TfHeader onMenuToggle={this.handleMenuToggle} menuToggled={this.state.menuToggled}/>
             <TfMenu

@@ -16,11 +16,11 @@ import '../.htaccess';
 ReactDOM.render(
     <Router history={browserHistory}>
         <Route path="tripfighter/build">
-            <IndexRoute component={TfHome}/>
-            <Route path="moderne" component={TfUnivers}/>
-            <Route path="traditionnel" component={TfUnivers}/>
+            <IndexRoute component={TfHome} univers="tf-modern"/>
+            <Route path="moderne" component={TfUnivers} univers="tf-modern"/>
+            <Route path="traditionnel" component={TfUnivers} univers="tf-trad"/>
         </Route>
-        <Route path="*" component={Tf404}/>
+        <Route path="*" component={Tf404} univers="tf-modern"/>
     </Router>,
     document.getElementById('root')
 );
