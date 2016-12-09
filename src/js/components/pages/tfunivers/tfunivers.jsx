@@ -15,7 +15,7 @@ class TfUnivers extends React.Component {
 
     render(){
 
-        return <TfPage {...this.props.route}>
+        return <TfPage {...this.props}>
             <TfSeparator/>
             <TfPageTitle>Univers {this.props.name}</TfPageTitle>
             <TfThemeSelectMini/>

@@ -12,7 +12,7 @@ class Tf404 extends React.Component {
 
     render(){
 
-        return <TfPage {...this.props.route}>
+        return <TfPage {...this.props}>
             <TfSeparator/>
             <h1>404 - Page non trouvée</h1>
             <TfSeparator/>

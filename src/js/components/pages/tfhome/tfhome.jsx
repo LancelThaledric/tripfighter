@@ -16,7 +16,7 @@ class TfHome extends React.Component {
 
     render(){
 
-        return <TfPage {...this.props.route}>
+        return <TfPage {...this.props}>
             <TfPunchline/>
             <TfSeparator/>
             <TfCharacterSelect/>
