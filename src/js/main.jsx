@@ -1,4 +1,6 @@
 import 'babel-polyfill';
+// Configuration
+import {baseURL} from 'config';
 // React
 import ReactDOM from 'react-dom';
 import React from 'react';
@@ -13,9 +15,10 @@ import style from '../style/style.scss';
 import index from 'file?name=[name].[ext]!../index.html';
 import '../.htaccess';
 
+
 ReactDOM.render(
     <Router history={browserHistory}>
-        <Route path="tripfighter/build">
+        <Route path={baseURL}>
             <IndexRoute component={(props, state, params) => <TfHome univers="tf-modern"/>}/>
             <Route path="moderne" component={(props, state, params) => <TfUnivers univers="tf-modern" name="Moderne"/>}/>
             <Route path="traditionnel" component={(props, state, params) => <TfUnivers univers="tf-trad" name="Traditionnel"/>}/>

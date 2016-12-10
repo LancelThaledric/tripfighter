@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "title": "Hokusai : Où trouver les meilleurs oeuvres ?",
+        "description": "Hokusai c'est vraiment trop de la balle",
+        "tags": ["Art", "Traditionnel"],
+        "image": "media/thumbnail/hokusai.png"
+    },
+    {
+        "id": 2,
+        "title": "Goûtez aux meilleurs mochis de Tokyo",
+        "description": "Huuummm ! La belle bête ! C'est gourmand-croquant !",
+        "tags": ["Gastonomie", "Moderne"],
+        "image": "media/thumbnail/mochis.png" 
+    },
+    {
+        "id": 3,
+        "title": "Les thermes traditionnels c'est bon pour la santé des cheveux",
+        "description": "Ces bains chauds sont super trop suuuuuuuuper !",
+        "tags": ["Style de vie", "Traditionnel"],
+        "image": "media/thumbnail/thermes.jpg"
+    },
+    {
+        "id": 4,
+        "title": "One Piece Gold, le nouveau film de la Toei Animation",
+        "description": "Gum-gum souffre-douleur ! Hmmmmm de la viande !!! Et un squelette vivant !",
+        "tags": ["Art", "Moderne"],
+        "image": "media/thumbnail/onepiece.jpg"
+    },
+    {
+        "id": 5,
+        "title": "La tour de Tokyo, classique indémodable",
+        "description": "Franchement je ne sais plus trop quoi mettre comme vignettes. Je fatigue.",
+        "tags": ["Lieux", "Moderne"],
+        "image": "media/thumbnail/tower.jpg" 
+    },
+    {
+        "id": 6,
+        "title": "Une ville de nuit, je ne sais même pas laquelle",
+        "description": "Cependant, je dois avouer que ça reste stylé.",
+        "tags": ["Lieux", "Moderne"],
+        "image": "media/thumbnail/city.jpg" 
+    },
+    {
+        "id": 7,
+        "title": "Sans déconner, même sans image ça rend pas mal, non ?",
+        "description": "C'est ça qui est sympa avec le css. En ajoutant un peu de confiture, de simples carrés deviennent swag.",
+        "tags": ["Art", "Moderne"],
+        "image": null 
+    },
+    {
+        "id": 8,
+        "title": "Un dernier article dummy",
+        "description": "Oh mon dieu que c'est dummy ! Yummy dummy, comme dirait l'autre.",
+        "tags": ["Divertissement", "Traditionnel"],
+        "image": null 
+    }
+]

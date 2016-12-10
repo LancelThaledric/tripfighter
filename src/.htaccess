@@ -7,5 +7,6 @@ RewriteRule main\.css /tripfighter/build/main.css [L,END]
 
 RewriteRule fonts\/(.*) /tripfighter/build/fonts/$1 [L,END]
 RewriteRule resource\/(.*) /tripfighter/build/resource/$1 [L,END]
+RewriteRule media\/(.*) /tripfighter/build/media/$1 [L,END]
 
 RewriteRule .* /tripfighter/build/index.html [L,END]

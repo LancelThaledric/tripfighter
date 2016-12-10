@@ -1,4 +1,6 @@
 import 'babel-polyfill';
+// Configuration
+import {baseURL} from 'config';
 // React
 import React from 'react';
 // Additional libraries
@@ -19,7 +21,7 @@ class TfArticleGrid extends React.Component {
                 tags.push(<div className="tf-tag-little" key={tagid}>{article.tags[tagid]}</div>);
             }
 
-            out_articles.push(<TfArticleMini imageUrl={article.image} key={article.id}>
+            out_articles.push(<TfArticleMini imageUrl={baseURL+article.image} key={article.id}>
                 <h3>{article.title}</h3><hr/>
                 <p>{article.description}</p>
                 <div className="tf-tag-list">{tags}</div>

@@ -1,4 +1,7 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+var path = require('path');
+var Config = require('./config.js');
 
 module.exports = {
     entry: [
@@ -8,7 +11,7 @@ module.exports = {
     output: {
         path: './build',
         filename: 'app.bundle.js',
-        publicPath: '/tripfighter/build/'   
+        publicPath: Config.baseURL  
     },
     module: {
         loaders: [
@@ -54,6 +57,14 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin('main.css', {
             allChunks: true
-        })
-    ]
+        }),
+        new CopyWebpackPlugin([
+            { from: 'src/media', to: './media/'}
+        ])
+    ],
+    resolve: {
+        alias: {
+            config$: require.resolve('./config.js')
+        }
+    }
 };
