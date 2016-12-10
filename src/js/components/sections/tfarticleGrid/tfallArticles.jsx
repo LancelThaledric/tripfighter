@@ -1,6 +1,4 @@
 import 'babel-polyfill';
-// Configuration
-import {baseURL} from 'config';
 // React
 import React from 'react';
 // Additional libraries
@@ -15,7 +13,7 @@ import style from './tflastArticles_style.scss';
 // Data
 import data_articles from 'raw!../../../../resource/articles.json';
 
-class TfLastArticles extends React.Component {
+class TfAllArticles extends React.Component {
 
     constructor(props){
         super(props);
@@ -25,8 +23,6 @@ class TfLastArticles extends React.Component {
 
         this.componentWillMount = this.componentWillMount.bind(this);
         this.loadData = this.loadData.bind(this);
-
-        this.maxLoadedArticles = 8;
     }
 
     componentWillMount(){
@@ -35,7 +31,6 @@ class TfLastArticles extends React.Component {
 
     loadData(data){
         data.sort(Article.sortRecent);
-        data = data.slice(0, this.maxLoadedArticles);
         this.setState({data: data});
     }
 
@@ -43,17 +38,16 @@ class TfLastArticles extends React.Component {
 
         return <section className="tf-last-articles">
             <h2>
-                Derniers articles qui tuent
+                Tous les articles de Trip Fighter en une page !
             </h2>
+            <p>
+                C'est tellement extra qu'aurait du mal à y croire !
+            </p>
 
             <TfArticleGrid data={this.state.data}/>
-
-            <div className="tf-center-button-bar">
-                <TfAButton to={baseURL+'articles/'} title="Plus d'articles">Mettez-moi une dose de <strong>Japon</strong> supplémentaire</TfAButton>
-            </div>
         </section>;
     }
 
 }
 
-module.exports = TfLastArticles;
+module.exports = TfAllArticles;

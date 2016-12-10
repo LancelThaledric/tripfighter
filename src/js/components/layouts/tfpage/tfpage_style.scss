@@ -11,6 +11,7 @@ div.tf-header-background{
     position: fixed; top: 0; left: 0; z-index: 99;
     width: 100%; height: $header-height;
     background: #000;
+    transition: background-color ease 0.4s;
 }
 
 // Full-width static content

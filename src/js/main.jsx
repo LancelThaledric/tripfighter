@@ -8,6 +8,7 @@ import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 // Components
 import TfHome from './components/pages/tfhome/tfhome.jsx';
 import TfUnivers from './components/pages/tfunivers/tfunivers.jsx';
+import TfArticles from './components/pages/tfarticles/tfarticles.jsx';
 import Tf404 from './components/pages/tf404/tf404.jsx';
 // Style
 import style from '../style/style.scss';
@@ -17,11 +18,12 @@ import '../.htaccess';
 
 
 ReactDOM.render(
-    <Router history={browserHistory}>
+    <Router history={browserHistory} onUpdate={() => window.scrollTo(0, 0)}>
         <Route path={baseURL}>
             <IndexRoute component={(props, state, params) => <TfHome univers="tf-modern"/>}/>
             <Route path="moderne" component={(props, state, params) => <TfUnivers univers="tf-modern" name="Moderne"/>}/>
             <Route path="traditionnel" component={(props, state, params) => <TfUnivers univers="tf-trad" name="Traditionnel"/>}/>
+            <Route path="articles" component={(props, state, params) => <TfArticles univers="tf-modern"/>}/>
         </Route>
         <Route path="*" component={(props, state, params) => <Tf404 univers="tf-modern"/>}/>
     </Router>,
