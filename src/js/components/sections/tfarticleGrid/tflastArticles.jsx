@@ -3,7 +3,7 @@ import 'babel-polyfill';
 import React from 'react';
 // Additional libraries
 import {Icon} from 'react-fa';
-import {parseArticles} from './../../../module/article.jsx';
+import Article from './../../../module/article.jsx';
 // Components
 import TfArticleGrid from './../../sections/tfarticleGrid/tfarticleGrid.jsx';
 import TfAButton from './../../widgets/tfabutton/tfabutton.jsx';
@@ -28,11 +28,11 @@ class TfLastArticles extends React.Component {
     }
 
     componentWillMount(){
-        this.loadData(parseArticles(JSON.parse(data_articles)));
+        this.loadData(Article.parseArticles(JSON.parse(data_articles)));
     }
 
     loadData(data){
-        data.sort(function(a, b){return b.date - a.date;});
+        data.sort(Article.sortRecent);
         data = data.slice(0, this.maxLoadedArticles);
         this.setState({data: data});
     }
