@@ -54,5 +54,12 @@
         "description": "Oh mon dieu que c'est dummy ! Yummy dummy, comme dirait l'autre.",
         "tags": ["Divertissement", "Traditionnel"],
         "image": null 
+    },
+    {
+        "id": 9,
+        "title": "Les cerisiers c'est trop stylé !",
+        "description": "Mmmmhhhh parrrrr ma moustache !",
+        "tags": ["Lieux", "Traditionnel"],
+        "image": "media/thumbnail/cerisiers.jpg" 
     }
 ]
