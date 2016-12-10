@@ -4,7 +4,7 @@ import React from 'react';
 // Additional libraries
 import {Icon} from 'react-fa';
 // Components
-import TfArticleMini from './../../widgets/tfarticleMini/tfarticleMini.jsx';
+import TfArticleGrid from './../../sections/tfarticleGrid/tfarticleGrid.jsx';
 import TfAButton from './../../widgets/tfabutton/tfabutton.jsx';
 // Style
 import style from './tflastArticles_style.scss';
@@ -22,10 +22,71 @@ class TfLastArticles extends React.Component {
 
         return <section className="tf-last-articles">
             <h2>
-                Derniers articles
+                Derniers articles qui tuent
             </h2>
 
-            <div className="tf-article-grid">
+            <TfArticleGrid data={
+                [
+                    {
+                        id: 1,
+                        title: 'Hokusai : Où trouver les meilleurs oeuvres ?',
+                        description: 'Hokusai c\'est vraiment trop de la balle',
+                        tags: ['Art', 'Traditionnel'],
+                        image: resource_hokusai 
+                    },
+                    {
+                        id: 2,
+                        title: 'Goûtez aux meilleurs mochis de Tokyo',
+                        description: 'Huuummm ! La belle bête ! C\'est gourmand-croquant !',
+                        tags: ['Gastonomie', 'Moderne'],
+                        image: resource_mochis 
+                    },
+                    {
+                        id: 3,
+                        title: 'Les thermes traditionnels c\'est bon pour la santé des cheveux',
+                        description: 'Ces bains chauds sont super trop suuuuuuuuper !',
+                        tags: ['Style de vie', 'Traditionnel'],
+                        image: resource_thermes 
+                    },
+                    {
+                        id: 4,
+                        title: 'One Piece Gold, le nouveau film de la Toei Animation',
+                        description: 'Gum-gum souffre-douleur ! Hmmmmm de la viande !!! Et un squelette vivant !',
+                        tags: ['Art', 'Moderne'],
+                        image: resource_onepiece 
+                    },
+                    {
+                        id: 5,
+                        title: 'La tour de Tokyo, classique indémodable',
+                        description: 'Franchement je ne sais plus trop quoi mettre comme vignettes. Je fatigue.',
+                        tags: ['Lieux', 'Moderne'],
+                        image: resource_tower 
+                    },
+                    {
+                        id: 6,
+                        title: 'Une ville de nuit, je ne sais même pas laquelle',
+                        description: 'Cependant, je dois avouer que ça reste stylé.',
+                        tags: ['Lieux', 'Moderne'],
+                        image: resource_city 
+                    },
+                    {
+                        id: 7,
+                        title: 'Sans déconner, même sans image ça rend pas mal, non ?',
+                        description: 'C\'est ça qui est sympa avec le css. En ajoutant un peu de confiture, de simples carrés deviennent swag.',
+                        tags: ['Art', 'Moderne'],
+                        image: null 
+                    },
+                    {
+                        id: 8,
+                        title: 'Un dernier article dummy',
+                        description: 'Oh mon dieu que c\'est dummy ! Yummy dummy, comme dirait l\'autre.',
+                        tags: ['Divertissement', 'Traditionnel'],
+                        image: null 
+                    },
+                ]
+            }/>
+
+            {/*<div className="tf-article-grid">
                 <TfArticleMini imageUrl={resource_hokusai}>
                     <h3>Hokusai : Où trouver les meilleurs oeuvres ?</h3><hr/>
                     <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
@@ -90,7 +151,7 @@ class TfLastArticles extends React.Component {
                         <div className="tf-tag-little">Traditionnel</div>
                     </div>
                 </TfArticleMini>
-            </div>
+            </div>*/}
             <div className="tf-center-button-bar">
                 <TfAButton href="#" title="Plus d'articles">Mettez-moi une dose de <strong>Japon</strong> supplémentaire</TfAButton>
             </div>

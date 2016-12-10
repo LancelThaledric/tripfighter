@@ -1,0 +1,21 @@
+@import '../../../../style/base/all';
+
+div.tf-article-grid{
+    $article-margin: 2rem;
+
+    max-width: $max-width-section;
+    margin: 0 auto;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    padding: $article-margin / 2;
+
+    div.tf-article-mini-wrapper{
+        flex: $article-height;
+
+        &:first-child{
+            flex: $article-height*2;
+        }
+    }
+}

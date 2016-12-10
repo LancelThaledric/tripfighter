@@ -3,14 +3,9 @@
 div.tf-article-mini-wrapper{
     min-width: $article-height;
     height: $article-height;
-    flex: $article-height;
 
     display: flex;
     align-items: stretch;
-
-    &:first-child{
-        flex: $article-height*2;
-    }
 
     a.tf-article-mini-box{
         flex: 1;
