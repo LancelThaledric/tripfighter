@@ -1,4 +1,6 @@
 import 'babel-polyfill';
+// Configuration
+import {baseURL} from 'config';
 // React
 import React from 'react';
 // Additional libraries
@@ -31,7 +33,7 @@ class TfHeader extends React.Component {
                 <TfAButton to="#tf-menu" id="tf-main-menu-toggle" onClick={this.handleClick}><Icon fixedWidth name={menuIcon}/> Menu</TfAButton>
             </div>
             <div>
-                <TfAButton to="/tripfighter/build/" id="tf-home-link" className="tf-site-title">TRIP FIGHTER</TfAButton>
+                <TfAButton to={baseURL} id="tf-home-link" className="tf-site-title">TRIP FIGHTER</TfAButton>
             </div>
             <div>
                 <TfAButton to="#" id="tf-search-link" title="Recherchez du Japon"><Icon fixedWidth name="search"/></TfAButton>

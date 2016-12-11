@@ -1,0 +1,12 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule index\.html /path/to/root/index.html [L,END]
+RewriteRule app\.bundle\.js /path/to/root/app.bundle.js [L,END]
+RewriteRule main\.css /path/to/root/main.css [L,END]
+
+RewriteRule fonts\/(.*) /path/to/root/fonts/$1 [L,END]
+RewriteRule resource\/(.*) /path/to/root/resource/$1 [L,END]
+RewriteRule media\/(.*) /path/to/root/media/$1 [L,END]
+
+RewriteRule .* /path/to/root/index.html [L,END]

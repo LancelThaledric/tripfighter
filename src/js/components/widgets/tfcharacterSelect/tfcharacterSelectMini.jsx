@@ -1,4 +1,6 @@
 import 'babel-polyfill';
+// Configuration
+import {baseURL} from 'config';
 // React
 import React from 'react';
 // Additional librairies
