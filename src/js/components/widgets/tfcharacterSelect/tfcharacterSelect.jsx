@@ -17,6 +17,8 @@ class TfCharacterSelect extends React.Component {
 
     render(){
 
+        let themeSuffix = this.props.themeSlug ? this.props.themeSlug+'/' : '';
+
         return <section className="tf-character-select">
             <h2>
                 Select your challenger
@@ -26,7 +28,7 @@ class TfCharacterSelect extends React.Component {
             </p>
             <div className="tf-character-select-selector">
                 <div className="tf-character-left">
-                    <Link to={baseURL+"moderne/"} className="tf-character-select-link">
+                    <Link to={baseURL+"moderne/"+themeSuffix} className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Moderne</h3>
                             <img className="tf-fighter" src={resource_leftFighter} alt=""/>
@@ -41,7 +43,7 @@ class TfCharacterSelect extends React.Component {
                     </Link>
                 </div>
                 <div className="tf-character-right">
-                    <Link to={baseURL+"traditionnel/"} className="tf-character-select-link">
+                    <Link to={baseURL+"traditionnel/"+themeSuffix} className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Traditionnel</h3>
                             <img className="tf-fighter" src={resource_rightFighter} alt=""/>
@@ -60,5 +62,15 @@ class TfCharacterSelect extends React.Component {
     }
 
 }
+
+TfCharacterSelect.propTypes = {
+    themeName: React.PropTypes.string,
+    themeSlug:React.PropTypes.string
+};
+
+TfCharacterSelect.defaultProps = {
+    themeName: '',
+    themeSlug: ''
+};
 
 module.exports = TfCharacterSelect;

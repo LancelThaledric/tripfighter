@@ -29,26 +29,26 @@ ReactDOM.render(
             <Route path="moderne" component={(props, state, params) => <TfUnivers univers="tf-modern" name="Moderne"/>}/>
             <Route path="traditionnel" component={(props, state, params) => <TfUnivers univers="tf-trad" name="Traditionnel"/>}/>
             {/*Thèmes*/}
-            <Route path="lieux" component={(props, state, params) => <TfTheme univers="tf-modern" name="Lieux"/>}/>
-            <Route path="art" component={(props, state, params) => <TfTheme univers="tf-modern" name="Art"/>}/>
-            <Route path="divertissement" component={(props, state, params) => <TfTheme univers="tf-modern" name="Divertissement"/>}/>
-            <Route path="gastronomie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Gastronomie"/>}/>
-            <Route path="vetements" component={(props, state, params) => <TfTheme univers="tf-modern" name="Vêtements"/>}/>
-            <Route path="styledevie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Style de vie"/>}/>
+            <Route path="lieux" component={(props, state, params) => <TfTheme univers="tf-modern" name="Lieux" slug="lieux"/>}/>
+            <Route path="art" component={(props, state, params) => <TfTheme univers="tf-modern" name="Art" slug="art"/>}/>
+            <Route path="divertissement" component={(props, state, params) => <TfTheme univers="tf-modern" name="Divertissement" slug="divertissement"/>}/>
+            <Route path="gastronomie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Gastronomie" slug="gastronomie"/>}/>
+            <Route path="vetements" component={(props, state, params) => <TfTheme univers="tf-modern" name="Vêtements" slug="vetements"/>}/>
+            <Route path="styledevie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Style de vie" slug="styledevie"/>}/>
             {/*Univers (moderne) + thèmes*/}
-            <Route path="moderne/lieux" component={(props, state, params) => <TfTheme univers="tf-modern" name="Lieux" universName="moderne"/>}/>
-            <Route path="moderne/art" component={(props, state, params) => <TfTheme univers="tf-modern" name="Art" universName="moderne"/>}/>
-            <Route path="moderne/divertissement" component={(props, state, params) => <TfTheme univers="tf-modern" name="Divertissement" universName="moderne"/>}/>
-            <Route path="moderne/gastronomie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Gastronomie" universName="moderne"/>}/>
-            <Route path="moderne/vetements" component={(props, state, params) => <TfTheme univers="tf-modern" name="Vêtements" universName="moderne"/>}/>
-            <Route path="moderne/styledevie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Style de vie" universName="moderne"/>}/>
+            <Route path="moderne/lieux" component={(props, state, params) => <TfTheme univers="tf-modern" name="Lieux" slug="lieux" universName="moderne"/>}/>
+            <Route path="moderne/art" component={(props, state, params) => <TfTheme univers="tf-modern" name="Art" slug="art" universName="moderne"/>}/>
+            <Route path="moderne/divertissement" component={(props, state, params) => <TfTheme univers="tf-modern" name="Divertissement" slug="divertissement" universName="moderne"/>}/>
+            <Route path="moderne/gastronomie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Gastronomie" slug="gastronomie" universName="moderne"/>}/>
+            <Route path="moderne/vetements" component={(props, state, params) => <TfTheme univers="tf-modern" name="Vêtements" slug="vetements" universName="moderne"/>}/>
+            <Route path="moderne/styledevie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Style de vie" slug="styledevie" universName="moderne"/>}/>
             {/*Univers (traditionnel) + thèmes*/}
-            <Route path="traditionnel/lieux" component={(props, state, params) => <TfTheme univers="tf-modern" name="Lieux" universName="traditionnel"/>}/>
-            <Route path="traditionnel/art" component={(props, state, params) => <TfTheme univers="tf-modern" name="Art" universName="traditionnel"/>}/>
-            <Route path="traditionnel/divertissement" component={(props, state, params) => <TfTheme univers="tf-modern" name="Divertissement" universName="traditionnel"/>}/>
-            <Route path="traditionnel/gastronomie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Gastronomie" universName="traditionnel"/>}/>
-            <Route path="traditionnel/vetements" component={(props, state, params) => <TfTheme univers="tf-modern" name="Vêtements" universName="traditionnel"/>}/>
-            <Route path="traditionnel/styledevie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Style de vie" universName="traditionnel"/>}/>
+            <Route path="traditionnel/lieux" component={(props, state, params) => <TfTheme univers="tf-modern" name="Lieux" slug="lieux" universName="traditionnel"/>}/>
+            <Route path="traditionnel/art" component={(props, state, params) => <TfTheme univers="tf-modern" name="Art" slug="art" universName="traditionnel"/>}/>
+            <Route path="traditionnel/divertissement" component={(props, state, params) => <TfTheme univers="tf-modern" name="Divertissement" slug="divertissement" universName="traditionnel"/>}/>
+            <Route path="traditionnel/gastronomie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Gastronomie" slug="gastronomie" universName="traditionnel"/>}/>
+            <Route path="traditionnel/vetements" component={(props, state, params) => <TfTheme univers="tf-modern" name="Vêtements" slug="vetements" universName="traditionnel"/>}/>
+            <Route path="traditionnel/styledevie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Style de vie" slug="styledevie" universName="traditionnel"/>}/>
         </Route>
         <Route path="*" component={(props, state, params) => <Tf404 univers="tf-modern"/>}/>
     </Router>,

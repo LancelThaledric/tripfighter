@@ -17,12 +17,11 @@ class TfTheme extends React.Component {
 
         let tags = [this.props.name];
         if(this.props.universName) tags.push(this.props.universName);
-        console.log(tags);
 
         return <TfPage {...this.props}>
             <TfSeparator/>
             <TfPageTitle>Thème {this.props.name}</TfPageTitle>
-            <TfCharacterSelectMini/>
+            {this.props.universName ? null : <TfCharacterSelectMini themeSlug={this.props.slug}/>}
             <TfAllArticles title={"Articles dans le thème "+this.props.name}
                            description={<p>Many fighter !</p>}
                            tags={tags}/>
@@ -33,6 +32,7 @@ class TfTheme extends React.Component {
 
 TfTheme.defaultProps = {
     name: '<ThemeName>',
+    slug: '',
     univers: 'tf-modern',
     universName: null
 };

@@ -16,13 +16,15 @@ class TfCharacterSelectMini extends React.Component {
 
     render(){
 
+        let themeSuffix = this.props.themeSlug ? this.props.themeSlug+'/' : '';
+
         return <section className="tf-character-select-mini">
             <h2>
                 Choisissez un univers
             </h2>
             <div className="tf-character-select-selector">
                 <div className="tf-character-left">
-                    <Link to={baseURL+"moderne/"} className="tf-character-select-link">
+                    <Link to={baseURL+"moderne/"+themeSuffix} className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Moderne</h3>
                             <img className="tf-fighter" src={resource_leftFighter} alt=""/>
@@ -30,7 +32,7 @@ class TfCharacterSelectMini extends React.Component {
                     </Link>
                 </div>
                 <div className="tf-character-right">
-                    <Link to={baseURL+"traditionnel/"}  className="tf-character-select-link">
+                    <Link to={baseURL+"traditionnel/"+themeSuffix}  className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Traditionnel</h3>
                             <img className="tf-fighter" src={resource_rightFighter} alt=""/>
@@ -42,5 +44,15 @@ class TfCharacterSelectMini extends React.Component {
     }
 
 }
+
+TfCharacterSelectMini.propTypes = {
+    themeName: React.PropTypes.string,
+    themeSlug:React.PropTypes.string
+};
+
+TfCharacterSelectMini.defaultProps = {
+    themeName: '',
+    themeSlug: ''
+};
 
 module.exports = TfCharacterSelectMini;

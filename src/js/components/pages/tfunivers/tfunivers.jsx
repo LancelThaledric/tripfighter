@@ -18,7 +18,7 @@ class TfUnivers extends React.Component {
         return <TfPage {...this.props}>
             <TfSeparator/>
             <TfPageTitle>Univers {this.props.name}</TfPageTitle>
-            <TfThemeSelectMini/>
+            <TfThemeSelectMini universName={this.props.name.toLowerCase()}/>
             <TfAllArticles title={"Articles dans l'univers "+this.props.name}
                            description={<p>Such wow !</p>}
                            tags={[this.props.name]}/>
