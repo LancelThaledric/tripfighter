@@ -5,6 +5,8 @@ import {baseURL} from 'config';
 import React from 'react';
 // Additional librairies
 import {Link} from 'react-router';
+import Url from './../../../module/url.jsx';
+import Taxonomy from './../../../module/taxonomy.jsx';
 // Components
 // Style
 import style from './tfcharacterSelectMini_style.scss';
@@ -16,15 +18,13 @@ class TfCharacterSelectMini extends React.Component {
 
     render(){
 
-        let themeSuffix = this.props.themeSlug ? this.props.themeSlug+'/' : '';
-
         return <section className="tf-character-select-mini">
             <h2>
                 Choisissez un univers
             </h2>
             <div className="tf-character-select-selector">
                 <div className="tf-character-left">
-                    <Link to={baseURL+"moderne/"+themeSuffix} className="tf-character-select-link">
+                    <Link to={Url.computeUrl(Taxonomy.Univers.modern.slug, this.props.themeSlug)} className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Moderne</h3>
                             <img className="tf-fighter" src={resource_leftFighter} alt=""/>
@@ -32,7 +32,7 @@ class TfCharacterSelectMini extends React.Component {
                     </Link>
                 </div>
                 <div className="tf-character-right">
-                    <Link to={baseURL+"traditionnel/"+themeSuffix}  className="tf-character-select-link">
+                    <Link to={Url.computeUrl(Taxonomy.Univers.traditionnel.slug, this.props.themeSlug)} className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Traditionnel</h3>
                             <img className="tf-fighter" src={resource_rightFighter} alt=""/>

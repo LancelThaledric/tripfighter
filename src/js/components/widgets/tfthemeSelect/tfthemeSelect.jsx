@@ -3,8 +3,10 @@ import 'babel-polyfill';
 import {baseURL} from 'config';
 // React
 import React from 'react';
-// Additional librairies
+// Additional libraries
 import {Link} from 'react-router';
+import Url from './../../../module/url.jsx';
+import Taxonomy from './../../../module/taxonomy.jsx';
 // Components
 // Style
 import style from './tfthemeSelect_style.scss';
@@ -13,36 +15,34 @@ class TfThemeSelect extends React.Component {
 
     render(){
 
-        let universSuffix = this.props.universName ? '/' : '';
-
         return <section className="tf-theme-select">
             <h2>
                 Choisissez un thème
             </h2>
             <div className="tf-theme-select-selector">
-                <Link to={baseURL+this.props.universName+universSuffix+"lieux"} className="tf-theme-environnement">
+                <Link to={Url.computeUrl(this.props.universSlug, Taxonomy.Themes.lieux.slug)} className="tf-theme-lieux">
                     <div className="tf-theme-thumbnail"/>
-                    <h3 className="tf-theme-title">Lieux</h3>
+                    <h3 className="tf-theme-title">{Taxonomy.Themes.lieux.name}</h3>
                 </Link>
-                <Link to={baseURL+this.props.universName+universSuffix+"art"} className="tf-theme-art">
+                <Link to={Url.computeUrl(this.props.universSlug, Taxonomy.Themes.art.slug)} className="tf-theme-art">
                     <div className="tf-theme-thumbnail"/>
-                    <h3 className="tf-theme-title">Art</h3>
+                    <h3 className="tf-theme-title">{Taxonomy.Themes.art.name}</h3>
                 </Link>
-                <Link to={baseURL+this.props.universName+universSuffix+"divertissement"} className="tf-theme-divertissement">
+                <Link to={Url.computeUrl(this.props.universSlug, Taxonomy.Themes.divertissement.slug)} className="tf-theme-divertissement">
                     <div className="tf-theme-thumbnail"/>
-                    <h3 className="tf-theme-title">Divertissement</h3>
+                    <h3 className="tf-theme-title">{Taxonomy.Themes.divertissement.name}</h3>
                 </Link>
-                <Link to={baseURL+this.props.universName+universSuffix+"gastronomie"} className="tf-theme-gastronomie">
+                <Link to={Url.computeUrl(this.props.universSlug, Taxonomy.Themes.gastronomie.slug)} className="tf-theme-gastronomie">
                     <div className="tf-theme-thumbnail"/>
-                    <h3 className="tf-theme-title">Gastronomie</h3>
+                    <h3 className="tf-theme-title">{Taxonomy.Themes.gastronomie.name}</h3>
                 </Link>
-                <Link to={baseURL+this.props.universName+universSuffix+"vetements"} className="tf-theme-vetements">
+                <Link to={Url.computeUrl(this.props.universSlug, Taxonomy.Themes.vetements.slug)} className="tf-theme-vetements">
                     <div className="tf-theme-thumbnail"/>
-                    <h3 className="tf-theme-title">Vêtements</h3>
+                    <h3 className="tf-theme-title">{Taxonomy.Themes.vetements.name}</h3>
                 </Link>
-                <Link to={baseURL+this.props.universName+universSuffix+"styledevie"} className="tf-theme-styledevie">
+                <Link to={Url.computeUrl(this.props.universSlug, Taxonomy.Themes.styledevie.slug)} className="tf-theme-styledevie">
                     <div className="tf-theme-thumbnail"/>
-                    <h3 className="tf-theme-title">Style de vie</h3>
+                    <h3 className="tf-theme-title">{Taxonomy.Themes.styledevie.name}</h3>
                 </Link>
             </div>
         </section>;
@@ -50,13 +50,12 @@ class TfThemeSelect extends React.Component {
 
 }
 
-
 TfThemeSelect.propTypes = {
-    universName: React.PropTypes.string
+    universSlug: React.PropTypes.string
 };
 
 TfThemeSelect.defaultProps = {
-    universName: ''
+    universSlug: ''
 };
 
 module.exports = TfThemeSelect;

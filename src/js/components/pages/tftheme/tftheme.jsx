@@ -2,6 +2,7 @@ import 'babel-polyfill';
 // React
 import React from 'react';
 // Additional librairies
+import Taxonomy from './../../../module/taxonomy.jsx';
 // Components
 import TfPage from './../../layouts/tfpage/tfpage.jsx';
 import TfSeparator from './../../widgets/tfseparator/tfseparator.jsx';
@@ -15,14 +16,14 @@ class TfTheme extends React.Component {
 
     render(){
 
-        let tags = [this.props.name];
+        let tags = [this.props.themeName];
         if(this.props.universName) tags.push(this.props.universName);
 
         return <TfPage {...this.props}>
             <TfSeparator/>
-            <TfPageTitle>Thème {this.props.name}</TfPageTitle>
-            {this.props.universName ? null : <TfCharacterSelectMini themeSlug={this.props.slug}/>}
-            <TfAllArticles title={"Articles dans le thème "+this.props.name}
+            <TfPageTitle>Thème {this.props.themeName}</TfPageTitle>
+            {this.props.universName ? null : <TfCharacterSelectMini themeSlug={this.props.themeSlug}/>}
+            <TfAllArticles title={"Articles dans le thème "+this.props.themeName}
                            description={<p>Many fighter !</p>}
                            tags={tags}/>
         </TfPage>;
@@ -31,9 +32,9 @@ class TfTheme extends React.Component {
 }
 
 TfTheme.defaultProps = {
-    name: '<ThemeName>',
-    slug: '',
-    univers: 'tf-modern',
+    themeName: '<ThemeName>',
+    themeSlug: null,
+    universClass: Taxonomy.Univers.default.className,
     universName: null
 };
 

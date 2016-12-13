@@ -5,6 +5,9 @@ import {baseURL} from 'config';
 import ReactDOM from 'react-dom';
 import React from 'react';
 import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
+// Additional libraries
+import Props from './module/props.jsx';
+import Taxonomy from './module/taxonomy.jsx';
 // Components
 import TfHome from './components/pages/tfhome/tfhome.jsx';
 import TfUnivers from './components/pages/tfunivers/tfunivers.jsx';
@@ -17,40 +20,126 @@ import style from '../style/style.scss';
 import index from 'file?name=[name].[ext]!../index.html';
 import '../.htaccess';
 
-
 ReactDOM.render(
     <Router history={browserHistory} onUpdate={() => window.scrollTo(0, 0)}>
         <Route path={baseURL}>
             {/*Home*/}
-            <IndexRoute component={(props, state, params) => <TfHome univers="tf-modern"/>}/>
+            <IndexRoute component={
+                (props, state, params) => <TfHome
+                universClass={Taxonomy.Univers.default.className}/>
+            }/>
             {/*Tous les articles*/}
-            <Route path="articles" component={(props, state, params) => <TfArticles univers="tf-modern"/>}/>
+            <Route path="articles" component={
+                (props, state, params) => <TfArticles
+                universClass={Taxonomy.Univers.default.className}/>
+            }/>
             {/*Univers*/}
-            <Route path="moderne" component={(props, state, params) => <TfUnivers univers="tf-modern" name="Moderne"/>}/>
-            <Route path="traditionnel" component={(props, state, params) => <TfUnivers univers="tf-trad" name="Traditionnel"/>}/>
-            {/*Thèmes*/}
-            <Route path="lieux" component={(props, state, params) => <TfTheme univers="tf-modern" name="Lieux" slug="lieux"/>}/>
-            <Route path="art" component={(props, state, params) => <TfTheme univers="tf-modern" name="Art" slug="art"/>}/>
-            <Route path="divertissement" component={(props, state, params) => <TfTheme univers="tf-modern" name="Divertissement" slug="divertissement"/>}/>
-            <Route path="gastronomie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Gastronomie" slug="gastronomie"/>}/>
-            <Route path="vetements" component={(props, state, params) => <TfTheme univers="tf-modern" name="Vêtements" slug="vetements"/>}/>
-            <Route path="styledevie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Style de vie" slug="styledevie"/>}/>
+            <Route path={Taxonomy.Univers.modern.slug} component={
+                (props, state, params) => <TfUnivers
+                {...Props.makeUniversProps(Taxonomy.Univers.modern)}/>
+            }/>
+            <Route path={Taxonomy.Univers.traditionnel.slug} component={
+                (props, state, params) => <TfUnivers
+                {...Props.makeUniversProps(Taxonomy.Univers.traditionnel)}/>
+            }/>
+            {/*Thèmes sans univers*/}
+            <Route path={Taxonomy.Themes.lieux.slug} component={
+                (props, state, params) => <TfTheme
+                universClass={Taxonomy.Univers.default.className}
+                {...Props.makeThemeProps(Taxonomy.Themes.lieux)}/>
+            }/>
+            <Route path={Taxonomy.Themes.art.slug} component={
+                (props, state, params) => <TfTheme
+                universClass={Taxonomy.Univers.default.className}
+                {...Props.makeThemeProps(Taxonomy.Themes.art)}/>
+            }/>
+            <Route path={Taxonomy.Themes.divertissement.slug} component={
+                (props, state, params) => <TfTheme
+                universClass={Taxonomy.Univers.default.className}
+                {...Props.makeThemeProps(Taxonomy.Themes.divertissement)}/>
+            }/>
+            <Route path={Taxonomy.Themes.gastronomie.slug} component={
+                (props, state, params) => <TfTheme
+                universClass={Taxonomy.Univers.default.className}
+                {...Props.makeThemeProps(Taxonomy.Themes.gastronomie)}/>
+            }/>
+            <Route path={Taxonomy.Themes.vetements.slug} component={
+                (props, state, params) => <TfTheme
+                universClass={Taxonomy.Univers.default.className}
+                {...Props.makeThemeProps(Taxonomy.Themes.vetements)}/>
+            }/>
+            <Route path={Taxonomy.Themes.styledevie.slug} component={
+                (props, state, params) => <TfTheme
+                universClass={Taxonomy.Univers.default.className}
+                {...Props.makeThemeProps(Taxonomy.Themes.styledevie)}/>
+            }/>
             {/*Univers (moderne) + thèmes*/}
-            <Route path="moderne/lieux" component={(props, state, params) => <TfTheme univers="tf-modern" name="Lieux" slug="lieux" universName="moderne"/>}/>
-            <Route path="moderne/art" component={(props, state, params) => <TfTheme univers="tf-modern" name="Art" slug="art" universName="moderne"/>}/>
-            <Route path="moderne/divertissement" component={(props, state, params) => <TfTheme univers="tf-modern" name="Divertissement" slug="divertissement" universName="moderne"/>}/>
-            <Route path="moderne/gastronomie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Gastronomie" slug="gastronomie" universName="moderne"/>}/>
-            <Route path="moderne/vetements" component={(props, state, params) => <TfTheme univers="tf-modern" name="Vêtements" slug="vetements" universName="moderne"/>}/>
-            <Route path="moderne/styledevie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Style de vie" slug="styledevie" universName="moderne"/>}/>
+            <Route path={Taxonomy.Univers.modern.slug+'/'+Taxonomy.Themes.lieux.slug} component={
+                (props, state, params) => <TfTheme
+                {...Props.makeUniversProps(Taxonomy.Univers.modern)}
+                {...Props.makeThemeProps(Taxonomy.Themes.lieux)}/>
+            }/>
+            <Route path={Taxonomy.Univers.modern.slug+'/'+Taxonomy.Themes.art.slug} component={
+                (props, state, params) => <TfTheme
+                {...Props.makeUniversProps(Taxonomy.Univers.modern)}
+                {...Props.makeThemeProps(Taxonomy.Themes.art)}/>
+            }/>
+            <Route path={Taxonomy.Univers.modern.slug+'/'+Taxonomy.Themes.divertissement.slug} component={
+                (props, state, params) => <TfTheme
+                {...Props.makeUniversProps(Taxonomy.Univers.modern)}
+                {...Props.makeThemeProps(Taxonomy.Themes.divertissement)}/>
+            }/>
+            <Route path={Taxonomy.Univers.modern.slug+'/'+Taxonomy.Themes.gastronomie.slug} component={
+                (props, state, params) => <TfTheme
+                {...Props.makeUniversProps(Taxonomy.Univers.modern)}
+                {...Props.makeThemeProps(Taxonomy.Themes.gastronomie)}/>
+            }/>
+            <Route path={Taxonomy.Univers.modern.slug+'/'+Taxonomy.Themes.vetements.slug} component={
+                (props, state, params) => <TfTheme
+                {...Props.makeUniversProps(Taxonomy.Univers.modern)}
+                {...Props.makeThemeProps(Taxonomy.Themes.vetements)}/>
+            }/>
+            <Route path={Taxonomy.Univers.modern.slug+'/'+Taxonomy.Themes.styledevie.slug} component={
+                (props, state, params) => <TfTheme
+                {...Props.makeUniversProps(Taxonomy.Univers.modern)}
+                {...Props.makeThemeProps(Taxonomy.Themes.styledevie)}/>
+            }/>
             {/*Univers (traditionnel) + thèmes*/}
-            <Route path="traditionnel/lieux" component={(props, state, params) => <TfTheme univers="tf-modern" name="Lieux" slug="lieux" universName="traditionnel"/>}/>
-            <Route path="traditionnel/art" component={(props, state, params) => <TfTheme univers="tf-modern" name="Art" slug="art" universName="traditionnel"/>}/>
-            <Route path="traditionnel/divertissement" component={(props, state, params) => <TfTheme univers="tf-modern" name="Divertissement" slug="divertissement" universName="traditionnel"/>}/>
-            <Route path="traditionnel/gastronomie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Gastronomie" slug="gastronomie" universName="traditionnel"/>}/>
-            <Route path="traditionnel/vetements" component={(props, state, params) => <TfTheme univers="tf-modern" name="Vêtements" slug="vetements" universName="traditionnel"/>}/>
-            <Route path="traditionnel/styledevie" component={(props, state, params) => <TfTheme univers="tf-modern" name="Style de vie" slug="styledevie" universName="traditionnel"/>}/>
+            <Route path={Taxonomy.Univers.traditionnel.slug+'/'+Taxonomy.Themes.lieux.slug} component={
+                (props, state, params) => <TfTheme
+                {...Props.makeUniversProps(Taxonomy.Univers.traditionnel)}
+                {...Props.makeThemeProps(Taxonomy.Themes.lieux)}/>
+            }/>
+            <Route path={Taxonomy.Univers.traditionnel.slug+'/'+Taxonomy.Themes.art.slug} component={
+                (props, state, params) => <TfTheme
+                {...Props.makeUniversProps(Taxonomy.Univers.traditionnel)}
+                {...Props.makeThemeProps(Taxonomy.Themes.art)}/>
+            }/>
+            <Route path={Taxonomy.Univers.traditionnel.slug+'/'+Taxonomy.Themes.divertissement.slug} component={
+                (props, state, params) => <TfTheme
+                {...Props.makeUniversProps(Taxonomy.Univers.traditionnel)}
+                {...Props.makeThemeProps(Taxonomy.Themes.divertissement)}/>
+            }/>
+            <Route path={Taxonomy.Univers.traditionnel.slug+'/'+Taxonomy.Themes.gastronomie.slug} component={
+                (props, state, params) => <TfTheme
+                {...Props.makeUniversProps(Taxonomy.Univers.traditionnel)}
+                {...Props.makeThemeProps(Taxonomy.Themes.gastronomie)}/>
+            }/>
+            <Route path={Taxonomy.Univers.traditionnel.slug+'/'+Taxonomy.Themes.vetements.slug} component={
+                (props, state, params) => <TfTheme
+                {...Props.makeUniversProps(Taxonomy.Univers.traditionnel)}
+                {...Props.makeThemeProps(Taxonomy.Themes.vetements)}/>
+            }/>
+            <Route path={Taxonomy.Univers.traditionnel.slug+'/'+Taxonomy.Themes.styledevie.slug} component={
+                (props, state, params) => <TfTheme
+                {...Props.makeUniversProps(Taxonomy.Univers.traditionnel)}
+                {...Props.makeThemeProps(Taxonomy.Themes.styledevie)}/>
+            }/>
         </Route>
-        <Route path="*" component={(props, state, params) => <Tf404 univers="tf-modern"/>}/>
+        <Route path="*" component={
+            (props, state, params) => <Tf404
+            universClass={Taxonomy.Univers.default.className}/>
+        }/>
     </Router>,
     document.getElementById('root')
 );

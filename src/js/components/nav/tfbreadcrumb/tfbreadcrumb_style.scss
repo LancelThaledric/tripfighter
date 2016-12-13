@@ -1,0 +1,10 @@
+@import '../../../../style/base/all';
+
+.tf-breadcrumb{
+    a::before{
+        content: '>';
+    }
+    a:first-child::before{
+        content: none;
+    }
+}

@@ -6,6 +6,7 @@ import {Icon} from 'react-fa';
 import ClassNames from 'classnames';
 // Components
 import TfHeader from './../../nav/tfheader/tfheader.jsx';
+import TfBreadcrumb from './../../nav/tfbreadcrumb/tfbreadcrumb.jsx';
 import TfMenu from './../../nav/tfmenu/tfmenu.jsx';
 // Style
 import style from './tfpage_style.scss';
@@ -89,11 +90,12 @@ class TfPage extends React.Component {
 
         let contentClass = ClassNames('tf-content', {'tf-figed': this.isFiged()});
 
-        let universClass = ClassNames(this.props.univers);
+        let universClass = ClassNames(this.props.universClass);
         
         return <div id="tf-app" className={universClass}>
             <div className="tf-header-background"/>
             <TfHeader onMenuToggle={this.handleMenuToggle} menuToggled={this.state.menuToggled}/>
+            <TfBreadcrumb univers={this.universName}/>
             <TfMenu
                 active={this.state.menuToggled}
                 displayed={this.state.menuDisplayed}

@@ -2,6 +2,7 @@ import 'babel-polyfill';
 // React
 import React from 'react';
 // Additional librairies
+import Taxonomy from './../../../module/taxonomy.jsx';
 // Components
 import TfPage from './../../layouts/tfpage/tfpage.jsx';
 import TfSeparator from './../../widgets/tfseparator/tfseparator.jsx';
@@ -17,18 +18,19 @@ class TfUnivers extends React.Component {
 
         return <TfPage {...this.props}>
             <TfSeparator/>
-            <TfPageTitle>Univers {this.props.name}</TfPageTitle>
-            <TfThemeSelectMini universName={this.props.name.toLowerCase()}/>
-            <TfAllArticles title={"Articles dans l'univers "+this.props.name}
+            <TfPageTitle>Univers {this.props.universName}</TfPageTitle>
+            <TfThemeSelectMini universSlug={this.props.universSlug}/>
+            <TfAllArticles title={"Articles dans l'univers "+this.props.universName}
                            description={<p>Such wow !</p>}
-                           tags={[this.props.name]}/>
+                           tags={[this.props.universName]}/>
         </TfPage>;
     }
 
 }
 
 TfUnivers.defaultProps = {
-    name: '<UniversName>'
+    universName: '<UniversName>',
+    universSlug: ''
 };
 
 module.exports = TfUnivers;
