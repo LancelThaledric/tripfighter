@@ -26,7 +26,8 @@ ReactDOM.render(
             {/*Home*/}
             <IndexRoute component={
                 (props, state, params) => <TfHome
-                universClass={Taxonomy.Univers.default.className}/>
+                universClass={Taxonomy.Univers.default.className}
+                isHome/>
             }/>
             {/*Tous les articles*/}
             <Route path="articles" component={

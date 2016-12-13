@@ -4,6 +4,7 @@ import React from 'react';
 // Additionnal librairies
 import {Icon} from 'react-fa';
 import ClassNames from 'classnames';
+import Taxonomy from './../../../module/taxonomy.jsx';
 // Components
 import TfHeader from './../../nav/tfheader/tfheader.jsx';
 import TfBreadcrumb from './../../nav/tfbreadcrumb/tfbreadcrumb.jsx';
@@ -92,10 +93,16 @@ class TfPage extends React.Component {
 
         let universClass = ClassNames(this.props.universClass);
         
+        let breadcrumb = !this.props.isHome ? <TfBreadcrumb
+                univers={this.props.universTax}
+                theme={this.props.themeTax}
+                articleTitle={this.props.articleTitle}
+                articleSlug={this.props.articleSlug}
+            /> : null;
+
         return <div id="tf-app" className={universClass}>
             <div className="tf-header-background"/>
             <TfHeader onMenuToggle={this.handleMenuToggle} menuToggled={this.state.menuToggled}/>
-            <TfBreadcrumb univers={this.universName}/>
             <TfMenu
                 active={this.state.menuToggled}
                 displayed={this.state.menuDisplayed}
@@ -104,6 +111,7 @@ class TfPage extends React.Component {
                 scrollOffset={this.isFiged() ? undefined : "calc("+(-this.scrollTop)+"px + "+this.props.headerHeight+")"}
             />
             <div id="#tf-content" className={contentClass} ref={(contentDOM) => { this.contentDOM = contentDOM; }}>
+                {breadcrumb}
                 {this.props.children}
             </div>
         </div>;
@@ -112,7 +120,8 @@ class TfPage extends React.Component {
 }
 
 TfPage.defaultProps = {
-    headerHeight: "4rem"
+    headerHeight: "4rem",
+    isHome: false
 };
 
 module.exports = TfPage;

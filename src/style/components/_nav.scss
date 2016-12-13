@@ -8,3 +8,15 @@
 .tf-trad div.tf-menu div.tf-transiter{
     background: $tradlightcolor;
 }
+
+//////////////////////////////////////////////////////
+// Breadcrumb
+//////////////////////////////////////////////////////
+
+.tf-modern nav.tf-breadcrumb{
+    background: mix($modernlightcolor, $fgcolor, 50%);
+}
+
+.tf-trad nav.tf-breadcrumb{
+    background: mix($tradlightcolor, $fgcolor, 50%);
+}
