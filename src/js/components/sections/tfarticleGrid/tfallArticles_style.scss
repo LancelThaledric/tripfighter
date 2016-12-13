@@ -1,3 +1,27 @@
 @import '../../../../style/base/all';
 
-$article-margin: 2rem;
+section.tf-all-articles{
+
+    h2{
+        @extend .tf-raleway;
+        @extend strong;
+        font-size: 2rem;
+        text-align: center;
+        margin: 2rem 0 0;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        flex: 0;
+
+        &::before, &::after{
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: $fgcolor;
+            margin: 0 2rem;
+        }
+    }
+
+}

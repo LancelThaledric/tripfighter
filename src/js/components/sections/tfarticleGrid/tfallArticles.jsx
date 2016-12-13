@@ -8,7 +8,7 @@ import Article from './../../../module/article.jsx';
 import TfArticleGrid from './../../sections/tfarticleGrid/tfarticleGrid.jsx';
 import TfAButton from './../../widgets/tfabutton/tfabutton.jsx';
 // Style
-import style from './tflastArticles_style.scss';
+import style from './tfallArticles_style.scss';
 // Resources
 // Data
 import data_articles from 'raw!../../../../resource/articles.json';
@@ -43,7 +43,7 @@ class TfAllArticles extends React.Component {
 
     render(){
 
-        return <section className="tf-last-articles">
+        return <section className="tf-all-articles">
             <h2>
                 {this.props.title}
             </h2>
