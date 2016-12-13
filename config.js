@@ -1,3 +1,4 @@
 module.exports = {
-    baseURL: '/tripfighter/build/'
+    //baseURL: '/tripfighter/build/'
+    baseURL: '/'
 };
