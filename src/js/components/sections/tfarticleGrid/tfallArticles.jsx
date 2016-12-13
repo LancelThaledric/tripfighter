@@ -30,7 +30,14 @@ class TfAllArticles extends React.Component {
     }
 
     loadData(data){
-        data.sort(Article.sortRecent);
+        // filter tags
+        data = Article.filterByTags(this.props.tags, data);
+        // Sorting
+        if(this.props.reverse) data.sort(Article.sortRecent);
+        else data.sort(Article.sortDate);
+        // limit
+        if(this.props.limit !== null) data = data.slice(0, this.props.limit);
+
         this.setState({data: data});
     }
 
@@ -38,16 +45,30 @@ class TfAllArticles extends React.Component {
 
         return <section className="tf-last-articles">
             <h2>
-                Tous les articles de Trip Fighter en une page !
+                {this.props.title}
             </h2>
-            <p>
-                C'est tellement extra qu'aurait du mal à y croire !
-            </p>
+            {this.props.description}
 
             <TfArticleGrid data={this.state.data}/>
         </section>;
     }
 
 }
+
+TfAllArticles.propTypes = {
+    reverse: React.PropTypes.bool,
+    tags: React.PropTypes.arrayOf(React.PropTypes.string),
+    limit: React.PropTypes.number,
+    title: React.PropTypes.string,
+    description: React.PropTypes.element,
+};
+
+TfAllArticles.defaultProps = {
+    reverse: false,
+    tags: [],
+    limit: null,
+    title: '&lt;Ici un titre&gt',
+    description: <p>&lt;Ici description&gt;</p>
+};
 
 module.exports = TfAllArticles;
