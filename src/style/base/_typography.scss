@@ -9,3 +9,24 @@ strong.tf-raleway, .tf-raleway strong,
 b.tf-raleway, .tf-raleway b{
     font-weight: 900;
 }
+
+.tf-nunito{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+strong.tf-nunito, .tf-nunito strong,
+b.tf-nunito, .tf-nunito b{
+    font-weight: 700;
+}
+
+p{
+    line-height: 1.6em;
+    text-indent: 2em;
+    text-align: justify;
+}
+
+h1, h2, h3{
+    @extend .tf-raleway;
+    @extend strong;
+}

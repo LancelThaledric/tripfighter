@@ -1,7 +1,12 @@
 @import '../../../../style/base/all';
 
 // Header-falloff
-div#tf-app{
+div.tf-app{
+    @extend .tf-raleway;
+
+    line-height: 1.6em;
+    color: $fgcolor;
+
     margin-top: $header-height;
 }
 

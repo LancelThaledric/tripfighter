@@ -3,4 +3,30 @@
 section.tf-article-reader{
     display: flex;
     flex-flow: row nowrap;
+    min-height: 100vh;
+
+    &>div{
+        flex: 1;
+    }
+
+    div.tf-article-image-wrapper{
+        position: relative;
+        overflow: hidden;
+
+        div.tf-article-image{
+            position: fixed;
+            z-index: -1;
+            top: $header-height;
+            width: 50%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    div.tf-article-content{
+        &>*{
+            padding: 0 2rem;
+        }
+    }
 }

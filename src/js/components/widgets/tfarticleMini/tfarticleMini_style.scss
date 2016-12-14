@@ -113,6 +113,7 @@ div.tf-article-mini-wrapper{
 
             h3{
                 @extend .tf-raleway;
+                font-weight: 500;
                 margin: 0 0 1rem;
             }
 
@@ -125,6 +126,7 @@ div.tf-article-mini-wrapper{
 
             p{
                 margin: 1rem 0;
+                text-indent: 0;
             }
 
             div.tf-tag-list{
