@@ -50,13 +50,10 @@ class TfBreadcrumb extends React.Component {
             switchLink.url = Url.computeUrl(switchLink.universSlug, this.props.theme.slug)
             switchLink.subtext = 'Thème '+this.props.theme.name;
         }
-
-        return <nav className="tf-breadcrumb">
-            <div className="tf-breadcrumb-nav">
-                <Link to={Url.homeUrl()}><Icon name="home"/></Link>
-                {links}
-            </div>
-            <div className="tf-breadcrumb-switcher">
+        // 3 : switcher
+        let switcherElement = null;
+        if(switchLink.universSlug){
+            switcherElement = <div className="tf-breadcrumb-switcher">
                 <Link to={switchLink.url} className={switchLink.universClass}>
                     <div>
                         <h3>{switchLink.text}</h3>
@@ -64,7 +61,15 @@ class TfBreadcrumb extends React.Component {
                     </div>
                     {switchLink.icon}
                 </Link>
+            </div>;
+        }
+
+        return <nav className="tf-breadcrumb">
+            <div className="tf-breadcrumb-nav">
+                <Link to={Url.homeUrl()}><Icon name="home"/></Link>
+                {links}
             </div>
+            {switcherElement}
         </nav>;
     }
 
