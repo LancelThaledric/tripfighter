@@ -1,73 +1,82 @@
 [
     {
         "id": 1,
+        "slug": "hokusai-ou-trouver-les-meilleurs-oeuvres",
         "title": "Hokusai : Où trouver les meilleurs oeuvres ?",
         "description": "Hokusai c'est vraiment trop de la balle",
-        "tags": ["Art", "Traditionnel"],
+        "tags": ["art", "traditionnel"],
         "image": "media/thumbnail/hokusai.png",
         "date": "2016-12-10T18:25:43.511Z"
     },
     {
         "id": 2,
+        "slug": "goutez-aux-meilleurs-mochis-de-tokyo",
         "title": "Goûtez aux meilleurs mochis de Tokyo",
         "description": "Huuummm ! La belle bête ! C'est gourmand-croquant !",
-        "tags": ["Gastonomie", "Moderne"],
+        "tags": ["gastonomie", "moderne"],
         "image": "media/thumbnail/mochis.png",
         "date": "2013-04-23T18:25:43.511Z"
     },
     {
         "id": 3,
+        "slug": "les-thermes-tradtionnels-c-est-bon-pour-la-sante",
         "title": "Les thermes traditionnels c'est bon pour la santé des cheveux",
         "description": "Ces bains chauds sont super trop suuuuuuuuper !",
-        "tags": ["Style de vie", "Traditionnel"],
+        "tags": ["styledevie", "traditionnel"],
         "image": "media/thumbnail/thermes.jpg",
         "date": "2013-10-23T18:25:43.511Z"
     },
     {
         "id": 4,
+        "slug": "one-piece-gold-le-nouveau-film-de-la-toei-animation",
         "title": "One Piece Gold, le nouveau film de la Toei Animation",
         "description": "Gum-gum souffre-douleur ! Hmmmmm de la viande !!! Et un squelette vivant !",
-        "tags": ["Art", "Moderne"],
+        "tags": ["art", "moderne"],
         "image": "media/thumbnail/onepiece.jpg",
         "date": "2014-04-11T18:25:43.511Z"
     },
     {
         "id": 5,
+        "slug": "la-tour-de-tokyo-classique-indemodable",
         "title": "La tour de Tokyo, classique indémodable",
         "description": "Franchement je ne sais plus trop quoi mettre comme vignettes. Je fatigue.",
-        "tags": ["Lieux", "Moderne"],
+        "tags": ["lieux", "moderne"],
         "image": "media/thumbnail/tower.jpg",
         "date": "2015-04-23T18:25:43.511Z"
     },
     {
         "id": 6,
+        "slug": "une-ville-de-nuit-je-ne-sais-meme-plus-laquelle",
         "title": "Une ville de nuit, je ne sais même pas laquelle",
         "description": "Cependant, je dois avouer que ça reste stylé.",
-        "tags": ["Lieux", "Moderne"],
+        "tags": ["lieux", "moderne"],
         "image": "media/thumbnail/city.jpg",
         "date": "2016-01-12T18:25:43.511Z"
     },
     {
         "id": 7,
+        "slug": "sans-deconner-meme-sans-image-ca-rend-pas-mal",
         "title": "Sans déconner, même sans image ça rend pas mal, non ?",
         "description": "C'est ça qui est sympa avec le css. En ajoutant un peu de confiture, de simples carrés deviennent swag.",
-        "tags": ["Art", "Moderne"],
+        "tags": ["art", "moderne"],
         "image": null,
         "date": "2016-04-23T18:25:43.511Z"
     },
     {
         "id": 8,
+        "slug": "un-dernier-article-dummy",
         "title": "Un dernier article dummy",
         "description": "Oh mon dieu que c'est dummy ! Yummy dummy, comme dirait l'autre.",
-        "tags": ["Divertissement", "Traditionnel"],
+        "tags": ["divertissement", "traditionnel"],
         "image": null,
         "date": "2016-06-25T18:25:43.511Z"
     },
     {
         "id": 9,
+        "slug": "les-cerisiers-c-est-trop-style",
         "title": "Les cerisiers c'est trop stylé !",
         "description": "Mmmmhhhh parrrrr ma moustache !",
-        "tags": ["Lieux", "Traditionnel"],
+        "tags": ["lieux", "traditionnel"],
         "image": "media/thumbnail/cerisiers.jpg",
         "date": "2016-10-23T18:25:43.511Z" 
     }

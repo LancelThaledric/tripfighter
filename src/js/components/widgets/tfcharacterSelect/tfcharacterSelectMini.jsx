@@ -24,7 +24,7 @@ class TfCharacterSelectMini extends React.Component {
             </h2>
             <div className="tf-character-select-selector">
                 <div className="tf-character-left">
-                    <Link to={Url.computeUrl(Taxonomy.Univers.modern.slug, this.props.themeSlug)} className="tf-character-select-link">
+                    <Link to={Url.computeUrl(Taxonomy.Univers.moderne.slug, this.props.themeSlug)} className="tf-character-select-link">
                         <div className="tf-character-inner">
                             <h3 className="tf-character-select-title"><span className="tf-character-title-small">Japon</span>Moderne</h3>
                             <img className="tf-fighter" src={resource_leftFighter} alt=""/>

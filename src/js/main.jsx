@@ -13,6 +13,7 @@ import TfHome from './components/pages/tfhome/tfhome.jsx';
 import TfUnivers from './components/pages/tfunivers/tfunivers.jsx';
 import TfArticles from './components/pages/tfarticles/tfarticles.jsx';
 import TfTheme from './components/pages/tftheme/tftheme.jsx';
+import TfArticle from './components/pages/tfarticle/tfarticle.jsx';
 import Tf404 from './components/pages/tf404/tf404.jsx';
 // Style
 import style from '../style/style.scss';
@@ -35,9 +36,9 @@ ReactDOM.render(
                 universClass={Taxonomy.Univers.default.className}/>
             }/>
             {/*Univers*/}
-            <Route path={Taxonomy.Univers.modern.slug} component={
+            <Route path={Taxonomy.Univers.moderne.slug} component={
                 (props, state, params) => <TfUnivers
-                {...Props.makeUniversProps(Taxonomy.Univers.modern)}/>
+                {...Props.makeUniversProps(Taxonomy.Univers.moderne)}/>
             }/>
             <Route path={Taxonomy.Univers.traditionnel.slug} component={
                 (props, state, params) => <TfUnivers
@@ -75,34 +76,34 @@ ReactDOM.render(
                 {...Props.makeThemeProps(Taxonomy.Themes.styledevie)}/>
             }/>
             {/*Univers (moderne) + thèmes*/}
-            <Route path={Taxonomy.Univers.modern.slug+'/'+Taxonomy.Themes.lieux.slug} component={
+            <Route path={Taxonomy.Univers.moderne.slug+'/'+Taxonomy.Themes.lieux.slug} component={
                 (props, state, params) => <TfTheme
-                {...Props.makeUniversProps(Taxonomy.Univers.modern)}
+                {...Props.makeUniversProps(Taxonomy.Univers.moderne)}
                 {...Props.makeThemeProps(Taxonomy.Themes.lieux)}/>
             }/>
-            <Route path={Taxonomy.Univers.modern.slug+'/'+Taxonomy.Themes.art.slug} component={
+            <Route path={Taxonomy.Univers.moderne.slug+'/'+Taxonomy.Themes.art.slug} component={
                 (props, state, params) => <TfTheme
-                {...Props.makeUniversProps(Taxonomy.Univers.modern)}
+                {...Props.makeUniversProps(Taxonomy.Univers.moderne)}
                 {...Props.makeThemeProps(Taxonomy.Themes.art)}/>
             }/>
-            <Route path={Taxonomy.Univers.modern.slug+'/'+Taxonomy.Themes.divertissement.slug} component={
+            <Route path={Taxonomy.Univers.moderne.slug+'/'+Taxonomy.Themes.divertissement.slug} component={
                 (props, state, params) => <TfTheme
-                {...Props.makeUniversProps(Taxonomy.Univers.modern)}
+                {...Props.makeUniversProps(Taxonomy.Univers.moderne)}
                 {...Props.makeThemeProps(Taxonomy.Themes.divertissement)}/>
             }/>
-            <Route path={Taxonomy.Univers.modern.slug+'/'+Taxonomy.Themes.gastronomie.slug} component={
+            <Route path={Taxonomy.Univers.moderne.slug+'/'+Taxonomy.Themes.gastronomie.slug} component={
                 (props, state, params) => <TfTheme
-                {...Props.makeUniversProps(Taxonomy.Univers.modern)}
+                {...Props.makeUniversProps(Taxonomy.Univers.moderne)}
                 {...Props.makeThemeProps(Taxonomy.Themes.gastronomie)}/>
             }/>
-            <Route path={Taxonomy.Univers.modern.slug+'/'+Taxonomy.Themes.vetements.slug} component={
+            <Route path={Taxonomy.Univers.moderne.slug+'/'+Taxonomy.Themes.vetements.slug} component={
                 (props, state, params) => <TfTheme
-                {...Props.makeUniversProps(Taxonomy.Univers.modern)}
+                {...Props.makeUniversProps(Taxonomy.Univers.moderne)}
                 {...Props.makeThemeProps(Taxonomy.Themes.vetements)}/>
             }/>
-            <Route path={Taxonomy.Univers.modern.slug+'/'+Taxonomy.Themes.styledevie.slug} component={
+            <Route path={Taxonomy.Univers.moderne.slug+'/'+Taxonomy.Themes.styledevie.slug} component={
                 (props, state, params) => <TfTheme
-                {...Props.makeUniversProps(Taxonomy.Univers.modern)}
+                {...Props.makeUniversProps(Taxonomy.Univers.moderne)}
                 {...Props.makeThemeProps(Taxonomy.Themes.styledevie)}/>
             }/>
             {/*Univers (traditionnel) + thèmes*/}
@@ -135,6 +136,11 @@ ReactDOM.render(
                 (props, state, params) => <TfTheme
                 {...Props.makeUniversProps(Taxonomy.Univers.traditionnel)}
                 {...Props.makeThemeProps(Taxonomy.Themes.styledevie)}/>
+            }/>
+            {/*Articles*/}
+            <Route path="article/:slug" component={
+                (props, state, params) => <TfArticle
+                {...props} {...params}/>
             }/>
         </Route>
         <Route path="*" component={

@@ -2,7 +2,7 @@
 import {baseURL} from 'config';
 
 var Univers = {
-    modern: {
+    moderne: {
         name: 'Moderne',
         slug: 'moderne',
         className: 'tf-modern'
@@ -13,7 +13,7 @@ var Univers = {
         className: 'tf-trad'
     }
 };
-Univers.default = Univers.modern;
+Univers.default = Univers.moderne;
 
 var Themes = {
     lieux: {

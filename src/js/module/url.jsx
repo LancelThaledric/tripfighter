@@ -12,7 +12,7 @@ module.exports = {
         let path = '';
         if(univers) path += univers + '/';
         if(theme) path += theme + '/';
-        if(article) path += article + '/';
+        if(article) path += 'article/' + article + '/';
 
         return this.makeUrl(path);
 

@@ -1,5 +1,9 @@
 // Configuration
 import {baseURL} from 'config';
+// Additional Libraries
+import Taxonomy from './taxonomy.jsx';
+// Data
+import data_articles from 'raw!../../resource/articles.json';
 
 module.exports = {
 
@@ -38,6 +42,34 @@ module.exports = {
                 out_articles.push(article);
         }
         return out_articles;
+    },
+
+    getBySlug: function(slug){
+        if(!slug) return null;
+        var articles = JSON.parse(data_articles);
+        for(let article of articles){
+            if(article.slug == slug)
+                return article;
+        }
+        return null;
+    },
+
+    getUnivers: function(article){
+        for(let tag of article.tags){
+            if(tag in Taxonomy.Univers){
+                return Taxonomy.Univers[tag];
+            }
+        }
+        return Taxonomy.Univers.default;
+    },
+
+    getTheme: function(article){
+        for(let tag of article.tags){
+            if(tag in Taxonomy.Themes){
+                return Taxonomy.Themes[tag];
+            }
+        }
+        return null
     }
 
 };
