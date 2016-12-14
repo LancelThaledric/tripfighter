@@ -5,6 +5,8 @@ import React from 'react';
 import {Icon} from 'react-fa';
 import {Link} from 'react-router';
 import Url from './../../../module/url.jsx';
+import Taxonomy from './../../../module/taxonomy.jsx';
+import ClassNames from 'classnames';
 // Components
 // Style
 import style from './tfbreadcrumb_style.scss';
@@ -25,13 +27,43 @@ class TfBreadcrumb extends React.Component {
         if(this.props.articleTitle && this.props.articleSlug)
             links.push(<Icon name="angle-right" key={'icon-article-'+this.props.articleSlug}/>, <Link to={Url.computeUrl(this.props.articleSlug)} key={'article-'+this.props.articleSlug}>{this.props.articleTitle}</Link>);
         
+        // Calcul du switcher
+        // 1 : univers
+        let switchLink = {
+            url: '', text: '', subtext: '', icon: null, universSlug: null, universClass: null
+        }
+        if(this.props.univers == Taxonomy.Univers.moderne){
+            switchLink.url = Url.computeUrl(Taxonomy.Univers.traditionnel.slug);
+            switchLink.text = 'Aller au Japon traditionnel';
+            switchLink.icon = <Icon name="angle-right"/>
+            switchLink.universSlug = Taxonomy.Univers.traditionnel.slug;
+            switchLink.universClass = Taxonomy.Univers.traditionnel.className;
+        } else if(this.props.univers == Taxonomy.Univers.traditionnel){
+            switchLink.url = Url.computeUrl(Taxonomy.Univers.moderne.slug);
+            switchLink.text = 'Aller au Japon moderne';
+            switchLink.icon = <Icon name="angle-right"/>
+            switchLink.universSlug = Taxonomy.Univers.moderne.slug;
+            switchLink.universClass = Taxonomy.Univers.moderne.className;
+        }
+        // 2 : thème
+        if(this.props.theme){
+            switchLink.url = Url.computeUrl(switchLink.universSlug, this.props.theme.slug)
+            switchLink.subtext = 'Thème '+this.props.theme.name;
+        }
+
         return <nav className="tf-breadcrumb">
             <div className="tf-breadcrumb-nav">
                 <Link to={Url.homeUrl()}><Icon name="home"/></Link>
                 {links}
             </div>
             <div className="tf-breadcrumb-switcher">
-
+                <Link to={switchLink.url} className={switchLink.universClass}>
+                    <div>
+                        <h3>{switchLink.text}</h3>
+                        <span>{switchLink.subtext}</span>
+                    </div>
+                    {switchLink.icon}
+                </Link>
             </div>
         </nav>;
     }
