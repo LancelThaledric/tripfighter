@@ -20,7 +20,6 @@ class TfArticle extends React.Component {
         let themeArticle = Article.getTheme(article);
 
         return <TfPage {...this.props} {...Props.makeUniversProps(universArticle)} {...Props.makeThemeProps(themeArticle)} articleTitle={article.title} articleSlug={article.slug}>
-            <TfSeparator/>
             <TfArticleReader article={article}/>
         </TfPage>;
     }

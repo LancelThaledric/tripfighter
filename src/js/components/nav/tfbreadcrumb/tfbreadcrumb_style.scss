@@ -8,6 +8,11 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: stretch;
+    position: fixed; z-index: 50;
+    top: $header-height;
+    width: 100%;
+
+    height: $breadcrumb-height;
 
     a{
         color: $bgcolor;
@@ -21,11 +26,17 @@
 
     .tf-breadcrumb-nav>*{
         display: inline-block;
-        padding: 0.3rem 0.5rem;
+        padding: 0 0.5rem;
+    }
+    .tf-breadcrumb-nav:first-child{
+        padding-left: 0.4rem;
     }
     .tf-breadcrumb-nav{
         margin-right: auto;
-        padding: 0.5rem;
+        font-size: 1.2rem;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
     }
 
     .fa{color: $bgcolor;}

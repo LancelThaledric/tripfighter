@@ -7,8 +7,9 @@ import ClassNames from 'classnames';
 import Taxonomy from './../../../module/taxonomy.jsx';
 // Components
 import TfHeader from './../../nav/tfheader/tfheader.jsx';
-import TfBreadcrumb from './../../nav/tfbreadcrumb/tfbreadcrumb.jsx';
 import TfMenu from './../../nav/tfmenu/tfmenu.jsx';
+import TfBreadcrumb from './../../nav/tfbreadcrumb/tfbreadcrumb.jsx';
+import TfHeaderSeparator from './../../widgets/tfseparator/tfheaderSeparator.jsx';
 // Style
 import style from './tfpage_style.scss';
 
@@ -38,6 +39,7 @@ class TfPage extends React.Component {
         this.scrollTop = 0;
         this.toScroll = undefined;
         this.contentDOM = undefined;
+        this.headerHeight = this.props.isHome ? "4.4rem" : this.props.headerHeight;
     }
 
     handleMenuToggle(){
@@ -81,7 +83,7 @@ class TfPage extends React.Component {
         }
 
         if(this.isFiged()){
-            let contentStyleTop = "calc("+(-this.scrollTop)+"px + "+this.props.headerHeight+")";
+            let contentStyleTop = "calc("+(-this.scrollTop)+"px + "+this.headerHeight+")";
             this.contentDOM.style.top = contentStyleTop;
         }
 
@@ -91,8 +93,8 @@ class TfPage extends React.Component {
 
         let contentClass = ClassNames('tf-content', {'tf-figed': this.isFiged()});
 
-        let universClass = ClassNames(this.props.universClass, 'tf-app');
-        
+        let universClass = ClassNames(this.props.universClass, 'tf-app', {isHome: this.props.isHome});
+
         let breadcrumb = !this.props.isHome ? <TfBreadcrumb
                 univers={this.props.universTax}
                 theme={this.props.themeTax}
@@ -102,16 +104,17 @@ class TfPage extends React.Component {
 
         return <div id="tf-app" className={universClass}>
             <div className="tf-header-background"/>
-            <TfHeader onMenuToggle={this.handleMenuToggle} menuToggled={this.state.menuToggled}/>
+            <TfHeader {...this.props} onMenuToggle={this.handleMenuToggle} menuToggled={this.state.menuToggled}/>
+            {breadcrumb}
+            <TfHeaderSeparator/>
             <TfMenu
                 active={this.state.menuToggled}
                 displayed={this.state.menuDisplayed}
                 onTransitionEnd={this.handleMenuTransitionEnd}
                 figed={!this.isFiged()}
-                scrollOffset={this.isFiged() ? undefined : "calc("+(-this.scrollTop)+"px + "+this.props.headerHeight+")"}
+                scrollOffset={this.isFiged() ? undefined : "calc("+(-this.scrollTop)+"px + "+this.headerHeight+")"}
             />
             <div id="#tf-content" className={contentClass} ref={(contentDOM) => { this.contentDOM = contentDOM; }}>
-                {breadcrumb}
                 {this.props.children}
             </div>
         </div>;
@@ -120,7 +123,7 @@ class TfPage extends React.Component {
 }
 
 TfPage.defaultProps = {
-    headerHeight: "4rem",
+    headerHeight: "7.6rem",
     isHome: false
 };
 

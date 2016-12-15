@@ -1,5 +1,8 @@
 $max-width-section: 80rem;
 
 $header-height: 4rem;
+$breadcrumb-height: 3.2rem;
+$separator-thickness: 0.4rem;
+$header-total-height: $header-height + $breadcrumb-height + $separator-thickness;
 
 $article-height: 26rem;

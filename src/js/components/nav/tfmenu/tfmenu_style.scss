@@ -7,6 +7,7 @@ div.tf-menu{
     color: $bgcolor;
     display: none;
     width: 100%;
+    margin-top: -3.6rem;
 
     div.tf-transiter{
         position: fixed;
@@ -62,4 +63,8 @@ div.tf-menu{
 
     }
 
+}
+
+.isHome div.tf-menu{
+    margin-top: -0.4rem;
 }

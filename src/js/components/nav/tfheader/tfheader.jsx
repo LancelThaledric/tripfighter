@@ -40,7 +40,8 @@ class TfHeader extends React.Component {
                 <TfAButton to="#" id="tf-login-box" title="Connexion / Inscription"><Icon fixedWidth name="user"/></TfAButton>
             </div>
             
-        </nav></header>;
+        </nav>
+        </header>;
     }
 
 }

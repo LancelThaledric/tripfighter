@@ -59,7 +59,7 @@ section.tf-theme-select{
         width: 100%; height: 100%;
         position: absolute;
         top: 0; left: 0;
-        z-index: -1;
+        z-index: 0;
         background-size: cover;
         background-position: center;
 
@@ -68,7 +68,7 @@ section.tf-theme-select{
             width: 100%; height: 100%;
             position: absolute;
             top: 0; left: 0;
-            z-index: -1;
+            z-index: 0;
             background-size: cover;
             background-position: center;
             opacity: 1;
@@ -122,5 +122,6 @@ section.tf-theme-select{
         padding: 0.5rem;
         font-size: 1.4rem;
         text-transform: uppercase;
+        position: relative; z-index: 1;
     }
 }

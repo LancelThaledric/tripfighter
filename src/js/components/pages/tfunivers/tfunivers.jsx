@@ -17,7 +17,6 @@ class TfUnivers extends React.Component {
     render(){
 
         return <TfPage {...this.props}>
-            <TfSeparator/>
             <TfPageTitle>Univers {this.props.universName}</TfPageTitle>
             <TfThemeSelectMini universSlug={this.props.universSlug}/>
             <TfAllArticles title={"Articles dans l'univers "+this.props.universName}

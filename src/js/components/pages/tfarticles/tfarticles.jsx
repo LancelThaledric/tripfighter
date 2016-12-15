@@ -15,7 +15,6 @@ class TfArticles extends React.Component {
     render(){
 
         return <TfPage {...this.props}>
-            <TfSeparator/>
             <TfPageTitle>Articles</TfPageTitle>
             <TfAllArticles title="Tous les articles de Trip Fighter en une page !"
                            description={<p>C'est si beau qu'on aurait du mal à y croire !</p>}/>

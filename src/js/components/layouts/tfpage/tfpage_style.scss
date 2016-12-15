@@ -6,8 +6,11 @@ div.tf-app{
 
     line-height: 1.6em;
     color: $fgcolor;
-
-    margin-top: $header-height;
+    background: $bgcolor;
+    margin-top: $header-total-height;
+    &.isHome{
+        margin-top: $header-height + $separator-thickness;
+    }
 }
 
 // Header background
@@ -27,5 +30,9 @@ div.tf-content{
 // Static-content when menu appears
 div.tf-content.tf-figed{
     position: fixed;
-    z-index: -1;
+    z-index: 0;
+}
+
+section{
+    background: $bgcolor;
 }

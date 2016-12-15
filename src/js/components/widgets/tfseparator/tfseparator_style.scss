@@ -1,7 +1,7 @@
 @import '../../../../style/base/all';
 
 $icon-size: 2rem;
-$thickness: 0.4rem;
+$thickness: $separator-thickness;
 
 div.tf-separator{
     background: #000;
@@ -53,4 +53,14 @@ h2.tf-text-separator{
         height: $thickness;
         background: #000;
     }
+}
+
+div.tf-header-separator{
+    position: fixed; top: $header-height + $breadcrumb-height;
+    width: 100%;
+    z-index: 50;
+}
+
+.isHome div.tf-header-separator{
+    top: $header-height;
 }

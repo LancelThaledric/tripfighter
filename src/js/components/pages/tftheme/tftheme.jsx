@@ -20,7 +20,6 @@ class TfTheme extends React.Component {
         if(this.props.universName) tags.push(this.props.universName);
 
         return <TfPage {...this.props}>
-            <TfSeparator/>
             <TfPageTitle>Thème {this.props.themeName}</TfPageTitle>
             {this.props.universName ? null : <TfCharacterSelectMini themeSlug={this.props.themeSlug}/>}
             <TfAllArticles title={"Articles dans le thème "+this.props.themeName}

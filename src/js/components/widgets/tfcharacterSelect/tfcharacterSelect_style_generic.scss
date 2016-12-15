@@ -6,6 +6,10 @@ section.tf-character-select{
 
     display: flex; flex-flow: column nowrap;
     align-items: stretch;
+    
+    p{
+        text-indent: 0;
+    }
 
     h2{
         flex: 0;
@@ -104,9 +108,10 @@ section.tf-character-select{
 
         div.tf-character-left{
             // margin-left: -0.2588190451 * $character-select-height; // depend on height. Compute margin-left: sin(-15deg) * $character-select-height;
-            /*a.tf-character-select-link div.tf-character-inner{
+            a.tf-character-select-link div.tf-character-inner{
                 //padding-left: 0.2588190451 * $character-select-height * 2 + 4rem;
-            }*/
+                p{text-align: left;}
+            }
 
             a.tf-character-select-link:hover{
                 h3.tf-character-select-title{
@@ -131,6 +136,7 @@ section.tf-character-select{
             a.tf-character-select-link div.tf-character-inner{
                 //padding-right: 0.2588190451 * $character-select-height * 2 + 4rem;
                 text-align: right;
+                p{text-align: right;}
             }
 
             a.tf-character-select-link:hover{
