@@ -16,7 +16,7 @@ section.tf-article-reader{
         div.tf-article-image{
             position: fixed;
             z-index: 0;
-            top: $header-height;
+            top: $header-total-height;
             width: 50%;
             height: 100%;
             background-size: cover;
