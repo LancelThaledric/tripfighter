@@ -83,7 +83,7 @@ div.tf-article-mini-wrapper{
             top: 0; left: 100% * 1.2588190451;
             z-index: 0;
             background-size: cover;
-            background: rgba(0,0,0,0.5);
+            //background: rgba(0,0,0,0.5);
             transform: skewX(-15deg);
             transition: left ease 0.4s;
 
@@ -93,7 +93,7 @@ div.tf-article-mini-wrapper{
                 position: absolute;
                 top: 0; left: 100%;
                 z-index: 1;
-                background: rgba(0,0,0,0.5);
+                //background: rgba(0,0,0,0.5);
                 transition: left ease 0s 0.4s;
             }
         }
@@ -136,7 +136,7 @@ div.tf-article-mini-wrapper{
                 .tf-tag, .tf-tag-little{
                     margin-bottom: 0;
 
-                    background: $fgcolor;
+                    //background: $fgcolor;
                 }
             }
         }

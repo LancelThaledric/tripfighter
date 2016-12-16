@@ -14,9 +14,9 @@
 //////////////////////////////////////////////////////
 
 .tf-modern nav.tf-breadcrumb{
-    background: rgba($modernlightcolor, 0.9);
+    background: mix($fgcolor, $modernlightcolor, 10%);
 }
 
 .tf-trad nav.tf-breadcrumb{
-    background: rgba($tradlightcolor, 0.9);
+    background: mix($fgcolor, $tradlightcolor, 10%);
 }

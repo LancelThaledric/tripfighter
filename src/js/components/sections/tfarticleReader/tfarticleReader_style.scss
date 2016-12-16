@@ -17,6 +17,7 @@ section.tf-article-reader{
             position: fixed;
             z-index: 0;
             top: $header-total-height;
+            //top: $header-height;
             width: 50%;
             height: 100%;
             background-size: cover;

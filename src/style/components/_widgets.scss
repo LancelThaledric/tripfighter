@@ -215,3 +215,39 @@ div.tf-menu{
         }
     }
 }
+
+//////////////////////////////////////////////////////
+// ArticleMini
+//////////////////////////////////////////////////////
+
+.tf-article-mini-inner.tf-modern{
+    .tf-transiter{
+        background: rgba($moderndarkcolor,0.5);
+        &::after{
+            background: rgba($moderndarkcolor,0.5);
+        }
+    }
+    div.tf-article-mini-content{
+        div.tf-tag-list{
+            .tf-tag, .tf-tag-little{
+                background: $moderndarkcolor;
+            }
+        }
+    }
+}
+
+.tf-article-mini-inner.tf-trad{
+    .tf-transiter{
+        background: rgba($traddarkcolor,0.5);
+        &::after{
+            background: rgba($traddarkcolor,0.5);
+        }
+    }
+    div.tf-article-mini-content{
+        div.tf-tag-list{
+            .tf-tag, .tf-tag-little{
+                background: $traddarkcolor;
+            }
+        }
+    }
+}
