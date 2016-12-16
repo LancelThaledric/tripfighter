@@ -168,3 +168,50 @@ div.tf-menu{
         background: $modernlightcolor;
     }
 }
+
+//////////////////////////////////////////////////////
+// TfAbutton
+//////////////////////////////////////////////////////
+
+.tf-modern a.tf-abutton,
+.tf-modern button,
+.tf-modern input[type=submit]{
+    background: $modernlightcolor;
+
+    div.tf-transiter{
+        &::before, &::after{
+            background: $modernaltcolor;
+        }
+    }
+    div.tf-transiter-2{
+        &::before, &::after{
+            background: $moderndarkcolor;
+        }
+    }
+}
+
+.tf-trad a.tf-abutton,
+.tf-trad button,
+.tf-trad input[type=submit]{
+    background: $tradlightcolor;
+
+    div.tf-transiter{
+        &::before, &::after{
+            background: $tradaltcolor;
+        }
+    }
+    div.tf-transiter-2{
+        &::before, &::after{
+            background: $traddarkcolor;
+        }
+    }
+}
+
+.tf-site-header a.tf-abutton{
+    background: none;
+    div.tf-transiter{
+        &::before, &::after{
+            background: $bgcolor;
+        }
+    }
+}

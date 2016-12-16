@@ -1,4 +1,6 @@
 import 'babel-polyfill';
+// Configuration
+import {baseURL} from 'config';
 // React
 import React from 'react';
 // Additional libraries
@@ -50,6 +52,9 @@ class TfAllArticles extends React.Component {
             {this.props.description}
 
             <TfArticleGrid data={this.state.data}/>
+            <div className="tf-center-button-bar">
+                <TfAButton to={baseURL+'articles/'} title="Plus d'articles">Mettez-moi une dose de <strong>Japon</strong> supplémentaire</TfAButton>
+            </div>
         </section>;
     }
 

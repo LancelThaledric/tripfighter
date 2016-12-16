@@ -11,8 +11,8 @@ import Taxonomy from './../../../module/taxonomy.jsx';
 // Style
 import style from './tfcharacterSelect_style.scss';
 // Resources
-import resource_leftFighter from '../../../../resource/fighter-left.png';
-import resource_rightFighter from '../../../../resource/fighter-right.png';
+import resource_leftFighter from '../../../../resource/moderne_kun_by_hellowizz.png';
+import resource_rightFighter from '../../../../resource/traditionnel_kun_by_hellowizz.png';
 import resource_versus from '../../../../resource/versus.png';
 
 class TfCharacterSelect extends React.Component {
