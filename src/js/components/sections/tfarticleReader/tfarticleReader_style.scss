@@ -31,3 +31,7 @@ section.tf-article-reader{
         }
     }
 }
+
+.tf-trad section.tf-article-reader{
+    flex-flow: row-reverse nowrap;
+}
