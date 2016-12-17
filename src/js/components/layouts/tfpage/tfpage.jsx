@@ -118,9 +118,8 @@ class TfPage extends React.Component {
             />
             <div id="#tf-content" className={contentClass} ref={(contentDOM) => { this.contentDOM = contentDOM; }}>
                 {this.props.children}
+                <TfFooter/>
             </div>
-            
-            <TfFooter/>
         </div>;
     }
 

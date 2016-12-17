@@ -35,9 +35,23 @@ section.tf-article-reader{
         display: flex; flex-flow: column nowrap;
         position: fixed;
         left: 0; top: center;
+        opacity: 0.5;
+        transition: opacity ease 0.4s;
+        
+        &:hover{
+            opacity: 1;
+        }
+
+        button{
+            text-align: center;
+        }
     }
 }
 
 .tf-trad section.tf-article-reader{
     flex-flow: row-reverse nowrap;
+
+    div.tf-article-social{
+        left: auto; right: 0;
+    }
 }
