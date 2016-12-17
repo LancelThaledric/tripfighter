@@ -3,8 +3,10 @@ import 'babel-polyfill';
 import React from 'react';
 // Additional libraries
 import {Link} from 'react-router';
+import {Icon} from 'react-fa';
 import ClassNames from 'classnames';
 // Components
+import TfAButton from './../../widgets/tfabutton/tfabutton.jsx';
 // Style
 import style from './tfarticleReader_style.scss';
 
@@ -17,6 +19,11 @@ class TfArticleReader extends React.Component {
         return <section className="tf-article-reader">
             <div className="tf-article-image-wrapper">
                 <div className="tf-article-image" style={{backgroundImage: 'url('+this.props.article.image+')'}}/>
+            </div>
+            <div className="tf-article-social">
+                <TfAButton to="#" className="tf-facebook-button"><Icon name="facebook"/></TfAButton>
+                <TfAButton to="#" className="tf-twitter-button"><Icon name="twitter"/></TfAButton>
+                <TfAButton to="#" className="tf-pinterest-button"><Icon name="pinterest-p"/></TfAButton>
             </div>
             <div className="tf-article-content">
                 <h1>{this.props.article.title}</h1>

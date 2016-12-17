@@ -30,6 +30,12 @@ section.tf-article-reader{
             padding: 0 2rem;
         }
     }
+
+    div.tf-article-social{
+        display: flex; flex-flow: column nowrap;
+        position: fixed;
+        left: 0; top: center;
+    }
 }
 
 .tf-trad section.tf-article-reader{
