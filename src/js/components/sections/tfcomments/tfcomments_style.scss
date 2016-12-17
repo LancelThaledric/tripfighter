@@ -1,0 +1,37 @@
+@import '../../../../style/base/all';
+
+.tf-comments{
+    display: flex; flex-flow: column nowrap;
+    align-items: stretch;
+
+    textarea{
+        background: rgba($bgcolor, 0.5);
+        border: none;
+        padding: 1rem;
+    }
+
+    .tf-comment{
+        display: flex; flex-flow: row nowrap;
+        margin: 2rem 0;
+
+        .tf-author{
+            display: flex; flex-flow: column nowrap;
+            align-items: stretch;
+            img{
+                width: 4rem; height: auto;
+            }
+            margin-right: 2rem;
+        }
+        .tf-comment-content{
+            margin: 0;
+            .tf-comment-info{
+                display: flex; flex-flow: row wrap;
+                &>strong{
+                    margin-right: 2rem;
+                    display: block;
+                }
+            }
+            
+        }
+    }
+}

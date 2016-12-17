@@ -1,0 +1,16 @@
+//////////////////////////////////////////////////////
+// Comments
+//////////////////////////////////////////////////////
+
+.tf-modern .tf-comments{
+    background: $modernaltcolor;
+}
+
+.tf-trad .tf-comments{
+    background: $tradaltcolor;
+    color: $bgcolor;
+    textarea{
+        background: rgba($fgcolor, 0.5);
+        color: $bgcolor;
+    }
+}
