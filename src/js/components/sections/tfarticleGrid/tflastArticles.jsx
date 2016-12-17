@@ -43,8 +43,11 @@ class TfLastArticles extends React.Component {
 
         return <section className="tf-last-articles">
             <h2>
-                Derniers articles qui tuent
+                Derniers articles de Trip Fighter
             </h2>
+            <p className="tf-center">
+                Atteignez une destination immédiatement.<br/>Il vous suffit de choisir un article.
+            </p>
 
             <TfArticleGrid data={this.state.data}/>
 

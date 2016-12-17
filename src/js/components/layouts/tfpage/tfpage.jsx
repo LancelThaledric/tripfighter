@@ -100,6 +100,7 @@ class TfPage extends React.Component {
                 theme={this.props.themeTax}
                 articleTitle={this.props.articleTitle}
                 articleSlug={this.props.articleSlug}
+                allArticles={this.props.allArticles}
             /> : null;
 
         return <div id="tf-app" className={universClass}>

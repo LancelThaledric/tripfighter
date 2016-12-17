@@ -33,7 +33,8 @@ ReactDOM.render(
             {/*Tous les articles*/}
             <Route path="articles" component={
                 (props, state, params) => <TfArticles
-                universClass={Taxonomy.Univers.default.className}/>
+                universClass={Taxonomy.Univers.default.className}
+                allArticles={true}/>
             }/>
             {/*Univers*/}
             <Route path={Taxonomy.Univers.moderne.slug} component={

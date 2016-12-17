@@ -15,9 +15,9 @@ class TfArticles extends React.Component {
     render(){
 
         return <TfPage {...this.props}>
-            <TfPageTitle>Articles</TfPageTitle>
-            <TfAllArticles title="Tous les articles de Trip Fighter en une page !"
-                           description={<p>C'est si beau qu'on aurait du mal à y croire !</p>}/>
+            <TfPageTitle inverted={true}>Tous les articles de Trip Fighter en une page</TfPageTitle>
+            <TfAllArticles title={null}
+                           description={<p className="tf-center">C'est si beau qu'on aurait du mal à y croire !</p>}/>
         </TfPage>;
     }
 

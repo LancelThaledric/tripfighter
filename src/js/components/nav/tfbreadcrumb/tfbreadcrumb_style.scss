@@ -94,4 +94,23 @@
             left: 5%;
         }
     }
+
+    .tf-breadcrumb-switcher{
+        position: relative;
+        display: flex; flex-flow: row-reverse nowrap;
+        align-items: center;
+        justify-content: flex-end;
+        .tf-switcher-plane{
+            font-size: 2rem;
+            transform: rotate(45deg);
+            margin-right: 4rem;
+            opacity: 0;
+            transition: margin ease 0.4s, opacity ease 0.4s;
+        }
+
+        a:hover+.tf-switcher-plane{
+            margin-right: 0;
+            opacity: 1;
+        }
+    }
 }

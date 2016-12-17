@@ -26,7 +26,10 @@ class TfBreadcrumb extends React.Component {
             links.push(<Icon name="angle-right" key={'icon-theme-'+this.props.theme.slug}/>, <Link to={Url.computeUrl('', this.props.theme.slug)} key={'theme-'+this.props.theme.slug}>{this.props.theme.name}</Link>);
         if(this.props.articleTitle && this.props.articleSlug)
             links.push(<Icon name="angle-right" key={'icon-article-'+this.props.articleSlug}/>, <Link to={Url.computeUrl('', '', this.props.articleSlug)} key={'article-'+this.props.articleSlug}>{this.props.articleTitle}</Link>);
-        
+        if(this.props.allArticles){
+            links.push(<Icon name="angle-right" key={'icon-allarticles-'+this.props.univers.slug}/>, <Link to={Url.computeUrl('articles')} key={'allarticles'}>Tous les articles</Link>);
+        }
+
         // Calcul du switcher
         // 1 : univers
         let switchLink = {
@@ -61,6 +64,7 @@ class TfBreadcrumb extends React.Component {
                     </div>
                     {switchLink.icon}
                 </Link>
+                <Icon name="plane" className="tf-switcher-plane"/>
             </div>;
         }
 

@@ -45,16 +45,18 @@ class TfAllArticles extends React.Component {
 
     render(){
 
+        let title = this.props.title ? <h2>{this.props.title}</h2> : null;
+
+        let buttonmore = this.props.buttonmore ? <div className="tf-center-button-bar">
+                <TfAButton to={baseURL+'articles/'} title="Plus d'articles">Mettez-moi une dose de <strong>Japon</strong> supplémentaire</TfAButton>
+            </div> : null;
+
         return <section className="tf-all-articles">
-            <h2>
-                {this.props.title}
-            </h2>
+            {title}
             {this.props.description}
 
             <TfArticleGrid data={this.state.data}/>
-            <div className="tf-center-button-bar">
-                <TfAButton to={baseURL+'articles/'} title="Plus d'articles">Mettez-moi une dose de <strong>Japon</strong> supplémentaire</TfAButton>
-            </div>
+            {buttonmore}
         </section>;
     }
 
@@ -73,7 +75,8 @@ TfAllArticles.defaultProps = {
     tags: [],
     limit: null,
     title: '&lt;Ici un titre&gt',
-    description: <p>&lt;Ici description&gt;</p>
+    description: <p>&lt;Ici description&gt;</p>,
+    buttonmore: false
 };
 
 module.exports = TfAllArticles;
