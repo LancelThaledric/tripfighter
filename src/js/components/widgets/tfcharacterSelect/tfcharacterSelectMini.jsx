@@ -19,9 +19,6 @@ class TfCharacterSelectMini extends React.Component {
     render(){
 
         return <section className="tf-character-select-mini">
-            <h2>
-                Choisissez un univers
-            </h2>
             <div className="tf-character-select-selector">
                 <div className="tf-character-left">
                     <Link to={Url.computeUrl(Taxonomy.Univers.moderne.slug, this.props.themeSlug)} className="tf-character-select-link">

@@ -20,14 +20,6 @@ section.tf-theme-select{
         align-items: center;
         justify-content: center;
         flex: 0;
-
-        &::before, &::after{
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: $bgcolor;
-            margin: 0 2rem;
-        }
     }
 
     div.tf-theme-select-selector{

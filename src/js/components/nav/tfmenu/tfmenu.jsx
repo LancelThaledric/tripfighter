@@ -19,6 +19,7 @@ class TfMenu extends React.Component {
         return <div id="tf-menu" className={className} style={styles}>
             <div className="tf-transiter" onTransitionEnd={this.props.onTransitionEnd}/>
             <div className="tf-menu-content">
+                <h2>Choisissez un univers</h2>
                 <TfCharacterSelectMini/>
                 <TfThemeSelect/>
             </div>

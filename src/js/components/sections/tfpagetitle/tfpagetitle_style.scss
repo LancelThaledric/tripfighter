@@ -21,13 +21,5 @@ section.tf-pagetitle{
         align-items: center;
         justify-content: center;
         flex: 0;
-
-        &::before, &::after{
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: $bgcolor;
-            margin: 0 2rem;
-        }
     }
 }

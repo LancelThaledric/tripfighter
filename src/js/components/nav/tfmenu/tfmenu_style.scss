@@ -63,6 +63,21 @@ div.tf-menu{
 
     }
 
+    h2{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500 !important;
+        line-height: 1.2em;
+        font-size: 2rem;
+        text-align: center;
+        margin: 2rem 0;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        flex: 0;
+    }
+
 }
 
 .isHome div.tf-menu{

@@ -23,14 +23,6 @@ section.tf-last-articles{
         align-items: center;
         justify-content: center;
         flex: 0;
-
-        &::before, &::after{
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: $fgcolor;
-            margin: 0 2rem;
-        }
     }
 
 }
