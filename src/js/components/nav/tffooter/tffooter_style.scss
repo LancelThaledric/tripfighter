@@ -1,0 +1,30 @@
+@import '../../../../style/base/all';
+
+footer.tf-site-footer nav{
+    padding: 2rem;
+
+    @extend .inverted-section;
+    display: flex; flex-flow: column nowrap;
+    align-items: stretch;
+    position: relative;
+    z-index: 50;
+
+    .tf-footer-row{
+        display: flex; flex-flow: row nowrap;
+    }
+
+    .tf-pinterest-button, .tf-footer-newsletter{
+        margin-right: auto;
+    }
+
+    .tf-footer-theme, .tf-footer-mentions, .tf-footer-contact, .tf-footer-newsletter{
+        background: none;
+    }
+
+
+}
+
+footer.tf-site-footer .tf-separator{
+    position: relative;
+    z-index: 60;
+}

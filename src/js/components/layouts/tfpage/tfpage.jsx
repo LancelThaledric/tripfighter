@@ -10,6 +10,7 @@ import TfHeader from './../../nav/tfheader/tfheader.jsx';
 import TfMenu from './../../nav/tfmenu/tfmenu.jsx';
 import TfBreadcrumb from './../../nav/tfbreadcrumb/tfbreadcrumb.jsx';
 import TfHeaderSeparator from './../../widgets/tfseparator/tfheaderSeparator.jsx';
+import TfFooter from './../../nav/tffooter/tffooter.jsx';
 // Style
 import style from './tfpage_style.scss';
 
@@ -118,6 +119,8 @@ class TfPage extends React.Component {
             <div id="#tf-content" className={contentClass} ref={(contentDOM) => { this.contentDOM = contentDOM; }}>
                 {this.props.children}
             </div>
+            
+            <TfFooter/>
         </div>;
     }
 

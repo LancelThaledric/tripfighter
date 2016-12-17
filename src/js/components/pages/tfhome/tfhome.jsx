@@ -21,7 +21,6 @@ class TfHome extends React.Component {
             <TfSeparator/>
             <TfCharacterSelect/>
             <TfLastArticles/>
-            <TfSeparator/>
         </TfPage>;
     }
 

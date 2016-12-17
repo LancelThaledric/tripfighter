@@ -207,11 +207,69 @@ div.tf-menu{
     }
 }
 
+a.tf-abutton.tf-modern,
+button.tf-modern,
+input[type=submit].tf-modern{
+    background: $modernlightcolor;
+
+    div.tf-transiter{
+        &::before, &::after{
+            background: $modernaltcolor;
+        }
+    }
+    div.tf-transiter-2{
+        &::before, &::after{
+            background: $moderndarkcolor;
+        }
+    }
+}
+
+a.tf-abutton.tf-trad,
+button.tf-trad,
+input[type=submit].tf-trad{
+    background: $tradlightcolor;
+
+    div.tf-transiter{
+        &::before, &::after{
+            background: $tradaltcolor;
+        }
+    }
+    div.tf-transiter-2{
+        &::before, &::after{
+            background: $traddarkcolor;
+        }
+    }
+}
+
 .tf-site-header a.tf-abutton{
     background: none;
     div.tf-transiter{
         &::before, &::after{
             background: $bgcolor;
+        }
+    }
+}
+
+.tf-facebook-button{
+    div.tf-transiter-2{
+        &::before, &::after{
+            background: #3b5998 !important;
+        }
+    }
+}
+
+.tf-twitter-button{
+    div.tf-transiter-2{
+        &::before, &::after{
+            background: #1da1f2 !important;
+        }
+    }
+}
+
+.tf-pinterest-button{
+    div.tf-transiter-2{
+        &::before, &::after{
+            background: #bd081c !important;
         }
     }
 }
