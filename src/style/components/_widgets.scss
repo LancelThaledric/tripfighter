@@ -21,6 +21,166 @@ section.tf-character-select-mini div.tf-character-select-selector{
 
 }
 
+@media (max-width: 1400px){
+    section.tf-character-select div.tf-character-select-selector,
+    section.tf-character-select-mini div.tf-character-select-selector{
+        div.tf-character-left p.tf-fighter-description{
+            margin-left: 8rem;
+        }
+        div.tf-character-right p.tf-fighter-description{
+            margin-right: 8rem;
+        }
+
+        div.tf-character-left{
+            a.tf-character-select-link:hover{
+                p.tf-fighter-description{
+                    margin-left: 12rem;
+                    opacity: 1;
+                }
+            }
+        }
+
+        div.tf-character-right{
+            a.tf-character-select-link:hover{
+                p.tf-fighter-description{
+                    margin-right: 12rem;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:hover{
+            div.tf-character-left p.tf-fighter-description{
+                margin-left: 6rem;
+            }
+            div.tf-character-right p.tf-fighter-description{
+                margin-right: 6rem;
+            }
+        }
+
+        h3.tf-character-select-title{
+            font-size: 3rem;
+        }
+        p.tf-fighter-description{
+           font-size: 0.9rem;
+           width: 20rem;
+        }
+    }
+
+    
+}
+
+@media (max-width: 1024px){
+    section.tf-character-select,
+    section.tf-character-select-mini{
+        $character-select-height: 8rem;
+
+        div.tf-character-select-selector{
+            flex-flow: column nowrap;
+        }
+
+        h2{
+            font-weight: 500;
+        }
+
+        div.tf-character-select-selector h3.tf-character-select-title{
+            font-size: 1.5rem;
+                span.tf-character-title-small{
+                font-size: 0.5em;
+            }
+        }
+
+        img.tf-character-select-versus{
+            display: none;
+        }
+
+        img.tf-fighter{
+            height: 192px; width: auto;
+        }
+
+        div.tf-character-select-selector{
+            div.tf-character-left, div.tf-character-right{
+                height: $character-select-height;
+            }
+
+            div.tf-character-left{
+                margin-left: sin(-15deg) * $character-select-height;
+
+                a.tf-character-select-link div.tf-character-inner{
+                    //padding-left: 0.2588190451 * $character-select-height * 2 + 4rem;
+                    padding-left: -1 * sin(-15deg) * $character-select-height * 2 + 4rem;
+                }
+            }
+
+            div.tf-character-right{
+                margin-right: sin(-15deg) * $character-select-height;
+                a.tf-character-select-link div.tf-character-inner{
+                    padding-right: -1 * sin(-15deg) * $character-select-height * 2 + 4rem;
+                }
+            }
+
+            div.tf-character-inner{
+                margin: 0 sin(-15deg) * $character-select-height;
+                padding: 0 -1 * sin(-15deg) * $character-select-height;
+            }
+
+            div.tf-character-left img.tf-fighter{
+                left: -1 * sin(-15deg) * $character-select-height * 2;
+            }
+            div.tf-character-right img.tf-fighter{
+                right: -1 * sin(-15deg) * $character-select-height * 2;
+            }
+
+            img.tf-fighter{
+                height: 384px / 2;
+                bottom: auto;
+                top: 0;
+            }
+
+            h3.tf-character-select-title{
+                margin: 2rem;
+                margin-bottom: 0;
+            }
+
+            div.tf-character-left{
+                h3.tf-character-select-title{
+                    margin-left: 4rem;
+                }
+                a.tf-character-select-link:hover{
+                    h3.tf-character-select-title{
+                        margin-left: 4rem;
+                    }
+                    img.tf-fighter{
+                        margin-left: 2rem;
+                    }
+                }
+            }
+            div.tf-character-right{
+                h3.tf-character-select-title{
+                    margin-right: 4rem;
+                }
+                a.tf-character-select-link:hover{
+                    h3.tf-character-select-title{
+                        margin-right: 4rem;
+                    }
+                    img.tf-fighter{
+                        margin-right: 2rem;
+                    }
+                }
+            }
+
+            &:hover{
+                div.tf-character-left h3.tf-character-select-title{
+                    margin-left: 2rem;
+                }
+                div.tf-character-right h3.tf-character-select-title{
+                    margin-right: 2rem;
+                }
+            }
+        }
+    }
+}
+
 //////////////////////////////////////////////////////
 // Theme Select & Theme Select Mini
 //////////////////////////////////////////////////////
@@ -125,6 +285,19 @@ div.tf-menu{
         }
         a.tf-theme-styledevie div.tf-theme-thumbnail::after{
             background-image: url('../resource/themes/styledevie-trad.jpg');
+        }
+    }
+}
+
+@media (max-width: 1400px){
+    section.tf-theme-select,
+    section.tf-theme-select-mini{
+        div.tf-theme-select-selector>a{
+            flex: 33%;
+            height: 8rem;
+            &:hover{
+                flex: 33%;
+            }    
         }
     }
 }

@@ -10,7 +10,7 @@ footer.tf-site-footer nav{
     z-index: 50;
 
     .tf-footer-row{
-        display: flex; flex-flow: row nowrap;
+        display: flex; flex-flow: row wrap;
     }
 
     .tf-pinterest-button, .tf-footer-newsletter{

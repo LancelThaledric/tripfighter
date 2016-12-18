@@ -24,11 +24,12 @@ section.tf-theme-select{
 
     div.tf-theme-select-selector{
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         align-items: stretch;
 
         &>a{
             flex: 1;
+            flex-shrink: 0;
             height: $theme-selector-height;
             transition: flex ease 0.4s;
             position: relative;

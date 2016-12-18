@@ -14,3 +14,36 @@
         color: $bgcolor;
     }
 }
+
+@media (max-width: 800px){
+    section.tf-article-reader{
+        flex-flow: column nowrap;
+
+        div.tf-article-image-wrapper{
+            position: relative;
+            overflow: hidden;
+
+            div.tf-article-image{
+                position: static;
+                z-index: 0;
+                top: $header-total-height;
+                //top: $header-height;
+                width: 100%;
+                height: 32rem;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+        }
+
+        div.tf-article-content{
+            position: relative;
+            z-index: 25;
+            background: $bgcolor;
+        }
+
+        div.tf-article-social{
+            opacity: 1;
+        }
+    }
+}
