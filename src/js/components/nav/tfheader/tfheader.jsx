@@ -18,27 +18,34 @@ class TfHeader extends React.Component {
     constructor(props){
         super(props);
 
-        this.handleClick = this.handleClick.bind(this);
+        this.handleMenuClick = this.handleMenuClick.bind(this);
+        this.handleSearchClick = this.handleSearchClick.bind(this);
     }
 
-    handleClick(e){
+    handleMenuClick(e){
         this.props.onMenuToggle();
+        e.preventDefault();
+    }
+
+    handleSearchClick(e){
+        this.props.onSearchToggle();
         e.preventDefault();
     }
 
     render(){
 
         let menuIcon = this.props.menuToggled ? 'times' : 'bars';
+        let searchIcon = this.props.searchToggled ? 'times' : 'search';
 
         return <header className="tf-site-header"><nav>
             <div>
-                <TfAButton to="#tf-menu" id="tf-main-menu-toggle" onClick={this.handleClick}><Icon fixedWidth name={menuIcon}/><span className="tf-menu-label"> Menu</span></TfAButton>
+                <TfAButton to="#tf-menu" id="tf-main-menu-toggle" onClick={this.handleMenuClick}><Icon fixedWidth name={menuIcon}/><span className="tf-menu-label"> Menu</span></TfAButton>
             </div>
             <div>
                 <TfAButton to={baseURL} id="tf-home-link" className="tf-site-title"><img src={baseURL+"resource/logo.svg"} alt="TRIP FIGHTER"/></TfAButton>
             </div>
             <div>
-                <TfAButton to="#" id="tf-search-link" title="Recherchez du Japon"><Icon fixedWidth name="search"/></TfAButton>
+                <TfAButton to="#" id="tf-search-link" title="Recherchez du Japon" onClick={this.handleSearchClick}><Icon fixedWidth name={searchIcon}/></TfAButton>
                 <TfAButton to="#" id="tf-login-box" title="Connexion / Inscription"><Icon fixedWidth name="user"/></TfAButton>
             </div>
             

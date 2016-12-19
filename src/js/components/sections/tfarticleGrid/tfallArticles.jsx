@@ -6,6 +6,7 @@ import React from 'react';
 // Additional libraries
 import {Icon} from 'react-fa';
 import Article from './../../../module/article.jsx';
+import ClassNames from 'classnames';
 // Components
 import TfArticleGrid from './../../sections/tfarticleGrid/tfarticleGrid.jsx';
 import TfAButton from './../../widgets/tfabutton/tfabutton.jsx';
@@ -51,7 +52,9 @@ class TfAllArticles extends React.Component {
                 <TfAButton to={baseURL+'articles/'} title="Plus d'articles">Mettez-moi une dose de <strong>Japon</strong> supplémentaire</TfAButton>
             </div> : null;
 
-        return <section className="tf-all-articles">
+            let sectionClassName = ClassNames("tf-all-articles", this.props.className)
+
+        return <section className={sectionClassName}>
             {title}
             {this.props.description}
 
