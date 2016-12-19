@@ -34,11 +34,15 @@
         padding-left: 0.4rem;
     }
     .tf-breadcrumb-nav{
+        flex: 1;
         margin-right: auto;
         font-size: 1em;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
+        position: relative;
+        z-index: 50;
+        overflow: hidden;
     }
 
     .fa{color: $bgcolor;}
@@ -97,10 +101,10 @@
     }
 
     .tf-breadcrumb-switcher{
+        flex: 0 0 28em;
         position: relative;
         display: flex; flex-flow: row-reverse nowrap;
         align-items: center;
-        justify-content: flex-end;
         .tf-switcher-plane{
             font-size: 2rem;
             transform: rotate(45deg);

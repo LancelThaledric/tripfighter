@@ -1,4 +1,35 @@
 //////////////////////////////////////////////////////
+// Header
+//////////////////////////////////////////////////////
+
+@media (max-width: 800px){
+    $items-font-size: 1.5rem;
+    $site-title-font-size: 1.5rem;
+    $items-padding: 0.5rem;
+
+    header.tf-site-header{
+        &>nav:first-child{
+            font-size: $items-font-size;
+            .tf-site-title{
+                font-size: $site-title-font-size;
+            }
+            &>:last-child{
+                justify-content: flex-end;
+                font-size: $items-font-size;
+            }
+        }
+
+        .tf-abutton{
+            padding: 0 $items-padding;
+        }
+
+        .tf-menu-label{
+            display: none;
+        }
+    }
+}
+
+//////////////////////////////////////////////////////
 // Menu
 //////////////////////////////////////////////////////
 
@@ -26,6 +57,25 @@
         font-size: 0.8rem;
         .tf-breadcrumb-nav{
             margin-right: -8rem;
+        }
+    }
+}
+
+@media (max-width: 800px){
+    nav.tf-breadcrumb{
+        .tf-breadcrumb-nav{
+            &>.tf-icon-last-breadcrumb{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px){
+    nav.tf-breadcrumb{
+        flex-direction: row-reverse;
+        .tf-breadcrumb-nav{
+            display: none;
         }
     }
 }

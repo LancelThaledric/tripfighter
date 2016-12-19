@@ -181,6 +181,15 @@ section.tf-character-select-mini div.tf-character-select-selector{
     }
 }
 
+@media (max-width: 500px){
+    section.tf-character-select div.tf-character-select-selector,
+    section.tf-character-select-mini div.tf-character-select-selector{
+        p.tf-fighter-description{
+            display: none;
+        }
+    }
+}
+
 //////////////////////////////////////////////////////
 // Theme Select & Theme Select Mini
 //////////////////////////////////////////////////////

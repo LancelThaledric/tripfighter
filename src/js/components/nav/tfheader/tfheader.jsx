@@ -30,7 +30,7 @@ class TfHeader extends React.Component {
 
         return <header className="tf-site-header"><nav>
             <div>
-                <TfAButton to="#tf-menu" id="tf-main-menu-toggle" onClick={this.handleClick}><Icon fixedWidth name={menuIcon}/> Menu</TfAButton>
+                <TfAButton to="#tf-menu" id="tf-main-menu-toggle" onClick={this.handleClick}><Icon fixedWidth name={menuIcon}/><span className="tf-menu-label"> Menu</span></TfAButton>
             </div>
             <div>
                 <TfAButton to={baseURL} id="tf-home-link" className="tf-site-title">TRIP FIGHTER</TfAButton>
