@@ -94,7 +94,7 @@ class TfPage extends React.Component {
 
         let contentClass = ClassNames('tf-content', {'tf-figed': this.isFiged()});
 
-        let universClass = ClassNames(this.props.universClass, 'tf-app', {isHome: this.props.isHome});
+        let universClass = ClassNames(this.props.universClass, 'tf-app', {isHome: this.props.isHome}, this.props.className);
 
         let breadcrumb = !this.props.isHome ? <TfBreadcrumb
                 univers={this.props.universTax}
@@ -102,6 +102,7 @@ class TfPage extends React.Component {
                 articleTitle={this.props.articleTitle}
                 articleSlug={this.props.articleSlug}
                 allArticles={this.props.allArticles}
+                contact={this.props.contact}
             /> : null;
 
         return <div id="tf-app" className={universClass}>

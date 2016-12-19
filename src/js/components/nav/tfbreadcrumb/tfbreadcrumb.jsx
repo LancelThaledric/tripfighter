@@ -29,6 +29,9 @@ class TfBreadcrumb extends React.Component {
         if(this.props.allArticles){
             links.push(<Icon name="angle-right" key={'icon-allarticles-'+this.props.univers.slug}/>, <Link to={Url.computeUrl('articles')} key={'allarticles'}>Tous les articles</Link>);
         }
+        if(this.props.contact){
+            links.push(<Icon name="angle-right" key={'icon-contact-'+this.props.univers.slug}/>, <Link to={Url.computeUrl('contact')} key={'contact'}>Contact</Link>);
+        }
 
         // Calcul du switcher
         // 1 : univers

@@ -1,0 +1,58 @@
+@import '../../../../style/base/all';
+
+.tf-contact{
+
+    .tf-content{
+        background: url('../../../../resource/contact.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    
+
+    p{
+        text-indent: 0;
+        max-width: $max-width-section;
+        margin: auto;
+        padding: 0 2rem;
+    }
+
+    form{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+    }
+
+    textarea{
+        display: block;
+        background: rgba($bgcolor, 0.8);
+        border: none;
+        color: $fgcolor;
+        padding: 1rem;
+        margin: 1rem 2rem;
+        height: 20rem;
+    }
+
+    input{
+        background: rgba($bgcolor, 0.8);
+        border: none;
+        color: $fgcolor;
+        padding: 1rem;
+        margin: 1rem 2rem;
+    }
+
+    input[type="submit"]{
+        align-self: center;
+        color: $fgcolor;
+    }
+
+    .tf-input-row{
+        display: flex; flex-flow: row wrap;
+        &>*{
+            flex: 1 400px;
+        }
+    }
+
+    .tf-pagetitle{
+        background: none;
+    }
+}

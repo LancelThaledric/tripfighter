@@ -45,7 +45,7 @@ class TfHeader extends React.Component {
                 </div>
                 <div className="tf-footer-row">
                     <TfAButton to="#" className="tf-footer-mentions">Mentions légales</TfAButton>
-                    <TfAButton to="#" className="tf-footer-contact">Contact</TfAButton>
+                    <TfAButton to={Url.computeUrl('contact')} className="tf-footer-contact">Contact</TfAButton>
                     <TfAButton to="#" className="tf-footer-newsletter">Newsletter</TfAButton>
 
                     <TfAButton to={Url.computeUrl('', 'lieux')} className="tf-footer-theme">Lieux</TfAButton>

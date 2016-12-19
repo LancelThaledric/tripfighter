@@ -15,6 +15,7 @@ import TfArticles from './components/pages/tfarticles/tfarticles.jsx';
 import TfTheme from './components/pages/tftheme/tftheme.jsx';
 import TfArticle from './components/pages/tfarticle/tfarticle.jsx';
 import Tf404 from './components/pages/tf404/tf404.jsx';
+import TfContact from './components/pages/tfcontact/tfcontact.jsx';
 // Style
 import style from '../style/style.scss';
 // Resources
@@ -35,6 +36,12 @@ ReactDOM.render(
                 (props, state, params) => <TfArticles
                 universClass={Taxonomy.Univers.default.className}
                 allArticles={true}/>
+            }/>
+            {/*Contact*/}
+            <Route path="contact" component={
+                (props, state, params) => <TfContact
+                universClass={Taxonomy.Univers.traditionnel.className}
+                contact={true}/>
             }/>
             {/*Univers*/}
             <Route path={Taxonomy.Univers.moderne.slug} component={
