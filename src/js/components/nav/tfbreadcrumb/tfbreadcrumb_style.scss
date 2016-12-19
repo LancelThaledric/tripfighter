@@ -8,6 +8,7 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: stretch;
+    justify-content: space-between;
     position: fixed; z-index: 50;
     top: $header-height;
     width: 100%;
