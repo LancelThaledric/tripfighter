@@ -10,6 +10,8 @@ import {Link} from 'react-router';
 import TfAButton from './../../widgets/tfabutton/tfabutton.jsx';
 // Style
 import style from './tfheader_style.scss';
+// Resources
+//import logo from './../../../../resource/logo.svg'; // copied with webpack
 
 class TfHeader extends React.Component {
 
@@ -33,7 +35,7 @@ class TfHeader extends React.Component {
                 <TfAButton to="#tf-menu" id="tf-main-menu-toggle" onClick={this.handleClick}><Icon fixedWidth name={menuIcon}/><span className="tf-menu-label"> Menu</span></TfAButton>
             </div>
             <div>
-                <TfAButton to={baseURL} id="tf-home-link" className="tf-site-title">TRIP FIGHTER</TfAButton>
+                <TfAButton to={baseURL} id="tf-home-link" className="tf-site-title"><img src={baseURL+"resource/logo.svg"} alt="TRIP FIGHTER"/></TfAButton>
             </div>
             <div>
                 <TfAButton to="#" id="tf-search-link" title="Recherchez du Japon"><Icon fixedWidth name="search"/></TfAButton>

@@ -50,6 +50,15 @@ section.tf-article-reader{
     p{
         margin: 2rem 0;
     }
+
+    .tf-article-text{
+        img{
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: auto;
+        }
+    }
 }
 
 .tf-trad section.tf-article-reader{

@@ -48,6 +48,14 @@ header.tf-site-header{
             @extend strong;
             font-size: $site-title-font-size;
             cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            span{
+                display: flex; align-items: center; justify-content: center;
+            }
+            img{
+                width: 7em;
+                height: auto;
+            }
         }
     }
 

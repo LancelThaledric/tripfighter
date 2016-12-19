@@ -59,7 +59,8 @@ module.exports = {
             allChunks: true
         }),
         new CopyWebpackPlugin([
-            { from: 'src/media', to: './media/'}
+            { from: 'src/media', to: './media/'},
+            { from: 'src/resource/logo.svg', to: './resource/logo.svg'}
         ])
     ],
     resolve: {
