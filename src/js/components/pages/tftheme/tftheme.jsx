@@ -16,7 +16,7 @@ class TfTheme extends React.Component {
 
     render(){
 
-        let tags = [this.props.themeName];
+        let tags = [this.props.themeSlug];
         if(this.props.universName) tags.push(this.props.universName);
 
         return <TfPage {...this.props}>

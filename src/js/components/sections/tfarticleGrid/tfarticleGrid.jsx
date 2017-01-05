@@ -3,6 +3,7 @@ import 'babel-polyfill';
 import React from 'react';
 // Additional libraries
 import {Icon} from 'react-fa';
+import Taxonomy from './../../../module/taxonomy.jsx';
 // Components
 import TfArticleMini from './../../widgets/tfarticleMini/tfarticleMini.jsx';
 import TfAButton from './../../widgets/tfabutton/tfabutton.jsx';
@@ -15,8 +16,11 @@ class TfArticleGrid extends React.Component {
         let out_articles = [];
         for(var article of this.props.data){
             let tags = [];
-            for(var tagid in article.tags){
-                tags.push(<div className="tf-tag-little" key={tagid}>{article.tags[tagid]}</div>);
+            for(var tagid of article.tags){
+                let tagname = Taxonomy.Univers[tagid] ? Taxonomy.Univers[tagid].name : (
+                    Taxonomy.Themes[tagid] ? Taxonomy.Themes[tagid].name : 'Undefined'
+                )
+                tags.push(<div className="tf-tag-little" key={tagid}>{tagname}</div>);
             }
 
             out_articles.push(<TfArticleMini article={article} key={article.id}>

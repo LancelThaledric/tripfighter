@@ -34,6 +34,7 @@ class TfAllArticles extends React.Component {
 
     loadData(data){
         // filter tags
+        console.log(this.props.tags);
         data = Article.filterByTags(this.props.tags, data);
         // Sorting
         if(this.props.reverse) data.sort(Article.sortRecent);
